@@ -1,0 +1,33 @@
+@* View of the original usgNumberField (numeric TextBox): same key filter, same parsing in the model.
+   Change (leaving the field / Enter) = LostFocus; Enter also raises PreviewKeyDown/KeyDown(Return). *@
+<input class="usg-number @Class" value="@Field.Text" disabled="@(!Field.Enabled)" readonly="@Field.ReadOnly"
+       style="@(Field.BackColor.A > 0 ? "background-color:" + Css(Field.BackColor) : null)"
+       onkeypress="return stebNumericKey(event)" @onchange="OnChange" @onkeydown="OnKeyDown" />
+
+@code {
+    [Parameter, EditorRequired] public STEB2.usgNumberField Field { get; set; }
+    [Parameter] public string Class { get; set; }
+    [Parameter] public EventCallback Changed { get; set; }
+    /// <summary>If set, Enter is handled by the page (e.g. to run a long calculation with a progress box).</summary>
+    [Parameter] public EventCallback OnEnter { get; set; }
+
+    private async Task OnChange(ChangeEventArgs e)
+    {
+        Field.Text = e.Value?.ToString() ?? "";
+        // A browser "change" fires when the user leaves the field or presses Enter,
+        // which is when the original handlers (LostFocus / PreviewKeyDown Return) ran.
+        Field.RaiseLostFocus();
+        await Changed.InvokeAsync();
+    }
+
+    // steb.js commits the typed value (change event) before this keydown reaches the server.
+    private async Task OnKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key != "Enter") return;
+        if (OnEnter.HasDelegate) { await OnEnter.InvokeAsync(); return; }
+        Field.RaisePreviewKeyDown(System.Windows.Forms.Keys.Return);
+        Field.RaiseKeyDown(System.Windows.Forms.Keys.Return);
+    }
+
+    private static string Css(System.Drawing.Color c) => "#" + c.R.ToString("x2") + c.G.ToString("x2") + c.B.ToString("x2");
+}

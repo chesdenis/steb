@@ -1,0 +1,2750 @@
+{
+ "% заполн": {
+  "en": "% full",
+  "es": "% lleno",
+  "fr": "% rempli",
+  "tr": "% dolu"
+ },
+ "% заполнения": {
+  "en": "% filling",
+  "es": "% de llenado",
+  "fr": "% de remplissage",
+  "tr": "% doluluk"
+ },
+ "(например": {
+  "en": "(for example",
+  "es": "(por ejemplo",
+  "fr": "(par exemple",
+  "tr": "(örneğin"
+ },
+ ", угол крена": {
+  "en": ", heel angle",
+  "es": ", ángulo de escora",
+  "fr": ", angle de gîte",
+  "tr": ", meyil açısı"
+ },
+ "3D вид корпуса": {
+  "en": "3D hull view",
+  "es": "Vista 3D del casco",
+  "fr": "Vue 3D de la coque",
+  "tr": "3B gövde görünümü"
+ },
+ "4,5:Шп. 10;": {
+  "en": "4,5:St. 10;",
+  "es": "4,5:Cuad. 10;",
+  "fr": "4,5:Couple 10;",
+  "tr": "4,5:Posta 10;"
+ },
+ ":Сечение по ДП;": {
+  "en": ":Centreline section;",
+  "es": ":Sección de crujía;",
+  "fr": ":Coupe dans le plan diamétral;",
+  "tr": ":Merkez hattı kesiti;"
+ },
+ "DSPL, т.": {
+  "en": "DSPL, t",
+  "es": "DSPL, t",
+  "fr": "DSPL, t",
+  "tr": "DSPL, t"
+ },
+ "Mcalc, т": {
+  "en": "Mcalc, t",
+  "es": "Mcalc, t",
+  "fr": "Mcalc, t",
+  "tr": "Mcalc, t"
+ },
+ "Mmax, т": {
+  "en": "Mmax, t",
+  "es": "Mmax, t",
+  "fr": "Mmax, t",
+  "tr": "Mmax, t"
+ },
+ "STEB — панель управления загрузкой судна": {
+  "en": "STEB — ship loading control panel",
+  "es": "STEB — panel de control de carga del buque",
+  "fr": "STEB — tableau de bord du chargement du navire",
+  "tr": "STEB — gemi yükleme kontrol paneli"
+ },
+ "V, куб.м.": {
+  "en": "V, m³",
+  "es": "V, m³",
+  "fr": "V, m³",
+  "tr": "V, m³"
+ },
+ "Vcalc, куб.м.": {
+  "en": "Vcalc, m³",
+  "es": "Vcalc, m³",
+  "fr": "Vcalc, m³",
+  "tr": "Vcalc, m³"
+ },
+ "Vmax, куб.м.": {
+  "en": "Vmax, m³",
+  "es": "Vmax, m³",
+  "fr": "Vmax, m³",
+  "tr": "Vmax, m³"
+ },
+ "Xc, м": {
+  "en": "Xc, m",
+  "es": "Xc, m",
+  "fr": "Xc, m",
+  "tr": "Xc, m"
+ },
+ "Xf, м": {
+  "en": "Xf, m",
+  "es": "Xf, m",
+  "fr": "Xf, m",
+  "tr": "Xf, m"
+ },
+ "Xg, м": {
+  "en": "Xg, m",
+  "es": "Xg, m",
+  "fr": "Xg, m",
+  "tr": "Xg, m"
+ },
+ "Yc, м": {
+  "en": "Yc, m",
+  "es": "Yc, m",
+  "fr": "Yc, m",
+  "tr": "Yc, m"
+ },
+ "Yg, м": {
+  "en": "Yg, m",
+  "es": "Yg, m",
+  "fr": "Yg, m",
+  "tr": "Yg, m"
+ },
+ "Zc, м": {
+  "en": "Zc, m",
+  "es": "Zc, m",
+  "fr": "Zc, m",
+  "tr": "Zc, m"
+ },
+ "Zg, м": {
+  "en": "Zg, m",
+  "es": "Zg, m",
+  "fr": "Zg, m",
+  "tr": "Zg, m"
+ },
+ "b, м": {
+  "en": "b, m",
+  "es": "b, m",
+  "fr": "b, m",
+  "tr": "b, m"
+ },
+ "h, м": {
+  "en": "h, m",
+  "es": "h, m",
+  "fr": "h, m",
+  "tr": "h, m"
+ },
+ "l, м": {
+  "en": "l, m",
+  "es": "l, m",
+  "fr": "l, m",
+  "tr": "l, m"
+ },
+ "x, м": {
+  "en": "x, m",
+  "es": "x, m",
+  "fr": "x, m",
+  "tr": "x, m"
+ },
+ "x0, м": {
+  "en": "x0, m",
+  "es": "x0, m",
+  "fr": "x0, m",
+  "tr": "x0, m"
+ },
+ "x0, м:": {
+  "en": "x0, m:",
+  "es": "x0, m:",
+  "fr": "x0, m :",
+  "tr": "x0, m:"
+ },
+ "x1, м": {
+  "en": "x1, m",
+  "es": "x1, m",
+  "fr": "x1, m",
+  "tr": "x1, m"
+ },
+ "x1, м:": {
+  "en": "x1, m:",
+  "es": "x1, m:",
+  "fr": "x1, m :",
+  "tr": "x1, m:"
+ },
+ "y, м": {
+  "en": "y, m",
+  "es": "y, m",
+  "fr": "y, m",
+  "tr": "y, m"
+ },
+ "y0, м": {
+  "en": "y0, m",
+  "es": "y0, m",
+  "fr": "y0, m",
+  "tr": "y0, m"
+ },
+ "y0, м:": {
+  "en": "y0, m:",
+  "es": "y0, m:",
+  "fr": "y0, m :",
+  "tr": "y0, m:"
+ },
+ "y1, м": {
+  "en": "y1, m",
+  "es": "y1, m",
+  "fr": "y1, m",
+  "tr": "y1, m"
+ },
+ "y1, м:": {
+  "en": "y1, m:",
+  "es": "y1, m:",
+  "fr": "y1, m :",
+  "tr": "y1, m:"
+ },
+ "z, м": {
+  "en": "z, m",
+  "es": "z, m",
+  "fr": "z, m",
+  "tr": "z, m"
+ },
+ "z0, м": {
+  "en": "z0, m",
+  "es": "z0, m",
+  "fr": "z0, m",
+  "tr": "z0, m"
+ },
+ "z0, м:": {
+  "en": "z0, m:",
+  "es": "z0, m:",
+  "fr": "z0, m :",
+  "tr": "z0, m:"
+ },
+ "z1, м": {
+  "en": "z1, m",
+  "es": "z1, m",
+  "fr": "z1, m",
+  "tr": "z1, m"
+ },
+ "z1, м:": {
+  "en": "z1, m:",
+  "es": "z1, m:",
+  "fr": "z1, m :",
+  "tr": "z1, m:"
+ },
+ "{0} из {1} файлов": {
+  "en": "{0} of {1} files",
+  "es": "{0} de {1} archivos",
+  "fr": "{0} sur {1} fichiers",
+  "tr": "{0} / {1} dosya"
+ },
+ "Абсцисса ЦВ, м": {
+  "en": "CB X-coordinate, m",
+  "es": "Abscisa del centro de carena, m",
+  "fr": "Abscisse du centre de carène, m",
+  "tr": "Sephiye merkezi X, m"
+ },
+ "Абсцисса ЦТ ватерлинии": {
+  "en": "Waterplane centroid X-coordinate (LCF)",
+  "es": "Abscisa del centro de flotación",
+  "fr": "Abscisse du centre de flottaison",
+  "tr": "Yüzme merkezi X koordinatı"
+ },
+ "Абсцисса ЦТ, м": {
+  "en": "CG X-coordinate, m",
+  "es": "Abscisa del centro de gravedad, m",
+  "fr": "Abscisse du centre de gravité, m",
+  "tr": "Ağırlık merkezi X, m"
+ },
+ "Абсцисса центра величины и абсцисса центра тяжести ватерлинии": {
+  "en": "X of the centre of buoyancy and X of the waterplane centroid",
+  "es": "Abscisa del centro de carena y abscisa del centro de flotación",
+  "fr": "Abscisse du centre de carène et abscisse du centre de flottaison",
+  "tr": "Sephiye merkezi X ve yüzme merkezi X"
+ },
+ "Автор": {
+  "en": "Author",
+  "es": "Autor",
+  "fr": "Auteur",
+  "tr": "Yazar"
+ },
+ "Адрес:": {
+  "en": "Address:",
+  "es": "Dirección:",
+  "fr": "Adresse :",
+  "tr": "Adres:"
+ },
+ "Аппликата ЦВ, м": {
+  "en": "CB Z-coordinate (KB), m",
+  "es": "Cota del centro de carena (KB), m",
+  "fr": "Cote du centre de carène (KB), m",
+  "tr": "Sephiye merkezi Z (KB), m"
+ },
+ "Аппликата ЦТ, м": {
+  "en": "CG Z-coordinate, m",
+  "es": "Cota del centro de gravedad, m",
+  "fr": "Cote du centre de gravité, m",
+  "tr": "Ağırlık merkezi Z, m"
+ },
+ "Аппликата центра величины, м": {
+  "en": "Centre of buoyancy Z-coordinate (KB), m",
+  "es": "Cota del centro de carena (KB), m",
+  "fr": "Cote du centre de carène (KB), m",
+  "tr": "Sephiye merkezi yüksekliği (KB), m"
+ },
+ "БОК": {
+  "en": "PROFILE",
+  "es": "PERFIL",
+  "fr": "PROFIL",
+  "tr": "PROFİL"
+ },
+ "Бок": {
+  "en": "Profile",
+  "es": "Perfil",
+  "fr": "Profil",
+  "tr": "Profil"
+ },
+ "Буксир": {
+  "en": "Tug",
+  "es": "Remolcador",
+  "fr": "Remorqueur",
+  "tr": "Römorkör"
+ },
+ "В папке проектов пока нет файлов. Создайте проект.": {
+  "en": "There are no files in the projects folder yet. Create a project.",
+  "es": "Todavía no hay archivos en la carpeta de proyectos. Cree un proyecto.",
+  "fr": "Le dossier des projets est encore vide. Créez un projet.",
+  "tr": "Proje klasöründe henüz dosya yok. Bir proje oluşturun."
+ },
+ "ВНИМАНИЕ!": {
+  "en": "WARNING!",
+  "es": "¡ATENCIÓN!",
+  "fr": "ATTENTION !",
+  "tr": "DİKKAT!"
+ },
+ "Ватерлинии": {
+  "en": "Waterlines",
+  "es": "Líneas de agua",
+  "fr": "Lignes d'eau",
+  "tr": "Su hatları"
+ },
+ "Введите координаты положения цистерны": {
+  "en": "Enter the tank position coordinates",
+  "es": "Introduzca las coordenadas de posición del tanque",
+  "fr": "Saisissez les coordonnées de la citerne",
+  "tr": "Tank konum koordinatlarını girin"
+ },
+ "Вес судна, т:": {
+  "en": "Ship weight, t:",
+  "es": "Peso del buque, t:",
+  "fr": "Poids du navire, t :",
+  "tr": "Gemi ağırlığı, t:"
+ },
+ "Весовое водоизмещение": {
+  "en": "Displacement (weight)",
+  "es": "Desplazamiento (peso)",
+  "fr": "Déplacement (poids)",
+  "tr": "Deplasman (ağırlık)"
+ },
+ "Весовому водоизмещению, углу крена, углу дифферента": {
+  "en": "Displacement, heel angle and trim angle",
+  "es": "Desplazamiento, ángulo de escora y ángulo de asiento",
+  "fr": "Déplacement, angle de gîte et angle d'assiette",
+  "tr": "Deplasman, meyil açısı ve trim açısı"
+ },
+ "Весу судна и координатам ЦТ": {
+  "en": "Ship weight and CG coordinates",
+  "es": "Peso del buque y coordenadas del CG",
+  "fr": "Poids du navire et coordonnées du CG",
+  "tr": "Gemi ağırlığı ve AM koordinatları"
+ },
+ "Водоизмещение, т": {
+  "en": "Displacement, t",
+  "es": "Desplazamiento, t",
+  "fr": "Déplacement, t",
+  "tr": "Deplasman, t"
+ },
+ "Водоизмещение, т:": {
+  "en": "Displacement, t:",
+  "es": "Desplazamiento, t:",
+  "fr": "Déplacement, t :",
+  "tr": "Deplasman, t:"
+ },
+ "Все": {
+  "en": "All",
+  "es": "Todos",
+  "fr": "Tous",
+  "tr": "Tümü"
+ },
+ "Вы можете редактировать белые поля": {
+  "en": "You can edit the white fields",
+  "es": "Puede editar los campos blancos",
+  "fr": "Vous pouvez modifier les champs blancs",
+  "tr": "Beyaz alanları düzenleyebilirsiniz"
+ },
+ "Выберите прототип.": {
+  "en": "Select a prototype.",
+  "es": "Seleccione un prototipo.",
+  "fr": "Choisissez un prototype.",
+  "tr": "Bir prototip seçin."
+ },
+ "Вывод поперечных сечений формы корпуса...": {
+  "en": "Drawing hull transverse sections...",
+  "es": "Dibujando secciones transversales del casco...",
+  "fr": "Tracé des sections transversales de la coque...",
+  "tr": "Gövde enine kesitleri çiziliyor..."
+ },
+ "Вывод посадки...": {
+  "en": "Drawing floating position...",
+  "es": "Dibujando la flotación...",
+  "fr": "Tracé de la flottaison...",
+  "tr": "Yüzme durumu çiziliyor..."
+ },
+ "Вывод продольных сечений формы корпуса...": {
+  "en": "Drawing hull longitudinal sections...",
+  "es": "Dibujando secciones longitudinales del casco...",
+  "fr": "Tracé des sections longitudinales de la coque...",
+  "tr": "Gövde boyuna kesitleri çiziliyor..."
+ },
+ "Высота отсека, м": {
+  "en": "Compartment height, m",
+  "es": "Altura del compartimento, m",
+  "fr": "Hauteur du compartiment, m",
+  "tr": "Bölme yüksekliği, m"
+ },
+ "Высота формы корпуса, м:": {
+  "en": "Hull form depth, m:",
+  "es": "Puntal de la forma del casco, m:",
+  "fr": "Creux de la forme de coque, m :",
+  "tr": "Gövde formu derinliği, m:"
+ },
+ "Высота, м": {
+  "en": "Height, m",
+  "es": "Altura, m",
+  "fr": "Hauteur, m",
+  "tr": "Yükseklik, m"
+ },
+ "Высота, м:": {
+  "en": "Height, m:",
+  "es": "Altura, m:",
+  "fr": "Hauteur, m :",
+  "tr": "Yükseklik, m:"
+ },
+ "Гидростатика - таблица значений": {
+  "en": "Hydrostatics - table of values",
+  "es": "Hidrostática - tabla de valores",
+  "fr": "Hydrostatique - tableau des valeurs",
+  "tr": "Hidrostatik - değerler tablosu"
+ },
+ "Главные размерения": {
+  "en": "Main dimensions",
+  "es": "Dimensiones principales",
+  "fr": "Dimensions principales",
+  "tr": "Ana boyutlar"
+ },
+ "Грузовой план": {
+  "en": "Loading plan",
+  "es": "Plan de carga",
+  "fr": "Plan de chargement",
+  "tr": "Yükleme planı"
+ },
+ "Грузовой размер": {
+  "en": "Deadweight scale",
+  "es": "Escala de carga",
+  "fr": "Échelle de port en lourd",
+  "tr": "Yükleme skalası"
+ },
+ "ДП": {
+  "en": "CL",
+  "es": "PC",
+  "fr": "PD",
+  "tr": "CL"
+ },
+ "Действия с отчетом...": {
+  "en": "Report actions...",
+  "es": "Acciones del informe...",
+  "fr": "Actions sur le rapport...",
+  "tr": "Rapor işlemleri..."
+ },
+ "Диаграмма Xc и Xf": {
+  "en": "Xc and Xf diagram",
+  "es": "Diagrama de Xc y Xf",
+  "fr": "Diagramme Xc et Xf",
+  "tr": "Xc ve Xf diyagramı"
+ },
+ "Диаграмма r и Zc": {
+  "en": "r and Zc diagram",
+  "es": "Diagrama de r y Zc",
+  "fr": "Diagramme r et Zc",
+  "tr": "r ve Zc diyagramı"
+ },
+ "Диаграмма плеч остойчивости формы": {
+  "en": "Form stability arms diagram (cross curves)",
+  "es": "Diagrama de brazos de estabilidad de formas (pantocarenas)",
+  "fr": "Diagramme des bras de stabilité de forme (pantocarènes)",
+  "tr": "Form stabilite kolları diyagramı (pantokarenler)"
+ },
+ "Диаграмма поперечной остойчивости": {
+  "en": "Transverse stability diagram",
+  "es": "Diagrama de estabilidad transversal",
+  "fr": "Diagramme de stabilité transversale",
+  "tr": "Enine stabilite diyagramı"
+ },
+ "Диаграмма продольной остойчивости": {
+  "en": "Longitudinal stability diagram",
+  "es": "Diagrama de estabilidad longitudinal",
+  "fr": "Diagramme de stabilité longitudinale",
+  "tr": "Boyuna stabilite diyagramı"
+ },
+ "Диаграммы и графики": {
+  "en": "Diagrams and charts",
+  "es": "Diagramas y gráficos",
+  "fr": "Diagrammes et graphiques",
+  "tr": "Diyagramlar ve grafikler"
+ },
+ "Диаграммы коэффициентов полноты": {
+  "en": "Form coefficient diagrams",
+  "es": "Diagramas de coeficientes de forma",
+  "fr": "Diagrammes des coefficients de remplissage",
+  "tr": "Form katsayıları diyagramları"
+ },
+ "Диаграммы остойчивости": {
+  "en": "Stability diagrams",
+  "es": "Diagramas de estabilidad",
+  "fr": "Diagrammes de stabilité",
+  "tr": "Stabilite diyagramları"
+ },
+ "Диаграммы поперечной остойчивости": {
+  "en": "Transverse stability diagrams",
+  "es": "Diagramas de estabilidad transversal",
+  "fr": "Diagrammes de stabilité transversale",
+  "tr": "Enine stabilite diyagramları"
+ },
+ "Диаграммы продольной остойчивости": {
+  "en": "Longitudinal stability diagrams",
+  "es": "Diagramas de estabilidad longitudinal",
+  "fr": "Diagrammes de stabilité longitudinale",
+  "tr": "Boyuna stabilite diyagramları"
+ },
+ "Длина отсека, м": {
+  "en": "Compartment length, m",
+  "es": "Eslora del compartimento, m",
+  "fr": "Longueur du compartiment, m",
+  "tr": "Bölme uzunluğu, m"
+ },
+ "Длина по ватерлинии": {
+  "en": "Waterline length",
+  "es": "Eslora en la flotación",
+  "fr": "Longueur à la flottaison",
+  "tr": "Su hattı boyu"
+ },
+ "Длина по ватерлинии, м": {
+  "en": "Waterline length, m",
+  "es": "Eslora en la flotación, m",
+  "fr": "Longueur à la flottaison, m",
+  "tr": "Su hattı boyu, m"
+ },
+ "Длина формы корпуса, м:": {
+  "en": "Hull form length, m:",
+  "es": "Eslora de la forma del casco, m:",
+  "fr": "Longueur de la forme de coque, m :",
+  "tr": "Gövde formu boyu, m:"
+ },
+ "Длина, м": {
+  "en": "Length, m",
+  "es": "Longitud, m",
+  "fr": "Longueur, m",
+  "tr": "Uzunluk, m"
+ },
+ "Длина, м:": {
+  "en": "Length, m:",
+  "es": "Longitud, m:",
+  "fr": "Longueur, m :",
+  "tr": "Uzunluk, m:"
+ },
+ "Для расчета используется плотность первой акватории в списке.": {
+  "en": "The calculation uses the density of the first water area in the list.",
+  "es": "El cálculo usa la densidad de la primera masa de agua de la lista.",
+  "fr": "Le calcul utilise la masse volumique du premier plan d'eau de la liste.",
+  "tr": "Hesaplamada listedeki ilk su alanının yoğunluğu kullanılır."
+ },
+ "Добавить акваторию": {
+  "en": "Add water area",
+  "es": "Añadir masa de agua",
+  "fr": "Ajouter un plan d'eau",
+  "tr": "Su alanı ekle"
+ },
+ "Добавить новую цистерну": {
+  "en": "Add new tank",
+  "es": "Añadir tanque nuevo",
+  "fr": "Ajouter une nouvelle citerne",
+  "tr": "Yeni tank ekle"
+ },
+ "Добавить новую цистерну?": {
+  "en": "Add the new tank?",
+  "es": "¿Añadir el tanque nuevo?",
+  "fr": "Ajouter la nouvelle citerne ?",
+  "tr": "Yeni tank eklensin mi?"
+ },
+ "Добавить строку": {
+  "en": "Add row",
+  "es": "Añadir fila",
+  "fr": "Ajouter une ligne",
+  "tr": "Satır ekle"
+ },
+ "Жидкость (уровень заполнения)": {
+  "en": "Liquid (filling level)",
+  "es": "Líquido (nivel de llenado)",
+  "fr": "Liquide (niveau de remplissage)",
+  "tr": "Sıvı (doluluk seviyesi)"
+ },
+ "Журнал": {
+  "en": "Log",
+  "es": "Registro",
+  "fr": "Journal",
+  "tr": "Günlük"
+ },
+ "Загрузить из файла (.psteb)...": {
+  "en": "Load from file (.psteb)...",
+  "es": "Cargar desde archivo (.psteb)...",
+  "fr": "Charger depuis un fichier (.psteb)...",
+  "tr": "Dosyadan yükle (.psteb)..."
+ },
+ "Закрыть": {
+  "en": "Close",
+  "es": "Cerrar",
+  "fr": "Fermer",
+  "tr": "Kapat"
+ },
+ "Заполненность отсека, %": {
+  "en": "Compartment filling, %",
+  "es": "Llenado del compartimento, %",
+  "fr": "Remplissage du compartiment, %",
+  "tr": "Bölme doluluğu, %"
+ },
+ "Заполненность, %": {
+  "en": "Filling, %",
+  "es": "Llenado, %",
+  "fr": "Remplissage, %",
+  "tr": "Doluluk, %"
+ },
+ "Затопление отсека": {
+  "en": "Compartment flooding",
+  "es": "Inundación de compartimento",
+  "fr": "Envahissement d'un compartiment",
+  "tr": "Bölme yaralanması"
+ },
+ "Значение": {
+  "en": "Value",
+  "es": "Valor",
+  "fr": "Valeur",
+  "tr": "Değer"
+ },
+ "Значения через запятую или диапазон «начало, следующее...конец» (например": {
+  "en": "Comma-separated values or a range \"start, next...end\" (for example",
+  "es": "Valores separados por comas o un rango «inicio, siguiente...fin» (por ejemplo",
+  "fr": "Valeurs séparées par des virgules ou plage « début, suivant...fin » (par exemple",
+  "tr": "Virgülle ayrılmış değerler veya «başlangıç, sonraki...bitiş» aralığı (örneğin"
+ },
+ "Изменения сохраняются в проект при выходе из поля.": {
+  "en": "Changes are saved to the project when you leave the field.",
+  "es": "Los cambios se guardan en el proyecto al salir del campo.",
+  "fr": "Les modifications sont enregistrées dans le projet en quittant le champ.",
+  "tr": "Değişiklikler alandan çıkınca projeye kaydedilir."
+ },
+ "Изменения сохраняются в проект сразу после редактирования ячейки.": {
+  "en": "Changes are saved to the project as soon as a cell is edited.",
+  "es": "Los cambios se guardan en el proyecto en cuanto se edita una celda.",
+  "fr": "Les modifications sont enregistrées dans le projet dès qu'une cellule est modifiée.",
+  "tr": "Değişiklikler hücre düzenlenir düzenlenmez projeye kaydedilir."
+ },
+ "Изменить параметры цистерны": {
+  "en": "Edit tank parameters",
+  "es": "Modificar parámetros del tanque",
+  "fr": "Modifier les paramètres de la citerne",
+  "tr": "Tank parametrelerini düzenle"
+ },
+ "Изменить цистерну?": {
+  "en": "Apply the tank changes?",
+  "es": "¿Modificar el tanque?",
+  "fr": "Modifier la citerne ?",
+  "tr": "Tank değiştirilsin mi?"
+ },
+ "Изометрия": {
+  "en": "Isometric",
+  "es": "Isométrica",
+  "fr": "Isométrique",
+  "tr": "İzometrik"
+ },
+ "Имя контейнера": {
+  "en": "Container name",
+  "es": "Nombre del contenedor",
+  "fr": "Nom du conteneur",
+  "tr": "Konteyner adı"
+ },
+ "Имя нового проекта:": {
+  "en": "New project name:",
+  "es": "Nombre del proyecto nuevo:",
+  "fr": "Nom du nouveau projet :",
+  "tr": "Yeni proje adı:"
+ },
+ "Имя отсека": {
+  "en": "Compartment name",
+  "es": "Nombre del compartimento",
+  "fr": "Nom du compartiment",
+  "tr": "Bölme adı"
+ },
+ "Имя цистерны": {
+  "en": "Tank name",
+  "es": "Nombre del tanque",
+  "fr": "Nom de la citerne",
+  "tr": "Tank adı"
+ },
+ "Исходные данные": {
+  "en": "Input data",
+  "es": "Datos de entrada",
+  "fr": "Données d'entrée",
+  "tr": "Giriş verileri"
+ },
+ "Исходный код восстановлен и перенесён на .NET / ASP.NET Core Blazor в 2026 году.": {
+  "en": "Source code recovered and ported to .NET / ASP.NET Core Blazor in 2026.",
+  "es": "Código fuente recuperado y portado a .NET / ASP.NET Core Blazor en 2026.",
+  "fr": "Code source récupéré et porté vers .NET / ASP.NET Core Blazor en 2026.",
+  "tr": "Kaynak kod 2026'da kurtarıldı ve .NET / ASP.NET Core Blazor'a taşındı."
+ },
+ "КОРПУС": {
+  "en": "BODY PLAN",
+  "es": "CAJA DE CUADERNAS",
+  "fr": "PLAN DE COUPLES",
+  "tr": "POSTA PLANI"
+ },
+ "Катамаран": {
+  "en": "Catamaran",
+  "es": "Catamarán",
+  "fr": "Catamaran",
+  "tr": "Katamaran"
+ },
+ "Катер": {
+  "en": "Boat",
+  "es": "Lancha",
+  "fr": "Vedette",
+  "tr": "Bot"
+ },
+ "Конец отсека по высоте, м": {
+  "en": "Compartment top (z), m",
+  "es": "Fin del compartimento en altura, m",
+  "fr": "Fin du compartiment en hauteur, m",
+  "tr": "Bölme üst sınırı (z), m"
+ },
+ "Конец отсека по длине, м": {
+  "en": "Compartment forward end (x), m",
+  "es": "Fin del compartimento en eslora, m",
+  "fr": "Fin du compartiment en longueur, m",
+  "tr": "Bölme ön sınırı (x), m"
+ },
+ "Конец отсека по ширине, м": {
+  "en": "Compartment side end (y), m",
+  "es": "Fin del compartimento en manga, m",
+  "fr": "Fin du compartiment en largeur, m",
+  "tr": "Bölme yan sınırı (y), m"
+ },
+ "Конечная осадка, м:": {
+  "en": "Final draft, m:",
+  "es": "Calado final, m:",
+  "fr": "Tirant d'eau final, m :",
+  "tr": "Son su çekimi, m:"
+ },
+ "Конечное водоизмешение, т:": {
+  "en": "Final displacement, t:",
+  "es": "Desplazamiento final, t:",
+  "fr": "Déplacement final, t :",
+  "tr": "Son deplasman, t:"
+ },
+ "Конечный угол крена, градусы:": {
+  "en": "Final heel angle, degrees:",
+  "es": "Ángulo de escora final, grados:",
+  "fr": "Angle de gîte final, degrés :",
+  "tr": "Son meyil açısı, derece:"
+ },
+ "Конечный угол направления наклонения": {
+  "en": "Final inclination direction angle",
+  "es": "Ángulo final de dirección de inclinación",
+  "fr": "Angle final de direction d'inclinaison",
+  "tr": "Son eğilme yönü açısı"
+ },
+ "Конечный угол пространственного наклонения": {
+  "en": "Final spatial inclination angle",
+  "es": "Ángulo final de inclinación espacial",
+  "fr": "Angle final d'inclinaison spatiale",
+  "tr": "Son uzaysal eğilme açısı"
+ },
+ "Конструктивная ватерлиния": {
+  "en": "Design waterline",
+  "es": "Línea de flotación de proyecto",
+  "fr": "Flottaison de projet",
+  "tr": "Dizayn su hattı"
+ },
+ "Контейнеровоз": {
+  "en": "Container ship",
+  "es": "Portacontenedores",
+  "fr": "Porte-conteneurs",
+  "tr": "Konteyner gemisi"
+ },
+ "Контейнеры": {
+  "en": "Containers",
+  "es": "Contenedores",
+  "fr": "Conteneurs",
+  "tr": "Konteynerler"
+ },
+ "Координата — отстояние от ДП Y, м.": {
+  "en": "Coordinate — distance from the centreline Y, m.",
+  "es": "Coordenada — distancia desde crujía Y, m.",
+  "fr": "Coordonnée — distance au plan diamétral Y, m.",
+  "tr": "Koordinat — merkez hattından uzaklık Y, m."
+ },
+ "Координата — отстояние по длине X, м.": {
+  "en": "Coordinate — longitudinal distance X, m.",
+  "es": "Coordenada — distancia longitudinal X, m.",
+  "fr": "Coordonnée — distance longitudinale X, m.",
+  "tr": "Koordinat — boyuna uzaklık X, m."
+ },
+ "Координатам ЦТ ватерлинии": {
+  "en": "Waterplane centroid coordinates",
+  "es": "Coordenadas del centro de flotación",
+  "fr": "Coordonnées du centre de flottaison",
+  "tr": "Yüzme merkezi koordinatları"
+ },
+ "Координатам центра величины": {
+  "en": "Centre of buoyancy coordinates",
+  "es": "Coordenadas del centro de carena",
+  "fr": "Coordonnées du centre de carène",
+  "tr": "Sephiye merkezi koordinatları"
+ },
+ "Корпус": {
+  "en": "Body plan",
+  "es": "Caja de cuadernas",
+  "fr": "Plan de couples",
+  "tr": "Posta planı"
+ },
+ "Коэфф-т общей полноты": {
+  "en": "Block coeff.",
+  "es": "Coef. de bloque",
+  "fr": "Coef. de bloc",
+  "tr": "Blok katsayısı"
+ },
+ "Коэфф-т полноты ватерлинии": {
+  "en": "Waterplane coeff.",
+  "es": "Coef. de flotación",
+  "fr": "Coef. de flottaison",
+  "tr": "Su hattı katsayısı"
+ },
+ "Коэффициент": {
+  "en": "Coefficient",
+  "es": "Coeficiente",
+  "fr": "Coefficient",
+  "tr": "Katsayı"
+ },
+ "Коэффициент общей полноты": {
+  "en": "Block coefficient",
+  "es": "Coeficiente de bloque",
+  "fr": "Coefficient de bloc",
+  "tr": "Blok katsayısı"
+ },
+ "Коэффициент полноты": {
+  "en": "Fullness coefficient",
+  "es": "Coeficiente de forma",
+  "fr": "Coefficient de remplissage",
+  "tr": "Doluluk katsayısı"
+ },
+ "Коэффициент полноты ватерлинии": {
+  "en": "Waterplane area coefficient",
+  "es": "Coeficiente de flotación",
+  "fr": "Coefficient de remplissage de la flottaison",
+  "tr": "Su hattı alan katsayısı"
+ },
+ "Коэффициент полноты водоизмещения": {
+  "en": "Block coefficient",
+  "es": "Coeficiente de bloque",
+  "fr": "Coefficient de bloc",
+  "tr": "Blok katsayısı"
+ },
+ "Коэффициент проницаемости от 0 до 1": {
+  "en": "Permeability from 0 to 1",
+  "es": "Permeabilidad de 0 a 1",
+  "fr": "Perméabilité de 0 à 1",
+  "tr": "Geçirgenlik 0 ile 1 arası"
+ },
+ "Коэффициенту общей полноты": {
+  "en": "Block coefficient",
+  "es": "Coeficiente de bloque",
+  "fr": "Coefficient de bloc",
+  "tr": "Blok katsayısı"
+ },
+ "Коэффициенту полноты ватерлинии": {
+  "en": "Waterplane area coefficient",
+  "es": "Coeficiente de flotación",
+  "fr": "Coefficient de remplissage de la flottaison",
+  "tr": "Su hattı alan katsayısı"
+ },
+ "Коэффициенты афинного преобразования:": {
+  "en": "Affine scaling coefficients:",
+  "es": "Coeficientes de transformación afín:",
+  "fr": "Coefficients de transformation affine :",
+  "tr": "Afin dönüşüm katsayıları:"
+ },
+ "Коэффициенты общей полноты и полноты ватерлинии": {
+  "en": "Block and waterplane area coefficients",
+  "es": "Coeficientes de bloque y de flotación",
+  "fr": "Coefficients de bloc et de flottaison",
+  "tr": "Blok ve su hattı alan katsayıları"
+ },
+ "Круговая диаграмма остойчивости": {
+  "en": "Polar stability diagram",
+  "es": "Diagrama polar de estabilidad",
+  "fr": "Diagramme polaire de stabilité",
+  "tr": "Polar stabilite diyagramı"
+ },
+ "Левая кнопка мыши — вращение, правая кнопка или Shift — перемещение, колесо — масштаб относительно курсора, двойной щелчок — подобрать масштаб.": {
+  "en": "Left mouse button — rotate, right button or Shift — pan, wheel — zoom around the cursor, double click — zoom to fit.",
+  "es": "Botón izquierdo — girar, botón derecho o Shift — desplazar, rueda — zoom respecto al cursor, doble clic — ajustar escala.",
+  "fr": "Bouton gauche — rotation, bouton droit ou Maj — déplacement, molette — zoom autour du curseur, double-clic — ajuster l'échelle.",
+  "tr": "Sol tuş — döndür, sağ tuş veya Shift — kaydır, tekerlek — imleç etrafında yakınlaştır, çift tıklama — sığdır."
+ },
+ "Ледокол": {
+  "en": "Icebreaker",
+  "es": "Rompehielos",
+  "fr": "Brise-glace",
+  "tr": "Buzkıran"
+ },
+ "Ледокольно-транспортное": {
+  "en": "Icebreaking cargo ship",
+  "es": "Buque de carga rompehielos",
+  "fr": "Cargo brise-glace",
+  "tr": "Buzkıran yük gemisi"
+ },
+ "Лесовоз": {
+  "en": "Timber carrier",
+  "es": "Buque maderero",
+  "fr": "Transporteur de bois",
+  "tr": "Kereste gemisi"
+ },
+ "Лесовоз-пакетовоз": {
+  "en": "Packaged timber carrier",
+  "es": "Buque maderero de paquetes",
+  "fr": "Transporteur de bois en paquets",
+  "tr": "Paketli kereste gemisi"
+ },
+ "Линии палубы и киля": {
+  "en": "Sheer and keel lines",
+  "es": "Líneas de cubierta y quilla",
+  "fr": "Lignes de pont et de quille",
+  "tr": "Güverte ve omurga hatları"
+ },
+ "Лихтеровоз": {
+  "en": "Barge carrier",
+  "es": "Portabarcazas",
+  "fr": "Porte-barges",
+  "tr": "Mavna taşıyıcı"
+ },
+ "Максимальный вес жидкости в цистерне, т": {
+  "en": "Maximum liquid weight in the tank, t",
+  "es": "Peso máximo de líquido en el tanque, t",
+  "fr": "Poids maximal de liquide dans la citerne, t",
+  "tr": "Tanktaki azami sıvı ağırlığı, t"
+ },
+ "Максимальный объем в цистерне, куб.м.": {
+  "en": "Maximum tank volume, m³",
+  "es": "Volumen máximo del tanque, m³",
+  "fr": "Volume maximal de la citerne, m³",
+  "tr": "Azami tank hacmi, m³"
+ },
+ "Масса контейнера, т": {
+  "en": "Container mass, t",
+  "es": "Masa del contenedor, t",
+  "fr": "Masse du conteneur, t",
+  "tr": "Konteyner kütlesi, t"
+ },
+ "Масштаб по оси X:": {
+  "en": "X scale:",
+  "es": "Escala X:",
+  "fr": "Échelle X :",
+  "tr": "X ölçeği:"
+ },
+ "Масштаб по оси Y:": {
+  "en": "Y scale:",
+  "es": "Escala Y:",
+  "fr": "Échelle Y :",
+  "tr": "Y ölçeği:"
+ },
+ "Момент инерции, относительно оси X": {
+  "en": "Moment of inertia about the X axis",
+  "es": "Momento de inercia respecto al eje X",
+  "fr": "Moment d'inertie par rapport à l'axe X",
+  "tr": "X eksenine göre atalet momenti"
+ },
+ "Момент инерции, относительно оси Y": {
+  "en": "Moment of inertia about the Y axis",
+  "es": "Momento de inercia respecto al eje Y",
+  "fr": "Moment d'inertie par rapport à l'axe Y",
+  "tr": "Y eksenine göre atalet momenti"
+ },
+ "Моментам инерции ватерлинии": {
+  "en": "Waterplane moments of inertia",
+  "es": "Momentos de inercia de la flotación",
+  "fr": "Moments d'inertie de la flottaison",
+  "tr": "Su hattı atalet momentleri"
+ },
+ "Морской буксир": {
+  "en": "Sea-going tug",
+  "es": "Remolcador de altura",
+  "fr": "Remorqueur de haute mer",
+  "tr": "Açık deniz römorkörü"
+ },
+ "НИЙ": {
+  "en": "NIY",
+  "es": "NIY",
+  "fr": "NIY",
+  "tr": "NIY"
+ },
+ "Навалочное судно": {
+  "en": "Bulk carrier",
+  "es": "Granelero",
+  "fr": "Vraquier",
+  "tr": "Dökme yük gemisi"
+ },
+ "Название акватории": {
+  "en": "Water area name",
+  "es": "Nombre de la masa de agua",
+  "fr": "Nom du plan d'eau",
+  "tr": "Su alanı adı"
+ },
+ "Название цистерны:": {
+  "en": "Tank name:",
+  "es": "Nombre del tanque:",
+  "fr": "Nom de la citerne :",
+  "tr": "Tank adı:"
+ },
+ "Названия": {
+  "en": "Names",
+  "es": "Nombres",
+  "fr": "Noms",
+  "tr": "Adlar"
+ },
+ "Накатное судно": {
+  "en": "Ro-Ro ship",
+  "es": "Buque Ro-Ro",
+  "fr": "Navire roulier",
+  "tr": "Ro-Ro gemisi"
+ },
+ "Начало отсека по высоте, м": {
+  "en": "Compartment bottom (z), m",
+  "es": "Inicio del compartimento en altura, m",
+  "fr": "Début du compartiment en hauteur, m",
+  "tr": "Bölme alt sınırı (z), m"
+ },
+ "Начало отсека по длине, м": {
+  "en": "Compartment aft end (x), m",
+  "es": "Inicio del compartimento en eslora, m",
+  "fr": "Début du compartiment en longueur, m",
+  "tr": "Bölme kıç sınırı (x), m"
+ },
+ "Начало отсека по ширине, м": {
+  "en": "Compartment side start (y), m",
+  "es": "Inicio del compartimento en manga, m",
+  "fr": "Début du compartiment en largeur, m",
+  "tr": "Bölme yan başlangıcı (y), m"
+ },
+ "Начальная осадка, м:": {
+  "en": "Initial draft, m:",
+  "es": "Calado inicial, m:",
+  "fr": "Tirant d'eau initial, m :",
+  "tr": "İlk su çekimi, m:"
+ },
+ "Начальное водоизмещение, т:": {
+  "en": "Initial displacement, t:",
+  "es": "Desplazamiento inicial, t:",
+  "fr": "Déplacement initial, t :",
+  "tr": "İlk deplasman, t:"
+ },
+ "Начальные Масса и ЦТ": {
+  "en": "Lightship mass and CG",
+  "es": "Masa en rosca y CG",
+  "fr": "Masse lège et CG",
+  "tr": "Boş gemi kütlesi ve AM"
+ },
+ "Начальный угол крена, градусы:": {
+  "en": "Initial heel angle, degrees:",
+  "es": "Ángulo de escora inicial, grados:",
+  "fr": "Angle de gîte initial, degrés :",
+  "tr": "İlk meyil açısı, derece:"
+ },
+ "Начальный угол направления наклонения": {
+  "en": "Initial inclination direction angle",
+  "es": "Ángulo inicial de dirección de inclinación",
+  "fr": "Angle initial de direction d'inclinaison",
+  "tr": "İlk eğilme yönü açısı"
+ },
+ "Начальный угол пространственного наклонения": {
+  "en": "Initial spatial inclination angle",
+  "es": "Ángulo inicial de inclinación espacial",
+  "fr": "Angle initial d'inclinaison spatiale",
+  "tr": "İlk uzaysal eğilme açısı"
+ },
+ "Неверный формат файла проекта": {
+  "en": "Invalid project file format",
+  "es": "Formato de archivo de proyecto no válido",
+  "fr": "Format de fichier de projet non valide",
+  "tr": "Geçersiz proje dosyası biçimi"
+ },
+ "Невозможно определить посадку судна(V =": {
+  "en": "Unable to determine the floating position (V =",
+  "es": "No se puede determinar la flotación del buque (V =",
+  "fr": "Impossible de déterminer la flottaison du navire (V =",
+  "tr": "Geminin yüzme durumu belirlenemiyor (V ="
+ },
+ "Нет отчета.": {
+  "en": "No report.",
+  "es": "No hay informe.",
+  "fr": "Aucun rapport.",
+  "tr": "Rapor yok."
+ },
+ "Ничего не найдено.": {
+  "en": "Nothing found.",
+  "es": "No se encontró nada.",
+  "fr": "Aucun résultat.",
+  "tr": "Hiçbir şey bulunamadı."
+ },
+ "Новая цистерна": {
+  "en": "New tank",
+  "es": "Tanque nuevo",
+  "fr": "Nouvelle citerne",
+  "tr": "Yeni tank"
+ },
+ "Новое имя:": {
+  "en": "New name:",
+  "es": "Nombre nuevo:",
+  "fr": "Nouveau nom :",
+  "tr": "Yeni ad:"
+ },
+ "ОЛ": {
+  "en": "BL",
+  "es": "LB",
+  "fr": "LB",
+  "tr": "BL"
+ },
+ "ОТЧЕТ": {
+  "en": "REPORT",
+  "es": "INFORME",
+  "fr": "RAPPORT",
+  "tr": "RAPOR"
+ },
+ "ОТЧЕТ о посадке судна": {
+  "en": "Ship floating position REPORT",
+  "es": "INFORME de flotación del buque",
+  "fr": "RAPPORT de flottaison du navire",
+  "tr": "Gemi yüzme durumu RAPORU"
+ },
+ "Об авторе": {
+  "en": "About the author",
+  "es": "Acerca del autor",
+  "fr": "À propos de l'auteur",
+  "tr": "Yazar hakkında"
+ },
+ "Об авторе — STEB": {
+  "en": "About the author — STEB",
+  "es": "Acerca del autor — STEB",
+  "fr": "À propos de l'auteur — STEB",
+  "tr": "Yazar hakkında — STEB"
+ },
+ "Объемное водоизмещение": {
+  "en": "Volume displacement",
+  "es": "Desplazamiento en volumen",
+  "fr": "Volume de carène",
+  "tr": "Hacimsel deplasman"
+ },
+ "Объемному водоизмещению, углу крена, углу дифферента": {
+  "en": "Volume displacement, heel angle and trim angle",
+  "es": "Desplazamiento en volumen, ángulo de escora y ángulo de asiento",
+  "fr": "Volume de carène, angle de gîte et angle d'assiette",
+  "tr": "Hacimsel deplasman, meyil açısı ve trim açısı"
+ },
+ "Одно сечение на строку в формате": {
+  "en": "One section per line in the format",
+  "es": "Una sección por línea con el formato",
+  "fr": "Une section par ligne au format",
+  "tr": "Her satırda bir kesit, biçim"
+ },
+ "Описание формы (теоретические шпангоуты: «new X», затем строки «Y = … Z = …»)": {
+  "en": "Hull form description (stations: \"new X\", then lines \"Y = … Z = …\")",
+  "es": "Descripción de la forma (cuadernas de trazado: «new X», luego líneas «Y = … Z = …»)",
+  "fr": "Description de la forme (couples de tracé : « new X », puis lignes « Y = … Z = … »)",
+  "tr": "Form tanımı (postalar: «new X», ardından «Y = … Z = …» satırları)"
+ },
+ "Определить посадку по:": {
+  "en": "Determine floating position by:",
+  "es": "Determinar la flotación por:",
+  "fr": "Déterminer la flottaison par :",
+  "tr": "Yüzme durumunu şuna göre belirle:"
+ },
+ "Определить(Enter)": {
+  "en": "Calculate (Enter)",
+  "es": "Calcular (Enter)",
+  "fr": "Calculer (Entrée)",
+  "tr": "Hesapla (Enter)"
+ },
+ "Ордината ЦВ, м": {
+  "en": "CB Y-coordinate, m",
+  "es": "Ordenada del centro de carena, m",
+  "fr": "Ordonnée du centre de carène, m",
+  "tr": "Sephiye merkezi Y, m"
+ },
+ "Ордината ЦТ ватерлинии": {
+  "en": "Waterplane centroid Y-coordinate",
+  "es": "Ordenada del centro de flotación",
+  "fr": "Ordonnée du centre de flottaison",
+  "tr": "Yüzme merkezi Y koordinatı"
+ },
+ "Ордината ЦТ, м": {
+  "en": "CG Y-coordinate, m",
+  "es": "Ordenada del centro de gravedad, m",
+  "fr": "Ordonnée du centre de gravité, m",
+  "tr": "Ağırlık merkezi Y, m"
+ },
+ "Осадка": {
+  "en": "Draft",
+  "es": "Calado",
+  "fr": "Tirant d'eau",
+  "tr": "Su çekimi"
+ },
+ "Осадка кормой": {
+  "en": "Draft aft",
+  "es": "Calado a popa",
+  "fr": "Tirant d'eau arrière",
+  "tr": "Kıç su çekimi"
+ },
+ "Осадка кормой, м": {
+  "en": "Draft aft, m",
+  "es": "Calado a popa, m",
+  "fr": "Tirant d'eau arrière, m",
+  "tr": "Kıç su çekimi, m"
+ },
+ "Осадка левого борта": {
+  "en": "Draft port side",
+  "es": "Calado a babor",
+  "fr": "Tirant d'eau bâbord",
+  "tr": "İskele su çekimi"
+ },
+ "Осадка левого борта, м": {
+  "en": "Draft port side, m",
+  "es": "Calado a babor, m",
+  "fr": "Tirant d'eau bâbord, m",
+  "tr": "İskele su çekimi, m"
+ },
+ "Осадка носом": {
+  "en": "Draft forward",
+  "es": "Calado a proa",
+  "fr": "Tirant d'eau avant",
+  "tr": "Baş su çekimi"
+ },
+ "Осадка носом, м": {
+  "en": "Draft forward, m",
+  "es": "Calado a proa, m",
+  "fr": "Tirant d'eau avant, m",
+  "tr": "Baş su çekimi, m"
+ },
+ "Осадка правого борта": {
+  "en": "Draft starboard side",
+  "es": "Calado a estribor",
+  "fr": "Tirant d'eau tribord",
+  "tr": "Sancak su çekimi"
+ },
+ "Осадка правого борта, м": {
+  "en": "Draft starboard side, m",
+  "es": "Calado a estribor, m",
+  "fr": "Tirant d'eau tribord, m",
+  "tr": "Sancak su çekimi, m"
+ },
+ "Осадка, м": {
+  "en": "Draft, m",
+  "es": "Calado, m",
+  "fr": "Tirant d'eau, m",
+  "tr": "Su çekimi, m"
+ },
+ "Осадка, м:": {
+  "en": "Draft, m:",
+  "es": "Calado, m:",
+  "fr": "Tirant d'eau, m :",
+  "tr": "Su çekimi, m:"
+ },
+ "Осадке левого, правого борта и угла дифферента": {
+  "en": "Port and starboard drafts and trim angle",
+  "es": "Calados de babor y estribor y ángulo de asiento",
+  "fr": "Tirants d'eau bâbord et tribord et angle d'assiette",
+  "tr": "İskele, sancak su çekimleri ve trim açısı"
+ },
+ "Осадке на миделе, углу крена и углу дифферента": {
+  "en": "Midship draft, heel angle and trim angle",
+  "es": "Calado en la maestra, ángulo de escora y ángulo de asiento",
+  "fr": "Tirant d'eau au maître-couple, angle de gîte et angle d'assiette",
+  "tr": "Orta kesit su çekimi, meyil açısı ve trim açısı"
+ },
+ "Осадке носом, кормой и углом крена": {
+  "en": "Forward and aft drafts and heel angle",
+  "es": "Calados a proa y popa y ángulo de escora",
+  "fr": "Tirants d'eau avant et arrière et angle de gîte",
+  "tr": "Baş, kıç su çekimleri ve meyil açısı"
+ },
+ "Осадке носом, кормой, левого и правого борта": {
+  "en": "Forward, aft, port and starboard drafts",
+  "es": "Calados a proa, popa, babor y estribor",
+  "fr": "Tirants d'eau avant, arrière, bâbord et tribord",
+  "tr": "Baş, kıç, iskele ve sancak su çekimleri"
+ },
+ "Осевой момент инерции": {
+  "en": "Axial moment of inertia",
+  "es": "Momento de inercia axial",
+  "fr": "Moment d'inertie axial",
+  "tr": "Eksenel atalet momenti"
+ },
+ "Осевой момент инерции ватерлинии относительно оси ординат, м^4": {
+  "en": "Waterplane moment of inertia about the Y axis, m^4",
+  "es": "Momento de inercia de la flotación respecto al eje Y, m^4",
+  "fr": "Moment d'inertie de la flottaison par rapport à l'axe Y, m^4",
+  "tr": "Su hattının Y eksenine göre atalet momenti, m^4"
+ },
+ "Осевой момент инерции относительно оси абсцисс, м^4": {
+  "en": "Moment of inertia about the X axis, m^4",
+  "es": "Momento de inercia respecto al eje X, m^4",
+  "fr": "Moment d'inertie par rapport à l'axe X, m^4",
+  "tr": "X eksenine göre atalet momenti, m^4"
+ },
+ "Оси": {
+  "en": "Axes",
+  "es": "Ejes",
+  "fr": "Axes",
+  "tr": "Eksenler"
+ },
+ "Открыть": {
+  "en": "Open",
+  "es": "Abrir",
+  "fr": "Ouvrir",
+  "tr": "Aç"
+ },
+ "Открыть...": {
+  "en": "Open...",
+  "es": "Abrir...",
+  "fr": "Ouvrir...",
+  "tr": "Aç..."
+ },
+ "Отредактируйте начальное положение ЦТ и вес судна": {
+  "en": "Edit the lightship CG position and weight",
+  "es": "Edite la posición del CG y el peso en rosca",
+  "fr": "Modifiez la position du CG et le poids lège",
+  "tr": "Boş gemi AM konumunu ve ağırlığını düzenleyin"
+ },
+ "Отредактируйте список акваторий": {
+  "en": "Edit the list of water areas",
+  "es": "Edite la lista de masas de agua",
+  "fr": "Modifiez la liste des plans d'eau",
+  "tr": "Su alanları listesini düzenleyin"
+ },
+ "Отредактируйте список контейнеров и закройте окно для принятия изменений": {
+  "en": "Edit the list of containers and close the window to apply the changes",
+  "es": "Edite la lista de contenedores y cierre la ventana para aplicar los cambios",
+  "fr": "Modifiez la liste des conteneurs et fermez la fenêtre pour appliquer les modifications",
+  "tr": "Konteyner listesini düzenleyin ve değişiklikleri uygulamak için pencereyi kapatın"
+ },
+ "Отредактируйте список отсеков и закройте окно для принятия изменений": {
+  "en": "Edit the list of compartments and close the window to apply the changes",
+  "es": "Edite la lista de compartimentos y cierre la ventana para aplicar los cambios",
+  "fr": "Modifiez la liste des compartiments et fermez la fenêtre pour appliquer les modifications",
+  "tr": "Bölme listesini düzenleyin ve değişiklikleri uygulamak için pencereyi kapatın"
+ },
+ "Отредактируйте список поперечных сечений": {
+  "en": "Edit the list of transverse sections",
+  "es": "Edite la lista de secciones transversales",
+  "fr": "Modifiez la liste des sections transversales",
+  "tr": "Enine kesit listesini düzenleyin"
+ },
+ "Отредактируйте список продольных сечений": {
+  "en": "Edit the list of longitudinal sections",
+  "es": "Edite la lista de secciones longitudinales",
+  "fr": "Modifiez la liste des sections longitudinales",
+  "tr": "Boyuna kesit listesini düzenleyin"
+ },
+ "Отредактируйте список форм проекта": {
+  "en": "Edit the project hull form",
+  "es": "Edite la forma del casco del proyecto",
+  "fr": "Modifiez la forme de coque du projet",
+  "tr": "Projenin gövde formunu düzenleyin"
+ },
+ "Отсеки": {
+  "en": "Compartments",
+  "es": "Compartimentos",
+  "fr": "Compartiments",
+  "tr": "Bölmeler"
+ },
+ "Отстояние по высоте от начала координат, м": {
+  "en": "Vertical distance from the origin, m",
+  "es": "Distancia vertical desde el origen, m",
+  "fr": "Distance verticale à l'origine, m",
+  "tr": "Başlangıç noktasından düşey uzaklık, m"
+ },
+ "Отстояние по длине от начала координат, м": {
+  "en": "Longitudinal distance from the origin, m",
+  "es": "Distancia longitudinal desde el origen, m",
+  "fr": "Distance longitudinale à l'origine, m",
+  "tr": "Başlangıç noktasından boyuna uzaklık, m"
+ },
+ "Отстояние по ширине от начала координат, м": {
+  "en": "Transverse distance from the origin, m",
+  "es": "Distancia transversal desde el origen, m",
+  "fr": "Distance transversale à l'origine, m",
+  "tr": "Başlangıç noktasından enine uzaklık, m"
+ },
+ "Отчет": {
+  "en": "Report",
+  "es": "Informe",
+  "fr": "Rapport",
+  "tr": "Rapor"
+ },
+ "Отчет Диаграмма поперечной статической остойчивости": {
+  "en": "Report: transverse static stability diagram",
+  "es": "Informe: diagrama de estabilidad estática transversal",
+  "fr": "Rapport : diagramme de stabilité statique transversale",
+  "tr": "Rapor: enine statik stabilite diyagramı"
+ },
+ "Отчет Диаграмма продольной статической остойчивости": {
+  "en": "Report: longitudinal static stability diagram",
+  "es": "Informe: diagrama de estabilidad estática longitudinal",
+  "fr": "Rapport : diagramme de stabilité statique longitudinale",
+  "tr": "Rapor: boyuna statik stabilite diyagramı"
+ },
+ "Отчет о посадке": {
+  "en": "Floating position report",
+  "es": "Informe de flotación",
+  "fr": "Rapport de flottaison",
+  "tr": "Yüzme durumu raporu"
+ },
+ "Отчет о текущей посадке": {
+  "en": "Current floating position report",
+  "es": "Informe de la flotación actual",
+  "fr": "Rapport de la flottaison actuelle",
+  "tr": "Mevcut yüzme durumu raporu"
+ },
+ "Отчет по гидростатике": {
+  "en": "Hydrostatics report",
+  "es": "Informe hidrostático",
+  "fr": "Rapport hydrostatique",
+  "tr": "Hidrostatik raporu"
+ },
+ "Отчеты и документы": {
+  "en": "Reports and documents",
+  "es": "Informes y documentos",
+  "fr": "Rapports et documents",
+  "tr": "Raporlar ve belgeler"
+ },
+ "Ошибка": {
+  "en": "Error",
+  "es": "Error",
+  "fr": "Erreur",
+  "tr": "Hata"
+ },
+ "Панель управления": {
+  "en": "Control panel",
+  "es": "Panel de control",
+  "fr": "Tableau de bord",
+  "tr": "Kontrol paneli"
+ },
+ "Панель управления ›": {
+  "en": "Control panel ›",
+  "es": "Panel de control ›",
+  "fr": "Tableau de bord ›",
+  "tr": "Kontrol paneli ›"
+ },
+ "Пантокарены": {
+  "en": "Cross curves (pantocarenes)",
+  "es": "Pantocarenas",
+  "fr": "Pantocarènes",
+  "tr": "Pantokarenler"
+ },
+ "Папка проектов:": {
+  "en": "Projects folder:",
+  "es": "Carpeta de proyectos:",
+  "fr": "Dossier des projets :",
+  "tr": "Proje klasörü:"
+ },
+ "Параметр": {
+  "en": "Parameter",
+  "es": "Parámetro",
+  "fr": "Paramètre",
+  "tr": "Parametre"
+ },
+ "Параметры диаграммы": {
+  "en": "Diagram parameters",
+  "es": "Parámetros del diagrama",
+  "fr": "Paramètres du diagramme",
+  "tr": "Diyagram parametreleri"
+ },
+ "Параметры новой цистерны": {
+  "en": "New tank parameters",
+  "es": "Parámetros del tanque nuevo",
+  "fr": "Paramètres de la nouvelle citerne",
+  "tr": "Yeni tank parametreleri"
+ },
+ "Параметры цистерны": {
+  "en": "Tank parameters",
+  "es": "Parámetros del tanque",
+  "fr": "Paramètres de la citerne",
+  "tr": "Tank parametreleri"
+ },
+ "Перезагрузить": {
+  "en": "Reload",
+  "es": "Recargar",
+  "fr": "Recharger",
+  "tr": "Yeniden yükle"
+ },
+ "Перемещение груза": {
+  "en": "Cargo shift",
+  "es": "Traslado de carga",
+  "fr": "Déplacement de charge",
+  "tr": "Yük kaydırma"
+ },
+ "Перерисовать посадку": {
+  "en": "Redraw floating position",
+  "es": "Redibujar la flotación",
+  "fr": "Redessiner la flottaison",
+  "tr": "Yüzme durumunu yeniden çiz"
+ },
+ "Перерисовать?": {
+  "en": "Redraw?",
+  "es": "¿Redibujar?",
+  "fr": "Redessiner ?",
+  "tr": "Yeniden çizilsin mi?"
+ },
+ "Пересчитать посадку": {
+  "en": "Recalculate floating position",
+  "es": "Recalcular la flotación",
+  "fr": "Recalculer la flottaison",
+  "tr": "Yüzme durumunu yeniden hesapla"
+ },
+ "Пересчитать посадку?": {
+  "en": "Recalculate the floating position?",
+  "es": "¿Recalcular la flotación?",
+  "fr": "Recalculer la flottaison ?",
+  "tr": "Yüzme durumu yeniden hesaplansın mı?"
+ },
+ "Перспектива": {
+  "en": "Perspective",
+  "es": "Perspectiva",
+  "fr": "Perspective",
+  "tr": "Perspektif"
+ },
+ "Печать": {
+  "en": "Print",
+  "es": "Imprimir",
+  "fr": "Imprimer",
+  "tr": "Yazdır"
+ },
+ "Плечи остойчивости формы:": {
+  "en": "Form stability arms:",
+  "es": "Brazos de estabilidad de formas:",
+  "fr": "Bras de stabilité de forme :",
+  "tr": "Form stabilite kolları:"
+ },
+ "Плотность акватории": {
+  "en": "Water density",
+  "es": "Densidad del agua",
+  "fr": "Masse volumique de l'eau",
+  "tr": "Su yoğunluğu"
+ },
+ "Плотность акватории:": {
+  "en": "Water density:",
+  "es": "Densidad del agua:",
+  "fr": "Masse volumique de l'eau :",
+  "tr": "Su yoğunluğu:"
+ },
+ "Плотность жидкости": {
+  "en": "Liquid density",
+  "es": "Densidad del líquido",
+  "fr": "Masse volumique du liquide",
+  "tr": "Sıvı yoğunluğu"
+ },
+ "Плотность жидкости в цистерне, т/куб.м.:": {
+  "en": "Tank liquid density, t/m³:",
+  "es": "Densidad del líquido del tanque, t/m³:",
+  "fr": "Masse volumique du liquide de la citerne, t/m³ :",
+  "tr": "Tank sıvısı yoğunluğu, t/m³:"
+ },
+ "Плотность жидкости, которая может быть в отсеке, т/куб.м.": {
+  "en": "Density of the liquid that may fill the compartment, t/m³",
+  "es": "Densidad del líquido que puede llenar el compartimento, t/m³",
+  "fr": "Masse volumique du liquide pouvant remplir le compartiment, t/m³",
+  "tr": "Bölmeyi doldurabilecek sıvının yoğunluğu, t/m³"
+ },
+ "Плотность, т/куб.м.": {
+  "en": "Density, t/m³",
+  "es": "Densidad, t/m³",
+  "fr": "Masse volumique, t/m³",
+  "tr": "Yoğunluk, t/m³"
+ },
+ "Площадь ватерлинии": {
+  "en": "Waterplane area",
+  "es": "Área de la flotación",
+  "fr": "Surface de la flottaison",
+  "tr": "Su hattı alanı"
+ },
+ "Подводный объем, куб.м": {
+  "en": "Underwater volume, m³",
+  "es": "Volumen sumergido, m³",
+  "fr": "Volume immergé, m³",
+  "tr": "Su altı hacmi, m³"
+ },
+ "Подводный объем, куб.м.:": {
+  "en": "Underwater volume, m³:",
+  "es": "Volumen sumergido, m³:",
+  "fr": "Volume immergé, m³ :",
+  "tr": "Su altı hacmi, m³:"
+ },
+ "Подобрать масштаб": {
+  "en": "Zoom to fit",
+  "es": "Ajustar escala",
+  "fr": "Ajuster l'échelle",
+  "tr": "Sığdır"
+ },
+ "Показать таблицу значений": {
+  "en": "Show table of values",
+  "es": "Mostrar tabla de valores",
+  "fr": "Afficher le tableau des valeurs",
+  "tr": "Değerler tablosunu göster"
+ },
+ "Положение ЦТ и вес судна": {
+  "en": "CG position and ship weight",
+  "es": "Posición del CG y peso del buque",
+  "fr": "Position du CG et poids du navire",
+  "tr": "AM konumu ve gemi ağırlığı"
+ },
+ "Положение центра величины": {
+  "en": "Centre of buoyancy position",
+  "es": "Posición del centro de carena",
+  "fr": "Position du centre de carène",
+  "tr": "Sephiye merkezi konumu"
+ },
+ "Положение центра тяжести": {
+  "en": "Centre of gravity position",
+  "es": "Posición del centro de gravedad",
+  "fr": "Position du centre de gravité",
+  "tr": "Ağırlık merkezi konumu"
+ },
+ "Полуширота": {
+  "en": "Half-breadth plan",
+  "es": "Plano de semimangas",
+  "fr": "Plan des demi-largeurs",
+  "tr": "Yarı genişlik planı"
+ },
+ "Поперечная": {
+  "en": "Transverse",
+  "es": "Transversal",
+  "fr": "Transversale",
+  "tr": "Enine"
+ },
+ "Поперечная метацентрическая высота": {
+  "en": "Transverse metacentric height",
+  "es": "Altura metacéntrica transversal",
+  "fr": "Hauteur métacentrique transversale",
+  "tr": "Enine metasantr yüksekliği"
+ },
+ "Поперечная метацентрическая высота, м": {
+  "en": "Transverse metacentric height, m",
+  "es": "Altura metacéntrica transversal, m",
+  "fr": "Hauteur métacentrique transversale, m",
+  "tr": "Enine metasantr yüksekliği, m"
+ },
+ "Поперечной метацентрической высоте": {
+  "en": "Transverse metacentric height",
+  "es": "Altura metacéntrica transversal",
+  "fr": "Hauteur métacentrique transversale",
+  "tr": "Enine metasantr yüksekliği"
+ },
+ "Поперечному метацентрическому радиусу": {
+  "en": "Transverse metacentric radius",
+  "es": "Radio metacéntrico transversal",
+  "fr": "Rayon métacentrique transversal",
+  "tr": "Enine metasantr yarıçapı"
+ },
+ "Поперечные сечения": {
+  "en": "Transverse sections",
+  "es": "Secciones transversales",
+  "fr": "Sections transversales",
+  "tr": "Enine kesitler"
+ },
+ "Поперечный": {
+  "en": "Transverse",
+  "es": "Transversal",
+  "fr": "Transversal",
+  "tr": "Enine"
+ },
+ "Поперечный метацентрический радиус": {
+  "en": "Transverse metacentric radius",
+  "es": "Radio metacéntrico transversal",
+  "fr": "Rayon métacentrique transversal",
+  "tr": "Enine metasantr yarıçapı"
+ },
+ "Поперечный метацентрический радиус и аппликата центра величины": {
+  "en": "Transverse metacentric radius and centre of buoyancy height",
+  "es": "Radio metacéntrico transversal y cota del centro de carena",
+  "fr": "Rayon métacentrique transversal et cote du centre de carène",
+  "tr": "Enine metasantr yarıçapı ve sephiye merkezi yüksekliği"
+ },
+ "Поперечный метацентрический радиус, м": {
+  "en": "Transverse metacentric radius, m",
+  "es": "Radio metacéntrico transversal, m",
+  "fr": "Rayon métacentrique transversal, m",
+  "tr": "Enine metasantr yarıçapı, m"
+ },
+ "Поперечный метрадиус, м": {
+  "en": "Transverse metacentric radius, m",
+  "es": "Radio metacéntrico transversal, m",
+  "fr": "Rayon métacentrique transversal, m",
+  "tr": "Enine metasantr yarıçapı, m"
+ },
+ "Посадка судна": {
+  "en": "Floating position",
+  "es": "Flotación del buque",
+  "fr": "Flottaison du navire",
+  "tr": "Gemi yüzme durumu"
+ },
+ "При обработке запроса произошла ошибка.": {
+  "en": "An error occurred while processing the request.",
+  "es": "Se produjo un error al procesar la solicitud.",
+  "fr": "Une erreur s'est produite lors du traitement de la requête.",
+  "tr": "İstek işlenirken bir hata oluştu."
+ },
+ "Программа расчёта посадки судна при различной загрузке (STEB, 2010).": {
+  "en": "Ship floating position calculation under different loading conditions (STEB, 2010).",
+  "es": "Cálculo de la flotación del buque en diferentes condiciones de carga (STEB, 2010).",
+  "fr": "Calcul de la flottaison du navire selon différents cas de chargement (STEB, 2010).",
+  "tr": "Farklı yükleme durumlarında gemi yüzme durumu hesabı (STEB, 2010)."
+ },
+ "Продольная": {
+  "en": "Longitudinal",
+  "es": "Longitudinal",
+  "fr": "Longitudinale",
+  "tr": "Boyuna"
+ },
+ "Продольная метацентрическая высота": {
+  "en": "Longitudinal metacentric height",
+  "es": "Altura metacéntrica longitudinal",
+  "fr": "Hauteur métacentrique longitudinale",
+  "tr": "Boyuna metasantr yüksekliği"
+ },
+ "Продольная метацентрическая высота, м": {
+  "en": "Longitudinal metacentric height, m",
+  "es": "Altura metacéntrica longitudinal, m",
+  "fr": "Hauteur métacentrique longitudinale, m",
+  "tr": "Boyuna metasantr yüksekliği, m"
+ },
+ "Продольной метацентрической высоте": {
+  "en": "Longitudinal metacentric height",
+  "es": "Altura metacéntrica longitudinal",
+  "fr": "Hauteur métacentrique longitudinale",
+  "tr": "Boyuna metasantr yüksekliği"
+ },
+ "Продольному метацентрическому радиусу": {
+  "en": "Longitudinal metacentric radius",
+  "es": "Radio metacéntrico longitudinal",
+  "fr": "Rayon métacentrique longitudinal",
+  "tr": "Boyuna metasantr yarıçapı"
+ },
+ "Продольные сечения": {
+  "en": "Longitudinal sections",
+  "es": "Secciones longitudinales",
+  "fr": "Sections longitudinales",
+  "tr": "Boyuna kesitler"
+ },
+ "Продольный": {
+  "en": "Longitudinal",
+  "es": "Longitudinal",
+  "fr": "Longitudinal",
+  "tr": "Boyuna"
+ },
+ "Продольный метацентрический радиус": {
+  "en": "Longitudinal metacentric radius",
+  "es": "Radio metacéntrico longitudinal",
+  "fr": "Rayon métacentrique longitudinal",
+  "tr": "Boyuna metasantr yarıçapı"
+ },
+ "Продольный метацентрический радиус, м": {
+  "en": "Longitudinal metacentric radius, m",
+  "es": "Radio metacéntrico longitudinal, m",
+  "fr": "Rayon métacentrique longitudinal, m",
+  "tr": "Boyuna metasantr yarıçapı, m"
+ },
+ "Продольный метрадиус, м": {
+  "en": "Longitudinal metacentric radius, m",
+  "es": "Radio metacéntrico longitudinal, m",
+  "fr": "Rayon métacentrique longitudinal, m",
+  "tr": "Boyuna metasantr yarıçapı, m"
+ },
+ "Проект не открыт.": {
+  "en": "No project is open.",
+  "es": "No hay ningún proyecto abierto.",
+  "fr": "Aucun projet ouvert.",
+  "tr": "Açık proje yok."
+ },
+ "Проект с таким именем уже существует:": {
+  "en": "A project with this name already exists:",
+  "es": "Ya existe un proyecto con este nombre:",
+  "fr": "Un projet portant ce nom existe déjà :",
+  "tr": "Bu adda bir proje zaten var:"
+ },
+ "Проект сохранен как": {
+  "en": "Project saved as",
+  "es": "Proyecto guardado como",
+  "fr": "Projet enregistré sous",
+  "tr": "Proje şu adla kaydedildi:"
+ },
+ "Проектная осадка корпуса, м:": {
+  "en": "Design draft, m:",
+  "es": "Calado de proyecto, m:",
+  "fr": "Tirant d'eau de projet, m :",
+  "tr": "Dizayn su çekimi, m:"
+ },
+ "Проекты": {
+  "en": "Projects",
+  "es": "Proyectos",
+  "fr": "Projets",
+  "tr": "Projeler"
+ },
+ "Проекция бок": {
+  "en": "Profile view",
+  "es": "Vista de perfil",
+  "fr": "Vue de profil",
+  "tr": "Profil görünüşü"
+ },
+ "Проекция корпус": {
+  "en": "Body plan view",
+  "es": "Vista de caja de cuadernas",
+  "fr": "Vue du plan de couples",
+  "tr": "Posta planı görünüşü"
+ },
+ "Проекция полуширота": {
+  "en": "Half-breadth plan view",
+  "es": "Vista de semimangas",
+  "fr": "Vue des demi-largeurs",
+  "tr": "Yarı genişlik planı görünüşü"
+ },
+ "Произвольная посадка": {
+  "en": "Arbitrary floating position",
+  "es": "Flotación arbitraria",
+  "fr": "Flottaison quelconque",
+  "tr": "Serbest yüzme durumu"
+ },
+ "Произвольная посадка судна": {
+  "en": "Arbitrary floating position",
+  "es": "Flotación arbitraria del buque",
+  "fr": "Flottaison quelconque du navire",
+  "tr": "Geminin serbest yüzme durumu"
+ },
+ "Произошла ошибка.": {
+  "en": "An error occurred.",
+  "es": "Se produjo un error.",
+  "fr": "Une erreur s'est produite.",
+  "tr": "Bir hata oluştu."
+ },
+ "Прототип:": {
+  "en": "Prototype:",
+  "es": "Prototipo:",
+  "fr": "Prototype :",
+  "tr": "Prototip:"
+ },
+ "Прочие": {
+  "en": "Other",
+  "es": "Otros",
+  "fr": "Autres",
+  "tr": "Diğer"
+ },
+ "Пустой проект: затем задайте форму корпуса (можно загрузить .psteb).": {
+  "en": "Empty project: then define the hull form (a .psteb file can be loaded).",
+  "es": "Proyecto vacío: después defina la forma del casco (se puede cargar un .psteb).",
+  "fr": "Projet vide : définissez ensuite la forme de coque (un fichier .psteb peut être chargé).",
+  "tr": "Boş proje: ardından gövde formunu tanımlayın (.psteb yüklenebilir)."
+ },
+ "РАСЧЕТ ДИАГРАММЫ": {
+  "en": "CALCULATE DIAGRAM",
+  "es": "CALCULAR DIAGRAMA",
+  "fr": "CALCULER LE DIAGRAMME",
+  "tr": "DİYAGRAMI HESAPLA"
+ },
+ "Размер текста:": {
+  "en": "Text size:",
+  "es": "Tamaño del texto:",
+  "fr": "Taille du texte :",
+  "tr": "Metin boyutu:"
+ },
+ "Расчет": {
+  "en": "Calculate",
+  "es": "Calcular",
+  "fr": "Calculer",
+  "tr": "Hesapla"
+ },
+ "Расчет гидростатических характеристик": {
+  "en": "Hydrostatic characteristics calculation",
+  "es": "Cálculo de características hidrostáticas",
+  "fr": "Calcul des caractéristiques hydrostatiques",
+  "tr": "Hidrostatik özelliklerin hesabı"
+ },
+ "Расчет дифферента...": {
+  "en": "Calculating trim...",
+  "es": "Calculando el asiento...",
+  "fr": "Calcul de l'assiette...",
+  "tr": "Trim hesaplanıyor..."
+ },
+ "Расчет крена...": {
+  "en": "Calculating heel...",
+  "es": "Calculando la escora...",
+  "fr": "Calcul de la gîte...",
+  "tr": "Meyil hesaplanıyor..."
+ },
+ "Расчет осадки": {
+  "en": "Draft calculation",
+  "es": "Cálculo del calado",
+  "fr": "Calcul du tirant d'eau",
+  "tr": "Su çekimi hesabı"
+ },
+ "Расчет угла крена": {
+  "en": "Heel angle calculation",
+  "es": "Cálculo del ángulo de escora",
+  "fr": "Calcul de l'angle de gîte",
+  "tr": "Meyil açısı hesabı"
+ },
+ "Расчет формы отсека:": {
+  "en": "Calculating compartment shape:",
+  "es": "Calculando la forma del compartimento:",
+  "fr": "Calcul de la forme du compartiment :",
+  "tr": "Bölme şekli hesaplanıyor:"
+ },
+ "Расчет...": {
+  "en": "Calculating...",
+  "es": "Calculando...",
+  "fr": "Calcul en cours...",
+  "tr": "Hesaplanıyor..."
+ },
+ "Расчетный вес жидкости в цистерне, т": {
+  "en": "Calculated liquid weight in the tank, t",
+  "es": "Peso calculado de líquido en el tanque, t",
+  "fr": "Poids calculé de liquide dans la citerne, t",
+  "tr": "Tanktaki hesaplanan sıvı ağırlığı, t"
+ },
+ "Расчетный объем в цистерне, куб.м.": {
+  "en": "Calculated tank volume, m³",
+  "es": "Volumen calculado del tanque, m³",
+  "fr": "Volume calculé de la citerne, m³",
+  "tr": "Hesaplanan tank hacmi, m³"
+ },
+ "Расчетный уровень жидкости в цистерне, м": {
+  "en": "Calculated liquid level in the tank, m",
+  "es": "Nivel calculado de líquido en el tanque, m",
+  "fr": "Niveau calculé de liquide dans la citerne, m",
+  "tr": "Tanktaki hesaplanan sıvı seviyesi, m"
+ },
+ "Расчеты": {
+  "en": "Calculations",
+  "es": "Cálculos",
+  "fr": "Calculs",
+  "tr": "Hesaplamalar"
+ },
+ "Редактирование цистерн": {
+  "en": "Tank editing",
+  "es": "Edición de tanques",
+  "fr": "Modification des citernes",
+  "tr": "Tank düzenleme"
+ },
+ "Редактировать акваторию": {
+  "en": "Edit water areas",
+  "es": "Editar masas de agua",
+  "fr": "Modifier les plans d'eau",
+  "tr": "Su alanlarını düzenle"
+ },
+ "Редактировать форму корпуса": {
+  "en": "Edit hull form",
+  "es": "Editar forma del casco",
+  "fr": "Modifier la forme de coque",
+  "tr": "Gövde formunu düzenle"
+ },
+ "Рефрижератор": {
+  "en": "Reefer ship",
+  "es": "Buque frigorífico",
+  "fr": "Navire frigorifique",
+  "tr": "Frigorifik gemi"
+ },
+ "Рис.1 Диаграмма Xc и Xf": {
+  "en": "Fig. 1 Xc and Xf diagram",
+  "es": "Fig. 1 Diagrama de Xc y Xf",
+  "fr": "Fig. 1 Diagramme Xc et Xf",
+  "tr": "Şekil 1 Xc ve Xf diyagramı"
+ },
+ "Рис.1 Диаграмма r и Zc": {
+  "en": "Fig. 1 r and Zc diagram",
+  "es": "Fig. 1 Diagrama de r y Zc",
+  "fr": "Fig. 1 Diagramme r et Zc",
+  "tr": "Şekil 1 r ve Zc diyagramı"
+ },
+ "Рис.1 Диаграмма грузовой размер": {
+  "en": "Fig. 1 Deadweight scale diagram",
+  "es": "Fig. 1 Diagrama de escala de carga",
+  "fr": "Fig. 1 Diagramme d'échelle de port en lourd",
+  "tr": "Şekil 1 Yükleme skalası diyagramı"
+ },
+ "Рис.1 Коэффициенты полноты": {
+  "en": "Fig. 1 Form coefficients",
+  "es": "Fig. 1 Coeficientes de forma",
+  "fr": "Fig. 1 Coefficients de remplissage",
+  "tr": "Şekil 1 Form katsayıları"
+ },
+ "Рисовать диаграмму динамической остойчивости": {
+  "en": "Draw dynamic stability diagram",
+  "es": "Dibujar diagrama de estabilidad dinámica",
+  "fr": "Tracer le diagramme de stabilité dynamique",
+  "tr": "Dinamik stabilite diyagramını çiz"
+ },
+ "Рисовать диаграммы внакладку?": {
+  "en": "Overlay the diagrams?",
+  "es": "¿Superponer los diagramas?",
+  "fr": "Superposer les diagrammes ?",
+  "tr": "Diyagramlar üst üste çizilsin mi?"
+ },
+ "Рисовать ли начало координат": {
+  "en": "Draw the origin",
+  "es": "Dibujar el origen de coordenadas",
+  "fr": "Tracer l'origine des coordonnées",
+  "tr": "Koordinat başlangıcını çiz"
+ },
+ "Сечения": {
+  "en": "Sections",
+  "es": "Secciones",
+  "fr": "Sections",
+  "tr": "Kesitler"
+ },
+ "Скачать отчет (.html)": {
+  "en": "Download report (.html)",
+  "es": "Descargar informe (.html)",
+  "fr": "Télécharger le rapport (.html)",
+  "tr": "Raporu indir (.html)"
+ },
+ "Скачать текущий": {
+  "en": "Download current",
+  "es": "Descargar actual",
+  "fr": "Télécharger le projet actuel",
+  "tr": "Mevcut olanı indir"
+ },
+ "Скачать файл проекта": {
+  "en": "Download project file",
+  "es": "Descargar archivo del proyecto",
+  "fr": "Télécharger le fichier du projet",
+  "tr": "Proje dosyasını indir"
+ },
+ "Скрыть журнал": {
+  "en": "Hide log",
+  "es": "Ocultar registro",
+  "fr": "Masquer le journal",
+  "tr": "Günlüğü gizle"
+ },
+ "Сначала откройте или создайте проект": {
+  "en": "Open or create a project first",
+  "es": "Primero abra o cree un proyecto",
+  "fr": "Ouvrez ou créez d'abord un projet",
+  "tr": "Önce bir proje açın veya oluşturun"
+ },
+ "Сначала откройте или создайте проект.": {
+  "en": "Open or create a project first.",
+  "es": "Primero abra o cree un proyecto.",
+  "fr": "Ouvrez ou créez d'abord un projet.",
+  "tr": "Önce bir proje açın veya oluşturun."
+ },
+ "Создать": {
+  "en": "Create",
+  "es": "Crear",
+  "fr": "Créer",
+  "tr": "Oluştur"
+ },
+ "Создать копию": {
+  "en": "Create copy",
+  "es": "Crear copia",
+  "fr": "Créer une copie",
+  "tr": "Kopya oluştur"
+ },
+ "Создать на основе прототипа...": {
+  "en": "Create from prototype...",
+  "es": "Crear a partir de prototipo...",
+  "fr": "Créer à partir d'un prototype...",
+  "tr": "Prototipten oluştur..."
+ },
+ "Создать...": {
+  "en": "New...",
+  "es": "Nuevo...",
+  "fr": "Nouveau...",
+  "tr": "Yeni..."
+ },
+ "Сохранить": {
+  "en": "Save",
+  "es": "Guardar",
+  "fr": "Enregistrer",
+  "tr": "Kaydet"
+ },
+ "Сохранить изображение": {
+  "en": "Save image",
+  "es": "Guardar imagen",
+  "fr": "Enregistrer l'image",
+  "tr": "Görüntüyü kaydet"
+ },
+ "Сохранить как...": {
+  "en": "Save as...",
+  "es": "Guardar como...",
+  "fr": "Enregistrer sous...",
+  "tr": "Farklı kaydet..."
+ },
+ "Сохранить форму корпуса...": {
+  "en": "Save hull form...",
+  "es": "Guardar forma del casco...",
+  "fr": "Enregistrer la forme de coque...",
+  "tr": "Gövde formunu kaydet..."
+ },
+ "Список акваторий:": {
+  "en": "Water areas:",
+  "es": "Masas de agua:",
+  "fr": "Plans d'eau :",
+  "tr": "Su alanları:"
+ },
+ "Справка": {
+  "en": "Help",
+  "es": "Ayuda",
+  "fr": "Aide",
+  "tr": "Yardım"
+ },
+ "Схема загрузки отсеков": {
+  "en": "Compartment loading scheme",
+  "es": "Esquema de carga de compartimentos",
+  "fr": "Schéma de chargement des compartiments",
+  "tr": "Bölme yükleme şeması"
+ },
+ "Схема посадки корпуса": {
+  "en": "Hull floating position scheme",
+  "es": "Esquema de flotación del casco",
+  "fr": "Schéma de flottaison de la coque",
+  "tr": "Gövde yüzme durumu şeması"
+ },
+ "Таблица -": {
+  "en": "Table -",
+  "es": "Tabla -",
+  "fr": "Tableau -",
+  "tr": "Tablo -"
+ },
+ "Таблица - по водоизмещениям": {
+  "en": "Table - by displacement",
+  "es": "Tabla - por desplazamientos",
+  "fr": "Tableau - par déplacements",
+  "tr": "Tablo - deplasmana göre"
+ },
+ "Таблица - по осадкам": {
+  "en": "Table - by draft",
+  "es": "Tabla - por calados",
+  "fr": "Tableau - par tirants d'eau",
+  "tr": "Tablo - su çekimine göre"
+ },
+ "Таблица - по подводным объемам": {
+  "en": "Table - by underwater volume",
+  "es": "Tabla - por volúmenes sumergidos",
+  "fr": "Tableau - par volumes immergés",
+  "tr": "Tablo - su altı hacmine göre"
+ },
+ "Текущий:": {
+  "en": "Current:",
+  "es": "Actual:",
+  "fr": "Actuel :",
+  "tr": "Mevcut:"
+ },
+ "Тип поперечного сечения": {
+  "en": "Section type",
+  "es": "Tipo de sección",
+  "fr": "Type de section",
+  "tr": "Kesit tipi"
+ },
+ "Только для учебных целей. Программа предоставляется «как есть», без каких-либо гарантий; автор не несёт ответственности за её использование и результаты расчётов.": {
+  "en": "For educational purposes only. The program is provided \"as is\", without any warranty; the author accepts no liability for its use or for the results of its calculations.",
+  "es": "Solo con fines educativos. El programa se proporciona «tal cual», sin ninguna garantía; el autor no asume ninguna responsabilidad por su uso ni por los resultados de los cálculos.",
+  "fr": "À des fins pédagogiques uniquement. Le programme est fourni « tel quel », sans aucune garantie ; l'auteur décline toute responsabilité quant à son utilisation et aux résultats des calculs.",
+  "tr": "Yalnızca eğitim amaçlıdır. Program hiçbir garanti olmaksızın «olduğu gibi» sunulmaktadır; yazar, programın kullanımından ve hesaplama sonuçlarından sorumlu tutulamaz."
+ },
+ "Угол": {
+  "en": "Angle",
+  "es": "Ángulo",
+  "fr": "Angle",
+  "tr": "Açı"
+ },
+ "Угол дифферента": {
+  "en": "Trim angle",
+  "es": "Ángulo de asiento",
+  "fr": "Angle d'assiette",
+  "tr": "Trim açısı"
+ },
+ "Угол дифферента, градусы:": {
+  "en": "Trim angle, degrees:",
+  "es": "Ángulo de asiento, grados:",
+  "fr": "Angle d'assiette, degrés :",
+  "tr": "Trim açısı, derece:"
+ },
+ "Угол крена, градусы:": {
+  "en": "Heel angle, degrees:",
+  "es": "Ángulo de escora, grados:",
+  "fr": "Angle de gîte, degrés :",
+  "tr": "Meyil açısı, derece:"
+ },
+ "Угол крена:": {
+  "en": "Heel angle:",
+  "es": "Ángulo de escora:",
+  "fr": "Angle de gîte :",
+  "tr": "Meyil açısı:"
+ },
+ "Угол направления наклонения": {
+  "en": "Inclination direction angle",
+  "es": "Ángulo de dirección de inclinación",
+  "fr": "Angle de direction d'inclinaison",
+  "tr": "Eğilme yönü açısı"
+ },
+ "Угол пространственного наклонения": {
+  "en": "Spatial inclination angle",
+  "es": "Ángulo de inclinación espacial",
+  "fr": "Angle d'inclinaison spatiale",
+  "tr": "Uzaysal eğilme açısı"
+ },
+ "Удалить акваторию": {
+  "en": "Delete water area",
+  "es": "Eliminar masa de agua",
+  "fr": "Supprimer le plan d'eau",
+  "tr": "Su alanını sil"
+ },
+ "Удалить цистерну": {
+  "en": "Delete tank",
+  "es": "Eliminar tanque",
+  "fr": "Supprimer la citerne",
+  "tr": "Tankı sil"
+ },
+ "Удалить?": {
+  "en": "Delete?",
+  "es": "¿Eliminar?",
+  "fr": "Supprimer ?",
+  "tr": "Silinsin mi?"
+ },
+ "Укажите имя проекта.": {
+  "en": "Enter a project name.",
+  "es": "Indique el nombre del proyecto.",
+  "fr": "Indiquez le nom du projet.",
+  "tr": "Proje adını girin."
+ },
+ "Уровень": {
+  "en": "Level",
+  "es": "Nivel",
+  "fr": "Niveau",
+  "tr": "Seviye"
+ },
+ "Уровень жидкости, м": {
+  "en": "Liquid level, m",
+  "es": "Nivel del líquido, m",
+  "fr": "Niveau du liquide, m",
+  "tr": "Sıvı seviyesi, m"
+ },
+ "Учитывать заполненность отсеков": {
+  "en": "Include compartment filling",
+  "es": "Considerar el llenado de compartimentos",
+  "fr": "Tenir compte du remplissage des compartiments",
+  "tr": "Bölme doluluğunu dikkate al"
+ },
+ "Учитывать контейнеры": {
+  "en": "Include containers",
+  "es": "Considerar los contenedores",
+  "fr": "Tenir compte des conteneurs",
+  "tr": "Konteynerleri dikkate al"
+ },
+ "Учитывать цистерны": {
+  "en": "Include tanks",
+  "es": "Considerar los tanques",
+  "fr": "Tenir compte des citernes",
+  "tr": "Tankları dikkate al"
+ },
+ "Файл": {
+  "en": "File",
+  "es": "Archivo",
+  "fr": "Fichier",
+  "tr": "Dosya"
+ },
+ "Файл отчета не найден:": {
+  "en": "Report file not found:",
+  "es": "No se encontró el archivo del informe:",
+  "fr": "Fichier de rapport introuvable :",
+  "tr": "Rapor dosyası bulunamadı:"
+ },
+ "Файл проекта не найден": {
+  "en": "Project file not found",
+  "es": "No se encontró el archivo del proyecto",
+  "fr": "Fichier de projet introuvable",
+  "tr": "Proje dosyası bulunamadı"
+ },
+ "Форма корпуса": {
+  "en": "Hull form",
+  "es": "Forma del casco",
+  "fr": "Forme de coque",
+  "tr": "Gövde formu"
+ },
+ "Форма корпуса не задана.": {
+  "en": "The hull form is not defined.",
+  "es": "La forma del casco no está definida.",
+  "fr": "La forme de coque n'est pas définie.",
+  "tr": "Gövde formu tanımlanmamış."
+ },
+ "Форма корпуса сохранена в проект.": {
+  "en": "Hull form saved to the project.",
+  "es": "Forma del casco guardada en el proyecto.",
+  "fr": "Forme de coque enregistrée dans le projet.",
+  "tr": "Gövde formu projeye kaydedildi."
+ },
+ "Форма цистерны (шпангоуты «new X», затем точки «Y Z»):": {
+  "en": "Tank shape (stations \"new X\", then points \"Y Z\"):",
+  "es": "Forma del tanque (cuadernas «new X», luego puntos «Y Z»):",
+  "fr": "Forme de la citerne (couples « new X », puis points « Y Z ») :",
+  "tr": "Tank şekli (postalar «new X», ardından «Y Z» noktaları):"
+ },
+ "Характеристики ватерлинии": {
+  "en": "Waterplane characteristics",
+  "es": "Características de la flotación",
+  "fr": "Caractéristiques de la flottaison",
+  "tr": "Su hattı özellikleri"
+ },
+ "Характеристики объема": {
+  "en": "Volume characteristics",
+  "es": "Características del volumen",
+  "fr": "Caractéristiques du volume",
+  "tr": "Hacim özellikleri"
+ },
+ "Характеристики подводного объема": {
+  "en": "Underwater volume characteristics",
+  "es": "Características del volumen sumergido",
+  "fr": "Caractéristiques du volume immergé",
+  "tr": "Su altı hacmi özellikleri"
+ },
+ "Характеристики посадки": {
+  "en": "Floating position characteristics",
+  "es": "Características de la flotación",
+  "fr": "Caractéristiques de la flottaison",
+  "tr": "Yüzme durumu özellikleri"
+ },
+ "Цистерны": {
+  "en": "Tanks",
+  "es": "Tanques",
+  "fr": "Citernes",
+  "tr": "Tanklar"
+ },
+ "Чесноков Денис Юрьевич": {
+  "en": "Denis Chesnokov",
+  "es": "Denis Chesnokov",
+  "fr": "Denis Chesnokov",
+  "tr": "Denis Chesnokov"
+ },
+ "Чтение акватории...": {
+  "en": "Reading water area...",
+  "es": "Leyendo masa de agua...",
+  "fr": "Lecture du plan d'eau...",
+  "tr": "Su alanı okunuyor..."
+ },
+ "Чтение контейнеров...": {
+  "en": "Reading containers...",
+  "es": "Leyendo contenedores...",
+  "fr": "Lecture des conteneurs...",
+  "tr": "Konteynerler okunuyor..."
+ },
+ "Чтение начальной массы и координат ЦТ...": {
+  "en": "Reading lightship mass and CG coordinates...",
+  "es": "Leyendo masa en rosca y coordenadas del CG...",
+  "fr": "Lecture de la masse lège et des coordonnées du CG...",
+  "tr": "Boş gemi kütlesi ve AM koordinatları okunuyor..."
+ },
+ "Чтение отсеков...": {
+  "en": "Reading compartments...",
+  "es": "Leyendo compartimentos...",
+  "fr": "Lecture des compartiments...",
+  "tr": "Bölmeler okunuyor..."
+ },
+ "Чтение формы корпуса...": {
+  "en": "Reading hull form...",
+  "es": "Leyendo forma del casco...",
+  "fr": "Lecture de la forme de coque...",
+  "tr": "Gövde formu okunuyor..."
+ },
+ "Чтение цистерн...": {
+  "en": "Reading tanks...",
+  "es": "Leyendo tanques...",
+  "fr": "Lecture des citernes...",
+  "tr": "Tanklar okunuyor..."
+ },
+ "Шаг водоизмещений, т:": {
+  "en": "Displacement step, t:",
+  "es": "Paso de desplazamiento, t:",
+  "fr": "Pas de déplacement, t :",
+  "tr": "Deplasman adımı, t:"
+ },
+ "Шаг осадок, м:": {
+  "en": "Draft step, m:",
+  "es": "Paso de calado, m:",
+  "fr": "Pas de tirant d'eau, m :",
+  "tr": "Su çekimi adımı, m:"
+ },
+ "Шаг угла направления наклонения": {
+  "en": "Inclination direction angle step",
+  "es": "Paso del ángulo de dirección de inclinación",
+  "fr": "Pas de l'angle de direction d'inclinaison",
+  "tr": "Eğilme yönü açısı adımı"
+ },
+ "Шаг угла пространственного наклонения": {
+  "en": "Spatial inclination angle step",
+  "es": "Paso del ángulo de inclinación espacial",
+  "fr": "Pas de l'angle d'inclinaison spatiale",
+  "tr": "Uzaysal eğilme açısı adımı"
+ },
+ "Шаг углов крена, градусы:": {
+  "en": "Heel angle step, degrees:",
+  "es": "Paso del ángulo de escora, grados:",
+  "fr": "Pas de l'angle de gîte, degrés :",
+  "tr": "Meyil açısı adımı, derece:"
+ },
+ "Ширина отсека, м": {
+  "en": "Compartment breadth, m",
+  "es": "Manga del compartimento, m",
+  "fr": "Largeur du compartiment, m",
+  "tr": "Bölme genişliği, m"
+ },
+ "Ширина по ватерлинии": {
+  "en": "Waterline breadth",
+  "es": "Manga en la flotación",
+  "fr": "Largeur à la flottaison",
+  "tr": "Su hattı genişliği"
+ },
+ "Ширина по ватерлинии, м": {
+  "en": "Waterline breadth, m",
+  "es": "Manga en la flotación, m",
+  "fr": "Largeur à la flottaison, m",
+  "tr": "Su hattı genişliği, m"
+ },
+ "Ширина формы корпуса, м:": {
+  "en": "Hull form breadth, m:",
+  "es": "Manga de la forma del casco, m:",
+  "fr": "Largeur de la forme de coque, m :",
+  "tr": "Gövde formu genişliği, m:"
+ },
+ "Ширина, м": {
+  "en": "Breadth, m",
+  "es": "Manga, m",
+  "fr": "Largeur, m",
+  "tr": "Genişlik, m"
+ },
+ "Ширина, м:": {
+  "en": "Breadth, m:",
+  "es": "Manga, m:",
+  "fr": "Largeur, m :",
+  "tr": "Genişlik, m:"
+ },
+ "Шпангоуты": {
+  "en": "Stations",
+  "es": "Cuadernas",
+  "fr": "Couples",
+  "tr": "Postalar"
+ },
+ "ватерлинии": {
+  "en": "waterline",
+  "es": "flotación",
+  "fr": "flottaison",
+  "tr": "su hattı"
+ },
+ "ватерлинии относительно": {
+  "en": "waterline about",
+  "es": "flotación respecto",
+  "fr": "flottaison par rapport",
+  "tr": "su hattının"
+ },
+ "величина": {
+  "en": "value",
+  "es": "valor",
+  "fr": "valeur",
+  "tr": "değer"
+ },
+ "величина характеристики, м, м^2, м^3, т": {
+  "en": "value, m, m^2, m^3, t",
+  "es": "valor, m, m^2, m^3, t",
+  "fr": "valeur, m, m^2, m^3, t",
+  "tr": "değer, m, m^2, m^3, t"
+ },
+ "выберите проект в списке ниже (кнопка «копировать»)": {
+  "en": "select a project in the list below (the \"copy\" button)",
+  "es": "seleccione un proyecto en la lista inferior (botón «copiar»)",
+  "fr": "choisissez un projet dans la liste ci-dessous (bouton « copier »)",
+  "tr": "aşağıdaki listeden bir proje seçin («kopyala» düğmesi)"
+ },
+ "градусов": {
+  "en": "degrees",
+  "es": "grados",
+  "fr": "degrés",
+  "tr": "derece"
+ },
+ "градусов)": {
+  "en": "degrees)",
+  "es": "grados)",
+  "fr": "degrés)",
+  "tr": "derece)"
+ },
+ "градусов, угол дифферента": {
+  "en": "degrees, trim angle",
+  "es": "grados, ángulo de asiento",
+  "fr": "degrés, angle d'assiette",
+  "tr": "derece, trim açısı"
+ },
+ "градусов;": {
+  "en": "degrees;",
+  "es": "grados;",
+  "fr": "degrés ;",
+  "tr": "derece;"
+ },
+ "грузовой план": {
+  "en": "loading plan",
+  "es": "plan de carga",
+  "fr": "plan de chargement",
+  "tr": "yükleme planı"
+ },
+ "дифферента, градусы:": {
+  "en": "trim, degrees:",
+  "es": "asiento, grados:",
+  "fr": "assiette, degrés :",
+  "tr": "trim, derece:"
+ },
+ "жидкости, м": {
+  "en": "liquid, m",
+  "es": "líquido, m",
+  "fr": "liquide, m",
+  "tr": "sıvı, m"
+ },
+ "затопление отсека": {
+  "en": "compartment flooding",
+  "es": "inundación de compartimento",
+  "fr": "envahissement d'un compartiment",
+  "tr": "bölme yaralanması"
+ },
+ "кв.м.;": {
+  "en": "m²;",
+  "es": "m²;",
+  "fr": "m² ;",
+  "tr": "m²;"
+ },
+ "координата:подпись;": {
+  "en": "coordinate:label;",
+  "es": "coordenada:etiqueta;",
+  "fr": "coordonnée:libellé;",
+  "tr": "koordinat:etiket;"
+ },
+ "крена, градусы:": {
+  "en": "heel, degrees:",
+  "es": "escora, grados:",
+  "fr": "gîte, degrés :",
+  "tr": "meyil, derece:"
+ },
+ "куб.м.": {
+  "en": "m³",
+  "es": "m³",
+  "fr": "m³",
+  "tr": "m³"
+ },
+ "левого борта, м": {
+  "en": "port side, m",
+  "es": "babor, m",
+  "fr": "bâbord, m",
+  "tr": "iskele, m"
+ },
+ "м": {
+  "en": "m",
+  "es": "m",
+  "fr": "m",
+  "tr": "m"
+ },
+ "м, м^2, м^3, т": {
+  "en": "m, m^2, m^3, t",
+  "es": "m, m^2, m^3, t",
+  "fr": "m, m^2, m^3, t",
+  "tr": "m, m^2, m^3, t"
+ },
+ "м.;": {
+  "en": "m;",
+  "es": "m;",
+  "fr": "m ;",
+  "tr": "m;"
+ },
+ "м;": {
+  "en": "m;",
+  "es": "m;",
+  "fr": "m ;",
+  "tr": "m;"
+ },
+ "м^3;": {
+  "en": "m^3;",
+  "es": "m^3;",
+  "fr": "m^3 ;",
+  "tr": "m^3;"
+ },
+ "метацентрическая высота, м": {
+  "en": "metacentric height, m",
+  "es": "altura metacéntrica, m",
+  "fr": "hauteur métacentrique, m",
+  "tr": "metasantr yüksekliği, m"
+ },
+ "метацентрический": {
+  "en": "metacentric",
+  "es": "metacéntrico",
+  "fr": "métacentrique",
+  "tr": "metasantr"
+ },
+ "общей полноты": {
+  "en": "block",
+  "es": "de bloque",
+  "fr": "de bloc",
+  "tr": "blok"
+ },
+ "объем, куб.м.": {
+  "en": "volume, m³",
+  "es": "volumen, m³",
+  "fr": "volume, m³",
+  "tr": "hacim, m³"
+ },
+ "осадка, м": {
+  "en": "draft, m",
+  "es": "calado, m",
+  "fr": "tirant d'eau, m",
+  "tr": "su çekimi, m"
+ },
+ "оси абсцисс, м^4": {
+  "en": "X axis, m^4",
+  "es": "eje X, m^4",
+  "fr": "axe X, m^4",
+  "tr": "X ekseni, m^4"
+ },
+ "оси ординат, м^4": {
+  "en": "Y axis, m^4",
+  "es": "eje Y, m^4",
+  "fr": "axe Y, m^4",
+  "tr": "Y ekseni, m^4"
+ },
+ "относительно": {
+  "en": "about",
+  "es": "respecto a",
+  "fr": "par rapport à",
+  "tr": "göre"
+ },
+ "перемещение груза": {
+  "en": "cargo shift",
+  "es": "traslado de carga",
+  "fr": "déplacement de charge",
+  "tr": "yük kaydırma"
+ },
+ "плечи остойчивости формы, м": {
+  "en": "form stability arms, m",
+  "es": "brazos de estabilidad de formas, m",
+  "fr": "bras de stabilité de forme, m",
+  "tr": "form stabilite kolları, m"
+ },
+ "плечи остойчивости, м": {
+  "en": "stability arms, m",
+  "es": "brazos de estabilidad, m",
+  "fr": "bras de stabilité, m",
+  "tr": "stabilite kolları, m"
+ },
+ "поперечная остойчивость": {
+  "en": "transverse stability",
+  "es": "estabilidad transversal",
+  "fr": "stabilité transversale",
+  "tr": "enine stabilite"
+ },
+ "правого борта, м": {
+  "en": "starboard side, m",
+  "es": "estribor, m",
+  "fr": "tribord, m",
+  "tr": "sancak, m"
+ },
+ "продольная остойчивость": {
+  "en": "longitudinal stability",
+  "es": "estabilidad longitudinal",
+  "fr": "stabilité longitudinale",
+  "tr": "boyuna stabilite"
+ },
+ "проект не открыт": {
+  "en": "no project open",
+  "es": "ningún proyecto abierto",
+  "fr": "aucun projet ouvert",
+  "tr": "açık proje yok"
+ },
+ "радиус, м": {
+  "en": "radius, m",
+  "es": "radio, m",
+  "fr": "rayon, m",
+  "tr": "yarıçap, m"
+ },
+ "т.": {
+  "en": "t",
+  "es": "t",
+  "fr": "t",
+  "tr": "t"
+ },
+ "т/куб.м.": {
+  "en": "t/m³",
+  "es": "t/m³",
+  "fr": "t/m³",
+  "tr": "t/m³"
+ },
+ "т;": {
+  "en": "t;",
+  "es": "t;",
+  "fr": "t ;",
+  "tr": "t;"
+ },
+ "углы крена, градусы": {
+  "en": "heel angles, degrees",
+  "es": "ángulos de escora, grados",
+  "fr": "angles de gîte, degrés",
+  "tr": "meyil açıları, derece"
+ },
+ "удалить": {
+  "en": "delete",
+  "es": "eliminar",
+  "fr": "supprimer",
+  "tr": "sil"
+ },
+ "форму корпуса...": {
+  "en": "hull form...",
+  "es": "forma del casco...",
+  "fr": "forme de coque...",
+  "tr": "gövde formu..."
+ },
+ "характеристики,": {
+  "en": "characteristic,",
+  "es": "característica,",
+  "fr": "caractéristique,",
+  "tr": "özellik,"
+ },
+ "— копия": {
+  "en": "— copy",
+  "es": "— copia",
+  "fr": "— copie",
+  "tr": "— kopya"
+ },
+ "← К списку проектов": {
+  "en": "← Back to projects",
+  "es": "← Volver a los proyectos",
+  "fr": "← Retour aux projets",
+  "tr": "← Projelere dön"
+ }
+}

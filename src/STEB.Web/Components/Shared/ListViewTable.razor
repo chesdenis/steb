@@ -1,0 +1,21 @@
+@* View of a headless ListView (STEB.Compat): click selects, Ctrl/Cmd-click adds to the selection. *@
+<div class="grid-wrap">
+    <table class="grid list">
+        <thead><tr>@foreach (var c in List.Columns) { <th>@L.T(c.Text)</th> }</tr></thead>
+        <tbody>
+            @foreach (var item in List.Items)
+            {
+                var it = item;
+                <tr class="@(it.Selected ? "selected" : "")" @onclick="e => List.Select(it, e.CtrlKey || e.MetaKey)">
+                    @for (int i = 0; i < List.Columns.Count; i++)
+                    {
+                        <td>@L.T(i < it.SubItems.Count ? it.SubItems[i].Text : "")</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.ListView List { get; set; }
+}

@@ -1,0 +1,50 @@
+@* View of STEB2.Controls.ProjectCisterns (inside frmCisterns "Редактирование цистерн"). *@
+@inject IJSRuntime JS
+
+<div class="toolbar">
+    <button @onclick="Add"><b>@L.T(model.toolStripButton_AddCistern.Text)</b></button>
+    <button disabled="@(model.listView_Cisterns.SelectedItems.Count == 0)" @onclick="Delete"><b>@L.T(model.toolStripButton_DeleteCistern.Text)</b></button>
+    <button disabled="@(model.listView_Cisterns.SelectedItems.Count == 0)" @onclick="Modify"><b>@L.T(model.toolStripButton_ModifyCistern.Text)</b></button>
+</div>
+<ListViewTable List="model.listView_Cisterns" />
+
+@if (edit != null)
+{
+    <Modal Title="@edit.Value.title" Class="large" OnClose="CloseEdit">
+        <CisternParamsEditor Model="edit.Value.editor" />
+    </Modal>
+}
+
+@code {
+    private STEB2.Controls.ProjectCisterns model;
+    private (string title, STEB2.CisternMainParameter editor, string question, Action after)? edit;
+
+    protected override void OnInitialized()
+    {
+        model = new STEB2.Controls.ProjectCisterns();
+        model.listView_Cisterns.MultiSelect = false;
+        model.EditRequested += (title, editor, question, after) => edit = (title, editor, question, after);
+    }
+
+    private void Add() => model.toolStripButton_AddCistern_Click(model.toolStripButton_AddCistern, EventArgs.Empty);
+    private void Modify() => model.toolStripButton_ModifyCistern_Click(model.toolStripButton_ModifyCistern, EventArgs.Empty);
+
+    private async Task Delete() =>
+        await Ask("Удалить?", () => model.toolStripButton_DeleteCistern_Click(model.toolStripButton_DeleteCistern, EventArgs.Empty));
+
+    private async Task CloseEdit()
+    {
+        var e = edit.Value;
+        edit = null;
+        await Ask(e.question, e.after);
+    }
+
+    /// <summary>Asks the question the original showed with MessageBox (Yes/No) and runs the code with that answer.</summary>
+    private async Task Ask(string question, Action action)
+    {
+        bool yes = await JS.InvokeAsync<bool>("confirm", L.T(question));
+        System.Windows.Forms.MessageBox.Handler = _ => yes ? System.Windows.Forms.DialogResult.Yes : System.Windows.Forms.DialogResult.No;
+        try { action(); }
+        finally { System.Windows.Forms.MessageBox.Handler = null; }
+    }
+}

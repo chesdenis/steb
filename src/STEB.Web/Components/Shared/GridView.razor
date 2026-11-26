@@ -1,0 +1,39 @@
+@* View of a headless DataGridView (STEB.Compat): edit cells, add and delete rows. *@
+<div class="grid-tools">
+    <button @onclick="AddRow" disabled="@Grid.ReadOnly">@L.T("Добавить строку")</button>
+    <span class="muted small">@L.T("Изменения сохраняются в проект сразу после редактирования ячейки.")</span>
+</div>
+<div class="grid-wrap">
+    <table class="grid">
+        <thead>
+            <tr>
+                <th class="rownum">#</th>
+                @foreach (var c in Grid.Columns)
+                {
+                    <th title="@L.T(c.ToolTipText)">@L.T(c.HeaderText)</th>
+                }
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int r = 0; r < Grid.Rows.Count; r++)
+            {
+                int row = r;
+                <tr>
+                    <td class="rownum">@(row + 1)</td>
+                    @for (int c = 0; c < Grid.Columns.Count; c++)
+                    {
+                        int col = c;
+                        <td><input value="@Grid.Rows[row].Cells[col].Value" readonly="@(Grid.ReadOnly || Grid.Columns[col].ReadOnly)"
+                                   @onchange="e => Grid.EndEdit(row, col, e.Value?.ToString())" /></td>
+                    }
+                    <td><button class="link" title="@L.T("Удалить строку")" disabled="@Grid.ReadOnly" @onclick="() => Grid.Rows.RemoveAt(row)">@L.T("удалить")</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.DataGridView Grid { get; set; }
+    private void AddRow() => Grid.Rows.Add();
+}

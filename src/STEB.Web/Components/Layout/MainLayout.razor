@@ -1,0 +1,80 @@
+@inherits LayoutComponentBase
+@implements IDisposable
+@inject ProjectService Projects
+@inject NavigationManager Nav
+
+<div class="app">
+    <header class="titlebar">
+        <span class="title">@L.T("STEB — панель управления загрузкой судна")</span>
+        <span class="project">@(Projects.CurrentName ?? L.T("проект не открыт"))</span>
+    </header>
+    <nav class="menubar">
+        <MenuGroup Title="@L.T("Файл")">
+            <MenuItem Href="">@L.T("Открыть...")</MenuItem>
+            <MenuItem Href="?new=1">@L.T("Создать...")</MenuItem>
+            <MenuItem Href="?proto=1">@L.T("Создать на основе прототипа...")</MenuItem>
+            <MenuItem Href="?saveas=1" NeedsProject="true">@L.T("Сохранить как...")</MenuItem>
+            <MenuItem Href="download/project" NeedsProject="true" External="true">@L.T("Скачать файл проекта")</MenuItem>
+            <MenuItem Href="panel" NeedsProject="true">@L.T("Панель управления")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@L.T("Исходные данные")">
+            <MenuItem Href="panel?dlg=hull" NeedsProject="true">@L.T("Редактировать форму корпуса")</MenuItem>
+            <MenuItem Href="panel?dlg=hull3d" NeedsProject="true">@L.T("3D вид корпуса")</MenuItem>
+            <MenuItem Href="panel?dlg=transv" NeedsProject="true">@L.T("Поперечные сечения")</MenuItem>
+            <MenuItem Href="panel?dlg=long" NeedsProject="true">@L.T("Продольные сечения")</MenuItem>
+            <MenuItem Href="panel?dlg=aquatory" NeedsProject="true">@L.T("Редактировать акваторию")</MenuItem>
+            <MenuItem Href="panel?dlg=gposition" NeedsProject="true">@L.T("Начальные Масса и ЦТ")</MenuItem>
+            <MenuItem Href="panel?dlg=compartments" NeedsProject="true">@L.T("Отсеки")</MenuItem>
+            <MenuItem Href="panel?dlg=cisterns" NeedsProject="true">@L.T("Цистерны")</MenuItem>
+            <MenuItem Href="panel?dlg=containers" NeedsProject="true">@L.T("Контейнеры")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@L.T("Расчеты")">
+            <MenuItem Href="panel?dlg=sample" NeedsProject="true">@L.T("Произвольная посадка судна")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@L.T("Диаграммы и графики")">
+            <MenuItem Href="panel?dlg=gryz" NeedsProject="true">@L.T("Грузовой размер")</MenuItem>
+            <MenuItem Href="panel?dlg=xcxf" NeedsProject="true">@L.T("Диаграмма Xc и Xf")</MenuItem>
+            <MenuItem Href="panel?dlg=rzc" NeedsProject="true">@L.T("Диаграмма r и Zc")</MenuItem>
+            <MenuItem Href="panel?dlg=hydrocoeff" NeedsProject="true">@L.T("Диаграммы коэффициентов полноты")</MenuItem>
+            <MenuItem Href="panel?dlg=stability" NeedsProject="true">@L.T("Диаграммы остойчивости")</MenuItem>
+            <MenuItem Href="panel?dlg=pantokareni" NeedsProject="true">@L.T("Диаграмма плеч остойчивости формы")</MenuItem>
+            <MenuItem Href="panel?dlg=circle" NeedsProject="true">@L.T("Круговая диаграмма остойчивости")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@L.T("Отчеты и документы")">
+            <MenuItem Href="panel?dlg=hydrostatic" NeedsProject="true">@L.T("Отчет по гидростатике")</MenuItem>
+            <MenuItem Href="panel?dlg=report" NeedsProject="true">@L.T("Отчет о посадке")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@L.T("Справка")">
+            <MenuItem Href="author">@L.T("Об авторе")</MenuItem>
+        </MenuGroup>
+        <MenuGroup Title="@("🌐 " + CurrentLanguageName)" Class="menu-right">
+            @foreach (var lang in L.Languages)
+            {
+                var code = lang.Code;
+                <a class="menu-item @(code == L.Language ? "checked" : "")" href="" @onclick="() => SetLanguage(code)" @onclick:preventDefault="true">@lang.Name</a>
+            }
+        </MenuGroup>
+    </nav>
+    <main class="content">
+        @Body
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    @L.T("Произошла ошибка.") <a href="" class="reload">@L.T("Перезагрузить")</a> <a class="dismiss">🗙</a>
+</div>
+
+@code {
+    protected override void OnInitialized() => Projects.Changed += OnChanged;
+    private void OnChanged() => InvokeAsync(StateHasChanged);
+    public void Dispose() => Projects.Changed -= OnChanged;
+
+    private static string CurrentLanguageName => L.Languages.First(l => l.Code == L.Language).Name;
+
+    // Global setting: saved for the whole app; reload so every text (including drawings) is rebuilt.
+    private void SetLanguage(string code)
+    {
+        L.SetLanguage(code);
+        Nav.NavigateTo(Nav.Uri, forceLoad: true);
+    }
+}

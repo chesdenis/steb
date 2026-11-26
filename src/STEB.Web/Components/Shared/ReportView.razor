@@ -1,0 +1,34 @@
+@* View of STEB2.ReportControl (a WebBrowser showing a saved HTML report).
+   Pictures referenced by the report are embedded; drawings were saved as SVG. *@
+@inject IJSRuntime JS
+<div class="report-view">
+    <div class="report-tools">
+        <button @onclick="Print">@L.T("Печать")</button>
+        <button @onclick="Download">@L.T("Скачать отчет (.html)")</button>
+        <span class="muted small">@System.IO.Path.GetFileName((Report.webBrowser.Url ?? "").Replace('\\', '/'))</span>
+    </div>
+    <iframe class="report-frame" srcdoc="@html" @ref="frame"></iframe>
+</div>
+@code {
+    [Parameter, EditorRequired] public STEB2.ReportControl Report { get; set; }
+    private ElementReference frame;
+    private string html = "", loadedUrl;
+    private DateTime loadedStamp;
+
+    protected override void OnParametersSet() => Load();
+
+    private void Load()
+    {
+        string url = Report.webBrowser.Url;
+        if (string.IsNullOrEmpty(url)) { html = "<p style='font-family:sans-serif;color:#777'>" + L.T("Нет отчета.") + "</p>"; return; }
+        DateTime stamp = System.IO.File.Exists(url) ? System.IO.File.GetLastWriteTimeUtc(url) : DateTime.MinValue;
+        if (url == loadedUrl && stamp == loadedStamp) return;
+        loadedUrl = url; loadedStamp = stamp;
+        html = L.T(ReportFiles.LoadForDisplay(url));
+    }
+
+    private async Task Print() => await JS.InvokeVoidAsync("steb.printFrame", frame);
+
+    private async Task Download() =>
+        await JS.InvokeVoidAsync("steb.download", System.IO.Path.GetFileName((loadedUrl ?? "report.html").Replace('\\', '/')), "text/html", html);
+}

@@ -1,0 +1,40 @@
+@* View of STEB2.CisternMainParameter: tank geometry and filling. Values apply on Enter / leaving a field. *@
+<div class="cistern-layout">
+    <div class="cistern-fields">
+        <fieldset>
+            <legend>@L.T("Вы можете редактировать белые поля")</legend>
+            <div class="grid2">
+                <label>@L.T("Название цистерны:")</label><TextField Box="Model.textBox_Name" />
+                <label>@L.T("Плотность жидкости в цистерне, т/куб.м.:")</label><NumberField Field="Model.usgNumberField_CisternDensity" />
+                <label>@L.T("% заполнения")</label><NumberField Field="Model.usgNumberField_percOfVolume" />
+                <label>@L.T("Расчетный объем в цистерне, куб.м.")</label><NumberField Field="Model.usgNumberField_CalcVolume" />
+                <label>@L.T("Расчетный вес жидкости в цистерне, т")</label><NumberField Field="Model.usgNumberField_CalcMass" />
+                <label>@L.T("Расчетный уровень жидкости в цистерне, м")</label><NumberField Field="Model.usgNumberField_CalcWaterLevel" />
+                <label>@L.T("Максимальный объем в цистерне, куб.м.")</label><NumberField Field="Model.usgNumberField_MaxVolume" />
+                <label>@L.T("Максимальный вес жидкости в цистерне, т")</label><NumberField Field="Model.usgNumberField_MaxMass" />
+                <label>@L.T("Длина, м:")</label><NumberField Field="Model.usgNumberField_L" />
+                <label>@L.T("Ширина, м:")</label><NumberField Field="Model.usgNumberField_B" />
+                <label>@L.T("Высота, м:")</label><NumberField Field="Model.usgNumberField_H" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>@L.T("Введите координаты положения цистерны")</legend>
+            <div class="grid4">
+                <label>@L.T("x0, м:")</label><NumberField Field="Model.usgNumberField_x0" />
+                <label>@L.T("x1, м:")</label><NumberField Field="Model.usgNumberField_x1" />
+                <label>@L.T("y0, м:")</label><NumberField Field="Model.usgNumberField_y0" />
+                <label>@L.T("y1, м:")</label><NumberField Field="Model.usgNumberField_y1" />
+                <label>@L.T("z0, м:")</label><NumberField Field="Model.usgNumberField_z0" />
+                <label>@L.T("z1, м:")</label><NumberField Field="Model.usgNumberField_z1" />
+            </div>
+        </fieldset>
+        <div class="caption">@L.T("Форма цистерны (шпангоуты «new X», затем точки «Y Z»):")</div>
+        <TextField Box="Model.richTextBox" Multiline="true" Class="cistern-text" />
+    </div>
+    <div class="cistern-drawing">
+        <ModelFrame Frame="Model.usgModelFrame" Height="auto" FileName="cistern" />
+    </div>
+</div>
+@code {
+    [Parameter, EditorRequired] public STEB2.CisternMainParameter Model { get; set; }
+}

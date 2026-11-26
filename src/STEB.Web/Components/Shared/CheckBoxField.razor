@@ -1,0 +1,5 @@
+@* View of a WinForms CheckBox model (STEB.Compat). *@
+<label class="checkbox"><input type="checkbox" checked="@Box.Checked" disabled="@(!Box.Enabled)" @onchange="e => Box.Checked = e.Value is bool b && b" /> @L.T(Box.Text)</label>
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.CheckBox Box { get; set; }
+}

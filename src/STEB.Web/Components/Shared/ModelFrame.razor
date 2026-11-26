@@ -1,0 +1,120 @@
+@* View of the original usgModelFrame control: toolbar + drawing area with zoom (wheel) and pan (drag). *@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+
+<div class="mf">
+    <div class="mf-toolbar">
+        <button @onclick="ZoomAll">@L.T("Подобрать масштаб")</button>
+        <button @onclick="SaveImage">@L.T("Сохранить изображение")</button>
+        <span class="sep"></span>
+        <label>@L.T("Масштаб по оси X:") <input class="mf-num" value="@Frame.toolStripTextBox_ScaleX.Text" @onchange="e => SetText(Frame.toolStripTextBox_ScaleX, e)" /></label>
+        <label>@L.T("Масштаб по оси Y:") <input class="mf-num" value="@Frame.toolStripTextBox_ScaleY.Text" @onchange="e => SetText(Frame.toolStripTextBox_ScaleY, e)" /></label>
+        <label>@L.T("Размер текста:") <input class="mf-num" value="@Frame.toolStripTextBox_FontSize.Text" @onchange="e => SetText(Frame.toolStripTextBox_FontSize, e)" /></label>
+    </div>
+    <div class="mf-canvas" style="height:@(Height)" @ref="canvas"></div>
+</div>
+
+@code {
+    [Parameter, EditorRequired] public STEB2.usgModelFrame Frame { get; set; }
+    [Parameter] public string Height { get; set; } = "420px";
+    [Parameter] public string FileName { get; set; } = "drawing";
+    /// <summary>While true (a calculation is filling the display list) nothing is rendered.</summary>
+    [Parameter] public bool Suspended { get; set; }
+
+    private ElementReference canvas;
+    private DotNetObjectReference<ModelFrame> self;
+    private STEB2.usgModelFrame attached;
+    private bool ready, pushing, pending, inMouse;
+
+    private bool wasSuspended;
+
+    protected override void OnParametersSet()
+    {
+        if (wasSuspended && !Suspended && ready) _ = Push();
+        wasSuspended = Suspended;
+        if (ReferenceEquals(attached, Frame)) return;
+        if (attached != null) attached.Invalidated -= OnInvalidated;
+        attached = Frame;
+        attached.Invalidated += OnInvalidated;
+        if (ready) _ = Push();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+        self = DotNetObjectReference.Create(this);
+        var size = await JS.InvokeAsync<int[]>("steb.attachFrame", canvas, self);
+        Frame.SetViewSize(size[0], size[1]);
+        ready = true;
+        await Push();
+    }
+
+    private void OnInvalidated(object sender, EventArgs e)
+    {
+        if (ready && !inMouse && !Suspended) _ = InvokeAsync(Push);
+    }
+
+    private async Task Push()
+    {
+        if (Suspended) return;
+        if (pushing) { pending = true; return; }
+        pushing = true;
+        try
+        {
+            do
+            {
+                pending = false;
+                await JS.InvokeVoidAsync("steb.setSvg", canvas, Frame.RenderSvg());
+            } while (pending);
+        }
+        catch (JSDisconnectedException) { }
+        catch (TaskCanceledException) { }
+        finally { pushing = false; }
+    }
+
+    [JSInvokable]
+    public string OnMouse(string kind, int x, int y, int delta)
+    {
+        inMouse = true;
+        try
+        {
+            switch (kind)
+            {
+                case "down": Frame.MouseDown(x, y); break;
+                case "move": Frame.MouseMove(x, y); break;
+                case "up": Frame.MouseUp(x, y); break;
+                case "wheel": Frame.MouseWheel(x, y, delta); break;
+                case "enter": Frame.MouseEnter(); break;
+                case "leave": Frame.MouseLeave(); break;
+            }
+        }
+        finally { inMouse = false; }
+        return Frame.RenderSvg();
+    }
+
+    [JSInvokable]
+    public string OnResize(int width, int height)
+    {
+        Frame.SetViewSize(width, height);
+        return Frame.RenderSvg();
+    }
+
+    private void SetText(System.Windows.Forms.ToolStripTextBox box, ChangeEventArgs e)
+    {
+        box.Text = e.Value?.ToString() ?? "";
+        _ = Push();
+    }
+
+    private Task ZoomAll() { Frame.ZoomAll(); return Push(); }
+
+    private async Task SaveImage() =>
+        await JS.InvokeVoidAsync("steb.download", FileName + ".svg", "image/svg+xml", Frame.ExportImageSvg());
+
+
+    public async ValueTask DisposeAsync()
+    {
+        if (attached != null) attached.Invalidated -= OnInvalidated;
+        try { if (ready) await JS.InvokeVoidAsync("steb.detachFrame", canvas); } catch (JSDisconnectedException) { }
+        self?.Dispose();
+    }
+}

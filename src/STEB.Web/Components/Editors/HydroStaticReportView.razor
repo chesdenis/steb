@@ -1,0 +1,19 @@
+@* View of STEB_LOAD.frmHydroStaticReport ("Отчет по гидростатике"). *@
+<div class="hydro-layout">
+    <fieldset>
+        <legend>@L.T("Расчет гидростатических характеристик")</legend>
+        <p class="muted small">@L.T("Значения через запятую или диапазон «начало, следующее...конец» (например") <code>0.5, 1...3</code>).</p>
+        <div class="grid2 wide">
+            <label>@L.T(Model.label1.Text)</label><NumberField Field="Model.usgNumberField_d" />
+            <label>@L.T(Model.label2.Text)</label><NumberField Field="Model.usgNumberField_V" />
+            <label>@L.T(Model.label3.Text)</label><NumberField Field="Model.usgNumberField_DSPL" />
+        </div>
+        <button class="bold" disabled="@Host.IsBusy" @onclick="Calc">@L.T(Model.buttonCalc.Text)</button>
+    </fieldset>
+    <div class="form-fill"><ReportView Report="Model.reportControl" /></div>
+</div>
+@code {
+    [Parameter, EditorRequired] public STEB_LOAD.frmHydroStaticReport Model { get; set; }
+    [CascadingParameter] public FormHost Host { get; set; }
+    private Task Calc() => Host.Run(() => Model.buttonCalc_Click(Model.buttonCalc, EventArgs.Empty));
+}

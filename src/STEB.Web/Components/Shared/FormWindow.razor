@@ -1,0 +1,22 @@
+@* A window for a Form opened by the original code with Show()/ShowDialog(). *@
+<Modal Title="@Form.Text" Class="large" OnClose="OnClose">
+    @switch (Form)
+    {
+        case STEB_LOAD.frmDiagrammStability f:
+            <DiagrammStabilityView Model="f" />
+            break;
+        case STEB_LOAD.frmSampleWaterlanding f:
+            <SampleWaterlandingView Model="f" />
+            break;
+        case STEB_LOAD.frmHydroStaticReport f:
+            <HydroStaticReportView Model="f" />
+            break;
+        default:
+            <FormView Form="Form" />
+            break;
+    }
+</Modal>
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.Form Form { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+}

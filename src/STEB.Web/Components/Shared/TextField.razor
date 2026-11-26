@@ -1,0 +1,23 @@
+@* View of a WinForms TextBox / RichTextBox model (STEB.Compat). Change = LostFocus. *@
+@if (Multiline)
+{
+    <textarea class="@Class" spellcheck="false" readonly="@Box.ReadOnly" value="@Box.Text" @onchange="OnChange" style="@Style"></textarea>
+}
+else
+{
+    <input class="@Class" readonly="@Box.ReadOnly" value="@Box.Text" @onchange="OnChange" style="@Style" />
+}
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.TextBox Box { get; set; }
+    [Parameter] public bool Multiline { get; set; }
+    [Parameter] public string Class { get; set; }
+    [Parameter] public string Style { get; set; }
+    [Parameter] public EventCallback Changed { get; set; }
+
+    private async Task OnChange(ChangeEventArgs e)
+    {
+        Box.Text = e.Value?.ToString() ?? "";
+        Box.RaiseLostFocus();
+        await Changed.InvokeAsync();
+    }
+}

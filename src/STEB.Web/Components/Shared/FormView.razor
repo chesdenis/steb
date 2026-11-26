@@ -1,0 +1,51 @@
+@* Generic view of a form whose controls the original code created itself
+   (tool strips with labels / text boxes / buttons, a usgModelFrame, a ReportControl). *@
+@inject IJSRuntime JS
+<div class="form-view">
+    @foreach (var c in Form.Controls.OfType<System.Windows.Forms.ToolStrip>())
+    {
+        <div class="form-toolstrip">
+            @foreach (var item in c.Items)
+            {
+                var it = item;
+                switch (it)
+                {
+                    case System.Windows.Forms.ToolStripTextBox tb:
+                        <input class="ts-input" value="@tb.Text" onkeypress="return stebNumericKey(event)" @onchange="e => tb.Text = e.Value?.ToString() ?? string.Empty" />
+                        break;
+                    case System.Windows.Forms.ToolStripButton b:
+                        <button class="@(b.Font.Bold ? "bold" : "")" disabled="@(!b.Enabled || Host.IsBusy)" @onclick="() => ClickAsync(b)">@L.T(b.Text)</button>
+                        break;
+                    case System.Windows.Forms.ToolStripLabel l:
+                        <span class="ts-label">@L.T(l.Text)</span>
+                        break;
+                }
+            }
+        </div>
+    }
+    @foreach (var c in Form.Controls.Where(x => x is not System.Windows.Forms.ToolStrip))
+    {
+        switch (c)
+        {
+            case STEB2.usgModelFrame mf:
+                <div class="form-fill"><ModelFrame Frame="mf" Height="auto" FileName="@FileName" Suspended="Host.IsBusy" /></div>
+                break;
+            case STEB2.ReportControl rc:
+                <div class="form-fill"><ReportView Report="rc" /></div>
+                break;
+        }
+    }
+</div>
+@code {
+    [Parameter, EditorRequired] public System.Windows.Forms.Form Form { get; set; }
+    [CascadingParameter] public FormHost Host { get; set; }
+
+    private string FileName => string.IsNullOrWhiteSpace(Form.Text) ? "drawing" : Form.Text.Trim().TrimEnd(':');
+
+    private Task ClickAsync(System.Windows.Forms.ToolStripButton b) => Host.Run(() =>
+    {
+        b.PerformClick();
+        // Web addition: fit the form's drawings after a calculation.
+        foreach (var mf in Form.Controls.OfType<STEB2.usgModelFrame>()) mf.ZoomAll();
+    });
+}

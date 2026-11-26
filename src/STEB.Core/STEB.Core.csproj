@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    STEB.Core: the calculation engine recovered from STEB_LOAD_DLL.dll (2010),
+    retargeted from .NET 2.0 to modern .NET. Business logic is unchanged; only
+    framework-specific parts were replaced:
+      * Access/OleDb  -> JSON database provider (STEB2.DataBase.Json)
+      * GDI+/WinForms -> STEB.Compat (SVG rendering, headless controls)
+      * AutoCAD COM   -> removed
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>STEB.Core</AssemblyName>
+    <RootNamespace>STEB2</RootNamespace>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <Version>1.0.0.0</Version>
+    <Company>Denis Chesnokov</Company>
+    <Copyright>Copyright © 2010 Чесноков Денис Юрьевич</Copyright>
+    <!-- decompiled code: silence style/obsolete noise, keep real errors -->
+    <NoWarn>CS0162;CS0168;CS0219;CS0414;CS0649;CS0169;CS0436;CS8981;SYSLIB0014</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STEB.Compat\STEB.Compat.csproj" />
+  </ItemGroup>
+</Project>

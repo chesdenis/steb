@@ -1,0 +1,13 @@
+@page "/hull"
+@inject ProjectService Projects
+
+<h1>@L.T("Форма корпуса")</h1>
+
+@if (Projects.CurrentFile == null)
+{
+    <div class="msg info">@L.T("Сначала откройте или создайте проект.")</div>
+}
+else
+{
+    <HullFormEditor />
+}

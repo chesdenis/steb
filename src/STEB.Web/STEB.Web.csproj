@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!--
+    STEB (originally STEB_LOAD.exe, 2010) recovered as an ASP.NET Core Blazor Server app.
+    Controls/  : the original WinForms controls/forms as headless models (code kept as decompiled)
+    Components/: Razor views that render those models
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>STEB.Web</RootNamespace>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <!-- assembly attributes (originally STEB_LOAD.exe, 2010) -->
+    <AssemblyTitle>STEB</AssemblyTitle>
+    <Description>Программа предназначена для расчета посадки при различной загрузке судна</Description>
+    <Company>Denis Chesnokov</Company>
+    <Product>STEB</Product>
+    <Copyright>Copyright ©  2010 Чесноков Денис Юрьевич</Copyright>
+    <Version>1.0.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <NoWarn>CS0162;CS0168;CS0219;CS0414;CS0649;CS0169;CS0436;CS8981</NoWarn>
+    <!-- an unknown component tag would silently render as empty HTML -->
+    <WarningsAsErrors>RZ10012</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\STEB.Core\STEB.Core.csproj" />
+    <ProjectReference Include="..\STEB.Compat\STEB.Compat.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Templates\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Update="Resources\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Remove="settings.json" />
+  </ItemGroup>
+</Project>

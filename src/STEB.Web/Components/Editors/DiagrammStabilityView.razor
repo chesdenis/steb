@@ -1,0 +1,60 @@
+@* View of STEB_LOAD.frmDiagrammStability ("Диаграммы остойчивости"): two tabs, transverse / longitudinal. *@
+<div class="tabs">
+    <button class="tab @(tab == 0 ? "active" : "")" @onclick="() => tab = 0">@L.T("Диаграммы поперечной остойчивости")</button>
+    <button class="tab @(tab == 1 ? "active" : "")" @onclick="() => tab = 1">@L.T("Диаграммы продольной остойчивости")</button>
+</div>
+@if (tab == 0)
+{
+    <div class="stab-layout">
+        <fieldset class="stab-params">
+            <legend>@L.T("Параметры диаграммы")</legend>
+            <div class="grid2">
+                <label>@L.T(Model.label1.Text)</label><NumberField Field="Model.usgNumberField_transvStartAngle" />
+                <label>@L.T(Model.label2.Text)</label><NumberField Field="Model.usgNumberField_transvEndAngle" />
+                <label>@L.T(Model.label3.Text)</label><NumberField Field="Model.usgNumberField_transvStepAngle" />
+            </div>
+            <CheckBoxField Box="Model.checkBox_isDrawDDOForTransvStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingCompartmentsForTransvStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingCisternsForTransvStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingContainersForTransvStab" />
+            <div class="stab-buttons">
+                <button class="bold" disabled="@Host.IsBusy" @onclick="() => Run(() => Model.button_calc_transvStabDiagramm_Click(Model.button_calc_transvStabDiagramm, EventArgs.Empty), Model.usgModelFrame_transvStabDiagramm)">@L.T(Model.button_calc_transvStabDiagramm.Text)</button>
+                <button class="bold" disabled="@Host.IsBusy" @onclick="() => Run(() => Model.button_report_transvStabDiagramm_Click(Model.button_report_transvStabDiagramm, EventArgs.Empty), null)">@L.T(Model.button_report_transvStabDiagramm.Text)</button>
+            </div>
+        </fieldset>
+        <div class="form-fill"><ModelFrame Frame="Model.usgModelFrame_transvStabDiagramm" Height="auto" FileName="transverse-stability" Suspended="Host.IsBusy" /></div>
+    </div>
+}
+else
+{
+    <div class="stab-layout">
+        <fieldset class="stab-params">
+            <legend>@L.T("Параметры диаграммы")</legend>
+            <div class="grid2">
+                <label>@L.T(Model.label6.Text)</label><NumberField Field="Model.usgNumberField_longStartAngle" />
+                <label>@L.T(Model.label5.Text)</label><NumberField Field="Model.usgNumberField_longEndAngle" />
+                <label>@L.T(Model.label4.Text)</label><NumberField Field="Model.usgNumberField_longStepAngle" />
+            </div>
+            <CheckBoxField Box="Model.checkBox_isDrawDDOForLongStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingCompartmentsForLongStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingCisternsForLongStab" />
+            <CheckBoxField Box="Model.checkBox_isUsingContainersForLongStab" />
+            <div class="stab-buttons">
+                <button class="bold" disabled="@Host.IsBusy" @onclick="() => Run(() => Model.button_calc_longStabDiagramm_Click(Model.button_calc_longStabDiagramm, EventArgs.Empty), Model.usgModelFrame_longStabDiagramm)">@L.T(Model.button_calc_longStabDiagramm.Text)</button>
+                <button class="bold" disabled="@Host.IsBusy" @onclick="() => Run(() => Model.button_report_longStabDiagramm_Click(Model.button_report_longStabDiagramm, EventArgs.Empty), null)">@L.T(Model.button_report_longStabDiagramm.Text)</button>
+            </div>
+        </fieldset>
+        <div class="form-fill"><ModelFrame Frame="Model.usgModelFrame_longStabDiagramm" Height="auto" FileName="longitudinal-stability" Suspended="Host.IsBusy" /></div>
+    </div>
+}
+@code {
+    [Parameter, EditorRequired] public STEB_LOAD.frmDiagrammStability Model { get; set; }
+    [CascadingParameter] public FormHost Host { get; set; }
+    private int tab;
+
+    private Task Run(Action action, STEB2.usgModelFrame frame) => Host.Run(() =>
+    {
+        action();
+        frame?.ZoomAll(); // web addition: fit the new diagram
+    });
+}

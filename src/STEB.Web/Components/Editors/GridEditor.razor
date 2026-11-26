@@ -1,0 +1,20 @@
+@* Compartments / containers: the original controls are a DataGridView synced to the project. *@
+@if (Kind == "compartments")
+{
+    <GridView Grid="compartments.dataGridView" />
+}
+else
+{
+    <GridView Grid="containers.dataGridView" />
+}
+@code {
+    [Parameter] public string Kind { get; set; }
+    private STEB2.Controls.ProjectCompartments compartments;
+    private STEB2.Controls.ProjectContainers containers;
+
+    protected override void OnInitialized()
+    {
+        if (Kind == "compartments") compartments = new STEB2.Controls.ProjectCompartments();
+        else containers = new STEB2.Controls.ProjectContainers();
+    }
+}

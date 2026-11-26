@@ -1,0 +1,3576 @@
+{
+  "format": "STEB JSON database",
+  "formatVersion": 1,
+  "tables": {
+    "tblAquatories": {
+      "columns": [
+        {
+          "name": "ID",
+          "type": "int32",
+          "autoIncrement": true
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "AquaDensity",
+          "type": "double"
+        },
+        {
+          "name": "IsActive",
+          "type": "bool"
+        }
+      ],
+      "nextAutoId": 4,
+      "rows": [
+        {
+          "ID": 1,
+          "Name": "Морская вода",
+          "AquaDensity": 1.025,
+          "IsActive": true
+        },
+        {
+          "ID": 2,
+          "Name": "Пресная вода (река)",
+          "AquaDensity": 1.0,
+          "IsActive": false
+        },
+        {
+          "ID": 3,
+          "Name": "Азовское море",
+          "AquaDensity": 1.01,
+          "IsActive": false
+        }
+      ]
+    },
+    "tblCisterns": {
+      "columns": [
+        {
+          "name": "Name",
+          "type": "text",
+          "size": 50,
+          "primaryKey": true
+        },
+        {
+          "name": "x1",
+          "type": "double"
+        },
+        {
+          "name": "y1",
+          "type": "double"
+        },
+        {
+          "name": "z1",
+          "type": "double"
+        },
+        {
+          "name": "percentOfVolume",
+          "type": "double"
+        },
+        {
+          "name": "volumeDensity",
+          "type": "double"
+        },
+        {
+          "name": "TextDecriptionOfStation",
+          "type": "memo"
+        },
+        {
+          "name": "x0",
+          "type": "double"
+        },
+        {
+          "name": "y0",
+          "type": "double"
+        },
+        {
+          "name": "z0",
+          "type": "double"
+        }
+      ],
+      "nextAutoId": 1,
+      "rows": [
+        {
+          "Name": "Топливная цистерна ЛБ",
+          "x0": 13.2,
+          "y0": -1.29,
+          "z0": 0.26,
+          "x1": 19.8,
+          "y1": -0.58,
+          "z1": 1.87,
+          "percentOfVolume": 80,
+          "volumeDensity": 0.85,
+          "TextDecriptionOfStation": "new 0 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 1 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 2 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 3 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 4 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 5 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 6 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 7 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 8 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 9 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 10 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 "
+        },
+        {
+          "Name": "Топливная цистерна ПБ",
+          "x0": 13.2,
+          "y0": 0.58,
+          "z0": 0.26,
+          "x1": 19.8,
+          "y1": 1.29,
+          "z1": 1.87,
+          "percentOfVolume": 80,
+          "volumeDensity": 0.85,
+          "TextDecriptionOfStation": "new 0 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 1 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 2 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 3 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 4 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 5 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 6 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 7 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 8 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 9 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 10 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 "
+        },
+        {
+          "Name": "Цистерна пресной воды",
+          "x0": 3.96,
+          "y0": -2.83,
+          "z0": 4.11,
+          "x1": 7.92,
+          "y1": 2.83,
+          "z1": 5.81,
+          "percentOfVolume": 90,
+          "volumeDensity": 1.0,
+          "TextDecriptionOfStation": "new 0 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 1 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 2 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 3 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 4 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 5 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 6 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 7 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 8 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 9 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 10 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 "
+        },
+        {
+          "Name": "Балластная цистерна носовая",
+          "x0": 55.44,
+          "y0": -0.89,
+          "z0": 1.13,
+          "x1": 58.74,
+          "y1": 0.89,
+          "z1": 2.66,
+          "percentOfVolume": 0,
+          "volumeDensity": 1.025,
+          "TextDecriptionOfStation": "new 0 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 1 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 2 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 3 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 4 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 5 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 6 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 7 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 8 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 9 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 new 10 \n 0 0 \n 1 0 \n 1 1 \n 0 1\n 0 0 "
+        }
+      ]
+    },
+    "tblCompartments": {
+      "columns": [
+        {
+          "name": "Name",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "l",
+          "type": "double"
+        },
+        {
+          "name": "b",
+          "type": "double"
+        },
+        {
+          "name": "h",
+          "type": "double"
+        },
+        {
+          "name": "x",
+          "type": "double"
+        },
+        {
+          "name": "y",
+          "type": "double"
+        },
+        {
+          "name": "z",
+          "type": "double"
+        },
+        {
+          "name": "volumeDensity",
+          "type": "double"
+        },
+        {
+          "name": "percentOfVolume",
+          "type": "double"
+        },
+        {
+          "name": "coefficientPronicaem",
+          "type": "double"
+        }
+      ],
+      "nextAutoId": 1,
+      "rows": [
+        {
+          "Name": "Ахтерпик",
+          "l": 3.3,
+          "b": 20.4,
+          "h": 5.95,
+          "x": 0.0,
+          "y": 0,
+          "z": 2.55,
+          "volumeDensity": 1.025,
+          "percentOfVolume": 0,
+          "coefficientPronicaem": 0.95
+        },
+        {
+          "Name": "Машинное отделение",
+          "l": 9.9,
+          "b": 20.4,
+          "h": 7.91,
+          "x": 3.3,
+          "y": 0,
+          "z": 0.6,
+          "volumeDensity": 1.025,
+          "percentOfVolume": 0,
+          "coefficientPronicaem": 0.85
+        },
+        {
+          "Name": "Форпик",
+          "l": 6.6,
+          "b": 20.4,
+          "h": 6.38,
+          "x": 59.4,
+          "y": 0,
+          "z": 2.12,
+          "volumeDensity": 1.025,
+          "percentOfVolume": 0,
+          "coefficientPronicaem": 0.95
+        },
+        {
+          "Name": "ЗАТОПЛЕН: бортовой отсек ЛБ (пробоина)",
+          "l": 10.56,
+          "b": 8.5,
+          "h": 6.21,
+          "x": 27.72,
+          "y": -4.25,
+          "z": 0.6,
+          "volumeDensity": 1.025,
+          "percentOfVolume": 100,
+          "coefficientPronicaem": 0.85
+        },
+        {
+          "Name": "Бортовой отсек ПБ (меняйте % заполн.)",
+          "l": 10.56,
+          "b": 8.5,
+          "h": 6.21,
+          "x": 27.72,
+          "y": 4.25,
+          "z": 0.6,
+          "volumeDensity": 1.025,
+          "percentOfVolume": 0,
+          "coefficientPronicaem": 0.85
+        }
+      ]
+    },
+    "tblContainers": {
+      "columns": [
+        {
+          "name": "Name",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "l",
+          "type": "double"
+        },
+        {
+          "name": "b",
+          "type": "double"
+        },
+        {
+          "name": "h",
+          "type": "double"
+        },
+        {
+          "name": "x",
+          "type": "double"
+        },
+        {
+          "name": "y",
+          "type": "double"
+        },
+        {
+          "name": "z",
+          "type": "double"
+        },
+        {
+          "name": "Mass",
+          "type": "double"
+        }
+      ],
+      "nextAutoId": 1,
+      "rows": [
+        {
+          "Name": "Экипаж, багаж и провизия (надстройка)",
+          "l": 7.92,
+          "b": 8.5,
+          "h": 2.12,
+          "x": 2.64,
+          "y": 0,
+          "z": 6.84,
+          "Mass": 52.6
+        }
+      ]
+    },
+    "tblMassItems": {
+      "columns": [
+        {
+          "name": "Name",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "Mass",
+          "type": "double"
+        },
+        {
+          "name": "Area",
+          "type": "double"
+        },
+        {
+          "name": "Thickness",
+          "type": "double"
+        },
+        {
+          "name": "Density",
+          "type": "double"
+        },
+        {
+          "name": "GPosition_X",
+          "type": "double"
+        },
+        {
+          "name": "GPosition_Y",
+          "type": "double"
+        },
+        {
+          "name": "GPosition_Z",
+          "type": "double"
+        },
+        {
+          "name": "MassTableName",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "CatName",
+          "type": "text",
+          "size": 50
+        }
+      ],
+      "nextAutoId": 1,
+      "rows": []
+    },
+    "tblShipForms": {
+      "columns": [
+        {
+          "name": "ShipFormName",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "L",
+          "type": "double"
+        },
+        {
+          "name": "B",
+          "type": "double"
+        },
+        {
+          "name": "H",
+          "type": "double"
+        },
+        {
+          "name": "d",
+          "type": "double"
+        },
+        {
+          "name": "kX",
+          "type": "double"
+        },
+        {
+          "name": "kY",
+          "type": "double"
+        },
+        {
+          "name": "kZ",
+          "type": "double"
+        },
+        {
+          "name": "IsActive",
+          "type": "bool"
+        },
+        {
+          "name": "Xg",
+          "type": "double"
+        },
+        {
+          "name": "Yg",
+          "type": "double"
+        },
+        {
+          "name": "Zg",
+          "type": "double"
+        },
+        {
+          "name": "ShipFormMass",
+          "type": "double"
+        },
+        {
+          "name": "LongSections",
+          "type": "memo"
+        },
+        {
+          "name": "TransverseSections",
+          "type": "memo"
+        },
+        {
+          "name": "TopSections",
+          "type": "memo"
+        },
+        {
+          "name": "textHeight",
+          "type": "float"
+        },
+        {
+          "name": "transvStaticDiagrammStartAngle",
+          "type": "float"
+        },
+        {
+          "name": "transvStaticDiagrammEndAngle",
+          "type": "float"
+        },
+        {
+          "name": "transvStaticDiagrammStepAngle",
+          "type": "float"
+        },
+        {
+          "name": "transvStaticDiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "transvStaticDiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "longStaticDiagrammStartAngle",
+          "type": "float"
+        },
+        {
+          "name": "longStaticDiagrammEndAngle",
+          "type": "float"
+        },
+        {
+          "name": "longStaticDiagrammStepAngle",
+          "type": "float"
+        },
+        {
+          "name": "longStaticDiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "longStaticDiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "PantokareniTransvStaticDiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "PantokareniTransvStaticDiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvStartAngle",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvEndAngle",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvStepAngle",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvEndVolume",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvStepVolume",
+          "type": "float"
+        },
+        {
+          "name": "Pantokareni_transvStartVolume",
+          "type": "float"
+        },
+        {
+          "name": "GryzRazmer_EndDraft",
+          "type": "float"
+        },
+        {
+          "name": "GryzRazmer_StepDraft",
+          "type": "float"
+        },
+        {
+          "name": "GryzRazmer_StartDraft",
+          "type": "float"
+        },
+        {
+          "name": "GryzRazmer_DiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "GryzRazmer_DiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "Coeff_EndDraft",
+          "type": "float"
+        },
+        {
+          "name": "Coeff_StepDraft",
+          "type": "float"
+        },
+        {
+          "name": "Coeff_StartDraft",
+          "type": "float"
+        },
+        {
+          "name": "Coeff_DiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "Coeff_DiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "rZc_EndDraft",
+          "type": "float"
+        },
+        {
+          "name": "rZc_StepDraft",
+          "type": "float"
+        },
+        {
+          "name": "rZc_StartDraft",
+          "type": "float"
+        },
+        {
+          "name": "rZc_DiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "rZc_DiagrammYScale",
+          "type": "float"
+        },
+        {
+          "name": "XcXf_EndDraft",
+          "type": "float"
+        },
+        {
+          "name": "XcXf_StepDraft",
+          "type": "float"
+        },
+        {
+          "name": "XcXf_StartDraft",
+          "type": "float"
+        },
+        {
+          "name": "XcXf_DiagrammXScale",
+          "type": "float"
+        },
+        {
+          "name": "XcXf_DiagrammYScale",
+          "type": "float"
+        }
+      ],
+      "nextAutoId": 1,
+      "rows": [
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "L": 66.0,
+          "B": 17.0,
+          "H": 8.5,
+          "d": 6.12,
+          "kX": 0.0,
+          "kY": 0.0,
+          "kZ": 0.0,
+          "IsActive": true,
+          "Xg": 31.57,
+          "Yg": 0.0,
+          "Zg": 4.68,
+          "ShipFormMass": 3418.9,
+          "LongSections": "\n0:Сечение по ДП;\n4.25:Батокс B/4 ПБ;\n-4.25:Батокс B/4 ЛБ;",
+          "TransverseSections": "\n1.98:Ахтерпик;\n8.58:Машинное отделение;\n35.64:Трюм / помещения;\n33.0:Мидель-шпангоут;\n35.64:Носовая часть;\n62.7:Форпик;",
+          "TopSections": "",
+          "textHeight": 7.0,
+          "transvStaticDiagrammStartAngle": 0.0,
+          "transvStaticDiagrammEndAngle": 90.0,
+          "transvStaticDiagrammStepAngle": 5.0,
+          "transvStaticDiagrammXScale": 1.0,
+          "transvStaticDiagrammYScale": 10.0,
+          "longStaticDiagrammStartAngle": -10.0,
+          "longStaticDiagrammEndAngle": 10.0,
+          "longStaticDiagrammStepAngle": 2.0,
+          "longStaticDiagrammXScale": 2.0,
+          "longStaticDiagrammYScale": 1.0,
+          "PantokareniTransvStaticDiagrammXScale": 1.0,
+          "PantokareniTransvStaticDiagrammYScale": 1.0,
+          "Pantokareni_transvStartAngle": 0.0,
+          "Pantokareni_transvEndAngle": 90.0,
+          "Pantokareni_transvStepAngle": 10.0,
+          "Pantokareni_transvEndVolume": 5698.0,
+          "Pantokareni_transvStepVolume": 876.6,
+          "Pantokareni_transvStartVolume": 2192.0,
+          "GryzRazmer_EndDraft": 7.65,
+          "GryzRazmer_StepDraft": 0.68,
+          "GryzRazmer_StartDraft": 0.85,
+          "GryzRazmer_DiagrammXScale": 1.0,
+          "GryzRazmer_DiagrammYScale": 1.0,
+          "Coeff_EndDraft": 7.65,
+          "Coeff_StepDraft": 0.68,
+          "Coeff_StartDraft": 0.85,
+          "Coeff_DiagrammXScale": 1.0,
+          "Coeff_DiagrammYScale": 1.0,
+          "rZc_EndDraft": 7.65,
+          "rZc_StepDraft": 0.68,
+          "rZc_StartDraft": 0.85,
+          "rZc_DiagrammXScale": 1.0,
+          "rZc_DiagrammYScale": 1.0,
+          "XcXf_EndDraft": 7.65,
+          "XcXf_StepDraft": 0.68,
+          "XcXf_StartDraft": 0.85,
+          "XcXf_DiagrammXScale": 1.0,
+          "XcXf_DiagrammYScale": 1.0
+        }
+      ]
+    },
+    "tblStations": {
+      "columns": [
+        {
+          "name": "ShipFormName",
+          "type": "text",
+          "size": 50
+        },
+        {
+          "name": "StationID",
+          "type": "int32",
+          "autoIncrement": true
+        },
+        {
+          "name": "X",
+          "type": "double"
+        }
+      ],
+      "nextAutoId": 20,
+      "rows": [
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 1,
+          "X": 2000.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 2,
+          "X": 1900.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 3,
+          "X": 1800.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 4,
+          "X": 1700.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 5,
+          "X": 1600.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 6,
+          "X": 1500.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 7,
+          "X": 1400.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 8,
+          "X": 1300.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 9,
+          "X": 1200.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 10,
+          "X": 1100.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 11,
+          "X": 0.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 12,
+          "X": 100.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 13,
+          "X": 200.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 14,
+          "X": 300.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 15,
+          "X": 400.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 16,
+          "X": 500.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 17,
+          "X": 600.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 18,
+          "X": 700.0
+        },
+        {
+          "ShipFormName": "Ледокол 0001 (ледокол, L=66.0 м) — затопление отсека",
+          "StationID": 19,
+          "X": 900.0
+        }
+      ]
+    },
+    "tblStationsConturs": {
+      "columns": [
+        {
+          "name": "ConturID",
+          "type": "int32",
+          "autoIncrement": true
+        },
+        {
+          "name": "StationID",
+          "type": "int32"
+        }
+      ],
+      "nextAutoId": 20,
+      "rows": [
+        {
+          "ConturID": 1,
+          "StationID": 1
+        },
+        {
+          "ConturID": 2,
+          "StationID": 2
+        },
+        {
+          "ConturID": 3,
+          "StationID": 3
+        },
+        {
+          "ConturID": 4,
+          "StationID": 4
+        },
+        {
+          "ConturID": 5,
+          "StationID": 5
+        },
+        {
+          "ConturID": 6,
+          "StationID": 6
+        },
+        {
+          "ConturID": 7,
+          "StationID": 7
+        },
+        {
+          "ConturID": 8,
+          "StationID": 8
+        },
+        {
+          "ConturID": 9,
+          "StationID": 9
+        },
+        {
+          "ConturID": 10,
+          "StationID": 10
+        },
+        {
+          "ConturID": 11,
+          "StationID": 11
+        },
+        {
+          "ConturID": 12,
+          "StationID": 12
+        },
+        {
+          "ConturID": 13,
+          "StationID": 13
+        },
+        {
+          "ConturID": 14,
+          "StationID": 14
+        },
+        {
+          "ConturID": 15,
+          "StationID": 15
+        },
+        {
+          "ConturID": 16,
+          "StationID": 16
+        },
+        {
+          "ConturID": 17,
+          "StationID": 17
+        },
+        {
+          "ConturID": 18,
+          "StationID": 18
+        },
+        {
+          "ConturID": 19,
+          "StationID": 19
+        }
+      ]
+    },
+    "tblStationsContursPoints": {
+      "columns": [
+        {
+          "name": "ConturID",
+          "type": "int32"
+        },
+        {
+          "name": "PointX",
+          "type": "double"
+        },
+        {
+          "name": "PointY",
+          "type": "double"
+        },
+        {
+          "name": "PointID",
+          "type": "int32",
+          "autoIncrement": true
+        }
+      ],
+      "nextAutoId": 452,
+      "rows": [
+        {
+          "ConturID": 1,
+          "PointX": 842.612,
+          "PointY": 1591.6799,
+          "PointID": 1
+        },
+        {
+          "ConturID": 1,
+          "PointX": -842.612,
+          "PointY": 1591.6799,
+          "PointID": 2
+        },
+        {
+          "ConturID": 1,
+          "PointX": -604.346,
+          "PointY": 1322.58,
+          "PointID": 3
+        },
+        {
+          "ConturID": 1,
+          "PointX": -434.699,
+          "PointY": 1142.0701,
+          "PointID": 4
+        },
+        {
+          "ConturID": 1,
+          "PointX": -254.72,
+          "PointY": 973.268,
+          "PointID": 5
+        },
+        {
+          "ConturID": 1,
+          "PointX": -164.193,
+          "PointY": 889.08203,
+          "PointID": 6
+        },
+        {
+          "ConturID": 1,
+          "PointX": 0.0,
+          "PointY": 756.964,
+          "PointID": 7
+        },
+        {
+          "ConturID": 1,
+          "PointX": 164.193,
+          "PointY": 889.08203,
+          "PointID": 8
+        },
+        {
+          "ConturID": 1,
+          "PointX": 254.72,
+          "PointY": 973.268,
+          "PointID": 9
+        },
+        {
+          "ConturID": 1,
+          "PointX": 434.699,
+          "PointY": 1142.0701,
+          "PointID": 10
+        },
+        {
+          "ConturID": 1,
+          "PointX": 604.346,
+          "PointY": 1322.58,
+          "PointID": 11
+        },
+        {
+          "ConturID": 1,
+          "PointX": 842.612,
+          "PointY": 1591.6799,
+          "PointID": 12
+        },
+        {
+          "ConturID": 1,
+          "PointX": 842.612,
+          "PointY": 1591.6799,
+          "PointID": 13
+        },
+        {
+          "ConturID": 2,
+          "PointX": -1032.81,
+          "PointY": 1581.31,
+          "PointID": 14
+        },
+        {
+          "ConturID": 2,
+          "PointX": 1032.81,
+          "PointY": 1581.31,
+          "PointID": 15
+        },
+        {
+          "ConturID": 2,
+          "PointX": 904.05,
+          "PointY": 1370.81,
+          "PointID": 16
+        },
+        {
+          "ConturID": 2,
+          "PointX": 716.763,
+          "PointY": 1142.76,
+          "PointID": 17
+        },
+        {
+          "ConturID": 2,
+          "PointX": 506.065,
+          "PointY": 920.565,
+          "PointID": 18
+        },
+        {
+          "ConturID": 2,
+          "PointX": 236.84,
+          "PointY": 686.672,
+          "PointID": 19
+        },
+        {
+          "ConturID": 2,
+          "PointX": 0.0,
+          "PointY": 511.252,
+          "PointID": 20
+        },
+        {
+          "ConturID": 2,
+          "PointX": -236.84,
+          "PointY": 686.672,
+          "PointID": 21
+        },
+        {
+          "ConturID": 2,
+          "PointX": -506.065,
+          "PointY": 920.565,
+          "PointID": 22
+        },
+        {
+          "ConturID": 2,
+          "PointX": -716.763,
+          "PointY": 1142.76,
+          "PointID": 23
+        },
+        {
+          "ConturID": 2,
+          "PointX": -904.05,
+          "PointY": 1370.81,
+          "PointID": 24
+        },
+        {
+          "ConturID": 2,
+          "PointX": -1032.81,
+          "PointY": 1581.31,
+          "PointID": 25
+        },
+        {
+          "ConturID": 2,
+          "PointX": -1032.81,
+          "PointY": 1581.31,
+          "PointID": 26
+        },
+        {
+          "ConturID": 3,
+          "PointX": 1149.86,
+          "PointY": 1575.47,
+          "PointID": 27
+        },
+        {
+          "ConturID": 3,
+          "PointX": -1149.86,
+          "PointY": 1575.47,
+          "PointID": 28
+        },
+        {
+          "ConturID": 3,
+          "PointX": -991.841,
+          "PointY": 1277.25,
+          "PointID": 29
+        },
+        {
+          "ConturID": 3,
+          "PointX": -816.259,
+          "PointY": 1002.43,
+          "PointID": 30
+        },
+        {
+          "ConturID": 3,
+          "PointX": -652.383,
+          "PointY": 815.313,
+          "PointID": 31
+        },
+        {
+          "ConturID": 3,
+          "PointX": -465.096,
+          "PointY": 645.741,
+          "PointID": 32
+        },
+        {
+          "ConturID": 3,
+          "PointX": -301.22,
+          "PointY": 493.71,
+          "PointID": 33
+        },
+        {
+          "ConturID": 3,
+          "PointX": -177.582,
+          "PointY": 409.788,
+          "PointID": 34
+        },
+        {
+          "ConturID": 3,
+          "PointX": -88.3882,
+          "PointY": 334.853,
+          "PointID": 35
+        },
+        {
+          "ConturID": 3,
+          "PointX": -45.8185,
+          "PointY": 292.323,
+          "PointID": 36
+        },
+        {
+          "ConturID": 3,
+          "PointX": 0.0,
+          "PointY": 148.52899,
+          "PointID": 37
+        },
+        {
+          "ConturID": 3,
+          "PointX": 45.8185,
+          "PointY": 292.323,
+          "PointID": 38
+        },
+        {
+          "ConturID": 3,
+          "PointX": 88.3882,
+          "PointY": 334.853,
+          "PointID": 39
+        },
+        {
+          "ConturID": 3,
+          "PointX": 177.582,
+          "PointY": 409.788,
+          "PointID": 40
+        },
+        {
+          "ConturID": 3,
+          "PointX": 301.22,
+          "PointY": 493.71,
+          "PointID": 41
+        },
+        {
+          "ConturID": 3,
+          "PointX": 465.096,
+          "PointY": 645.741,
+          "PointID": 42
+        },
+        {
+          "ConturID": 3,
+          "PointX": 652.383,
+          "PointY": 815.313,
+          "PointID": 43
+        },
+        {
+          "ConturID": 3,
+          "PointX": 816.259,
+          "PointY": 1002.43,
+          "PointID": 44
+        },
+        {
+          "ConturID": 3,
+          "PointX": 991.841,
+          "PointY": 1277.25,
+          "PointID": 45
+        },
+        {
+          "ConturID": 3,
+          "PointX": 1149.86,
+          "PointY": 1575.47,
+          "PointID": 46
+        },
+        {
+          "ConturID": 3,
+          "PointX": 1149.86,
+          "PointY": 1575.47,
+          "PointID": 47
+        },
+        {
+          "ConturID": 4,
+          "PointX": -1248.88,
+          "PointY": 1552.3,
+          "PointID": 48
+        },
+        {
+          "ConturID": 4,
+          "PointX": 1248.88,
+          "PointY": 1552.3,
+          "PointID": 49
+        },
+        {
+          "ConturID": 4,
+          "PointX": 1175.19,
+          "PointY": 1298.72,
+          "PointID": 50
+        },
+        {
+          "ConturID": 4,
+          "PointX": 1089.22,
+          "PointY": 1106.49,
+          "PointID": 51
+        },
+        {
+          "ConturID": 4,
+          "PointX": 974.597,
+          "PointY": 926.526,
+          "PointID": 52
+        },
+        {
+          "ConturID": 4,
+          "PointX": 794.471,
+          "PointY": 726.116,
+          "PointID": 53
+        },
+        {
+          "ConturID": 4,
+          "PointX": 614.345,
+          "PointY": 550.246,
+          "PointID": 54
+        },
+        {
+          "ConturID": 4,
+          "PointX": 430.126,
+          "PointY": 374.376,
+          "PointID": 55
+        },
+        {
+          "ConturID": 4,
+          "PointX": 209.062,
+          "PointY": 182.146,
+          "PointID": 56
+        },
+        {
+          "ConturID": 4,
+          "PointX": 0.0,
+          "PointY": 14.4558,
+          "PointID": 57
+        },
+        {
+          "ConturID": 4,
+          "PointX": -209.062,
+          "PointY": 182.146,
+          "PointID": 58
+        },
+        {
+          "ConturID": 4,
+          "PointX": -430.126,
+          "PointY": 374.376,
+          "PointID": 59
+        },
+        {
+          "ConturID": 4,
+          "PointX": -614.345,
+          "PointY": 550.246,
+          "PointID": 60
+        },
+        {
+          "ConturID": 4,
+          "PointX": -794.471,
+          "PointY": 726.116,
+          "PointID": 61
+        },
+        {
+          "ConturID": 4,
+          "PointX": -974.597,
+          "PointY": 926.526,
+          "PointID": 62
+        },
+        {
+          "ConturID": 4,
+          "PointX": -1089.22,
+          "PointY": 1106.49,
+          "PointID": 63
+        },
+        {
+          "ConturID": 4,
+          "PointX": -1175.19,
+          "PointY": 1298.72,
+          "PointID": 64
+        },
+        {
+          "ConturID": 4,
+          "PointX": -1248.88,
+          "PointY": 1552.3,
+          "PointID": 65
+        },
+        {
+          "ConturID": 4,
+          "PointX": -1248.88,
+          "PointY": 1552.3,
+          "PointID": 66
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1316.91,
+          "PointY": 1540.25,
+          "PointID": 67
+        },
+        {
+          "ConturID": 5,
+          "PointX": 1316.91,
+          "PointY": 1540.25,
+          "PointID": 68
+        },
+        {
+          "ConturID": 5,
+          "PointX": 1276.0,
+          "PointY": 1307.2,
+          "PointID": 69
+        },
+        {
+          "ConturID": 5,
+          "PointX": 1247.56,
+          "PointY": 1187.2,
+          "PointID": 70
+        },
+        {
+          "ConturID": 5,
+          "PointX": 1193.83,
+          "PointY": 1068.79,
+          "PointID": 71
+        },
+        {
+          "ConturID": 5,
+          "PointX": 1100.24,
+          "PointY": 894.253,
+          "PointID": 72
+        },
+        {
+          "ConturID": 5,
+          "PointX": 990.735,
+          "PointY": 734.705,
+          "PointID": 73
+        },
+        {
+          "ConturID": 5,
+          "PointX": 872.104,
+          "PointY": 593.391,
+          "PointID": 74
+        },
+        {
+          "ConturID": 5,
+          "PointX": 730.66,
+          "PointY": 429.285,
+          "PointID": 75
+        },
+        {
+          "ConturID": 5,
+          "PointX": 598.341,
+          "PointY": 278.854,
+          "PointID": 76
+        },
+        {
+          "ConturID": 5,
+          "PointX": 420.396,
+          "PointY": 132.982,
+          "PointID": 77
+        },
+        {
+          "ConturID": 5,
+          "PointX": 278.778,
+          "PointY": 65.7539,
+          "PointID": 78
+        },
+        {
+          "ConturID": 5,
+          "PointX": 137.263,
+          "PointY": 0.0,
+          "PointID": 79
+        },
+        {
+          "ConturID": 5,
+          "PointX": -137.263,
+          "PointY": 0.0,
+          "PointID": 80
+        },
+        {
+          "ConturID": 5,
+          "PointX": -278.778,
+          "PointY": 65.7539,
+          "PointID": 81
+        },
+        {
+          "ConturID": 5,
+          "PointX": -420.396,
+          "PointY": 132.982,
+          "PointID": 82
+        },
+        {
+          "ConturID": 5,
+          "PointX": -598.341,
+          "PointY": 278.854,
+          "PointID": 83
+        },
+        {
+          "ConturID": 5,
+          "PointX": -730.66,
+          "PointY": 429.285,
+          "PointID": 84
+        },
+        {
+          "ConturID": 5,
+          "PointX": -872.104,
+          "PointY": 593.391,
+          "PointID": 85
+        },
+        {
+          "ConturID": 5,
+          "PointX": -990.735,
+          "PointY": 734.705,
+          "PointID": 86
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1100.24,
+          "PointY": 894.253,
+          "PointID": 87
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1193.83,
+          "PointY": 1068.79,
+          "PointID": 88
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1247.56,
+          "PointY": 1187.2,
+          "PointID": 89
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1276.0,
+          "PointY": 1307.2,
+          "PointID": 90
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1316.91,
+          "PointY": 1540.25,
+          "PointID": 91
+        },
+        {
+          "ConturID": 5,
+          "PointX": -1316.91,
+          "PointY": 1540.25,
+          "PointID": 92
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1368.01,
+          "PointY": 1539.65,
+          "PointID": 93
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1368.01,
+          "PointY": 1539.65,
+          "PointID": 94
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1355.47,
+          "PointY": 1359.53,
+          "PointID": 95
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1320.87,
+          "PointY": 1203.48,
+          "PointID": 96
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1284.81,
+          "PointY": 1070.35,
+          "PointID": 97
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1236.21,
+          "PointY": 962.28,
+          "PointID": 98
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1148.14,
+          "PointY": 798.673,
+          "PointID": 99
+        },
+        {
+          "ConturID": 6,
+          "PointX": -1074.46,
+          "PointY": 674.938,
+          "PointID": 100
+        },
+        {
+          "ConturID": 6,
+          "PointX": -966.291,
+          "PointY": 507.349,
+          "PointID": 101
+        },
+        {
+          "ConturID": 6,
+          "PointX": -876.679,
+          "PointY": 387.66602,
+          "PointID": 102
+        },
+        {
+          "ConturID": 6,
+          "PointX": -784.184,
+          "PointY": 274.895,
+          "PointID": 103
+        },
+        {
+          "ConturID": 6,
+          "PointX": -690.122,
+          "PointY": 184.052,
+          "PointID": 104
+        },
+        {
+          "ConturID": 6,
+          "PointX": -560.003,
+          "PointY": 94.7751,
+          "PointID": 105
+        },
+        {
+          "ConturID": 6,
+          "PointX": -453.399,
+          "PointY": 36.8235,
+          "PointID": 106
+        },
+        {
+          "ConturID": 6,
+          "PointX": -296.628,
+          "PointY": 0.0,
+          "PointID": 107
+        },
+        {
+          "ConturID": 6,
+          "PointX": 296.628,
+          "PointY": 0.0,
+          "PointID": 108
+        },
+        {
+          "ConturID": 6,
+          "PointX": 453.399,
+          "PointY": 36.8235,
+          "PointID": 109
+        },
+        {
+          "ConturID": 6,
+          "PointX": 560.003,
+          "PointY": 94.7751,
+          "PointID": 110
+        },
+        {
+          "ConturID": 6,
+          "PointX": 690.122,
+          "PointY": 184.052,
+          "PointID": 111
+        },
+        {
+          "ConturID": 6,
+          "PointX": 784.184,
+          "PointY": 274.895,
+          "PointID": 112
+        },
+        {
+          "ConturID": 6,
+          "PointX": 876.679,
+          "PointY": 387.66602,
+          "PointID": 113
+        },
+        {
+          "ConturID": 6,
+          "PointX": 966.291,
+          "PointY": 507.349,
+          "PointID": 114
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1074.46,
+          "PointY": 674.938,
+          "PointID": 115
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1148.14,
+          "PointY": 798.673,
+          "PointID": 116
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1236.21,
+          "PointY": 962.28,
+          "PointID": 117
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1284.81,
+          "PointY": 1070.35,
+          "PointID": 118
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1320.87,
+          "PointY": 1203.48,
+          "PointID": 119
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1355.47,
+          "PointY": 1359.53,
+          "PointID": 120
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1368.01,
+          "PointY": 1539.65,
+          "PointID": 121
+        },
+        {
+          "ConturID": 6,
+          "PointX": 1368.01,
+          "PointY": 1539.65,
+          "PointID": 122
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 123
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 124
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1372.81,
+          "PointY": 1277.23,
+          "PointID": 125
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1341.5801,
+          "PointY": 1097.83,
+          "PointID": 126
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1274.3301,
+          "PointY": 919.41,
+          "PointID": 127
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1211.87,
+          "PointY": 771.211,
+          "PointID": 128
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1133.66,
+          "PointY": 591.274,
+          "PointID": 129
+        },
+        {
+          "ConturID": 7,
+          "PointX": 1079.01,
+          "PointY": 491.435,
+          "PointID": 130
+        },
+        {
+          "ConturID": 7,
+          "PointX": 983.765,
+          "PointY": 330.756,
+          "PointID": 131
+        },
+        {
+          "ConturID": 7,
+          "PointX": 920.937,
+          "PointY": 257.065,
+          "PointID": 132
+        },
+        {
+          "ConturID": 7,
+          "PointX": 856.91797,
+          "PointY": 186.86499,
+          "PointID": 133
+        },
+        {
+          "ConturID": 7,
+          "PointX": 794.461,
+          "PointY": 127.586,
+          "PointID": 134
+        },
+        {
+          "ConturID": 7,
+          "PointX": 700.776,
+          "PointY": 69.866104,
+          "PointID": 135
+        },
+        {
+          "ConturID": 7,
+          "PointX": 607.09,
+          "PointY": 29.306301,
+          "PointID": 136
+        },
+        {
+          "ConturID": 7,
+          "PointX": 508.72,
+          "PointY": 0.0,
+          "PointID": 137
+        },
+        {
+          "ConturID": 7,
+          "PointX": -508.72,
+          "PointY": 0.0,
+          "PointID": 138
+        },
+        {
+          "ConturID": 7,
+          "PointX": -607.09,
+          "PointY": 29.306301,
+          "PointID": 139
+        },
+        {
+          "ConturID": 7,
+          "PointX": -700.776,
+          "PointY": 69.866104,
+          "PointID": 140
+        },
+        {
+          "ConturID": 7,
+          "PointX": -794.461,
+          "PointY": 127.586,
+          "PointID": 141
+        },
+        {
+          "ConturID": 7,
+          "PointX": -856.91797,
+          "PointY": 186.86499,
+          "PointID": 142
+        },
+        {
+          "ConturID": 7,
+          "PointX": -920.937,
+          "PointY": 257.065,
+          "PointID": 143
+        },
+        {
+          "ConturID": 7,
+          "PointX": -983.765,
+          "PointY": 330.756,
+          "PointID": 144
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1079.01,
+          "PointY": 491.435,
+          "PointID": 145
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1133.66,
+          "PointY": 591.274,
+          "PointID": 146
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1211.87,
+          "PointY": 771.211,
+          "PointID": 147
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1274.3301,
+          "PointY": 919.41,
+          "PointID": 148
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1341.5801,
+          "PointY": 1097.83,
+          "PointID": 149
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1372.81,
+          "PointY": 1277.23,
+          "PointID": 150
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 151
+        },
+        {
+          "ConturID": 7,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 152
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 153
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 154
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1375.55,
+          "PointY": 1165.7,
+          "PointID": 155
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1351.1,
+          "PointY": 1046.04,
+          "PointID": 156
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1292.44,
+          "PointY": 859.224,
+          "PointID": 157
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1210.34,
+          "PointY": 636.129,
+          "PointID": 158
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1162.08,
+          "PointY": 508.032,
+          "PointID": 159
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1095.91,
+          "PointY": 367.539,
+          "PointID": 160
+        },
+        {
+          "ConturID": 8,
+          "PointX": -1017.08,
+          "PointY": 234.852,
+          "PointID": 161
+        },
+        {
+          "ConturID": 8,
+          "PointX": -964.692,
+          "PointY": 167.36,
+          "PointID": 162
+        },
+        {
+          "ConturID": 8,
+          "PointX": -899.895,
+          "PointY": 99.8686,
+          "PointID": 163
+        },
+        {
+          "ConturID": 8,
+          "PointX": -840.613,
+          "PointY": 53.0376,
+          "PointID": 164
+        },
+        {
+          "ConturID": 8,
+          "PointX": -777.195,
+          "PointY": 15.8482,
+          "PointID": 165
+        },
+        {
+          "ConturID": 8,
+          "PointX": -651.738,
+          "PointY": 0.0,
+          "PointID": 166
+        },
+        {
+          "ConturID": 8,
+          "PointX": 651.738,
+          "PointY": 0.0,
+          "PointID": 167
+        },
+        {
+          "ConturID": 8,
+          "PointX": 777.195,
+          "PointY": 15.8482,
+          "PointID": 168
+        },
+        {
+          "ConturID": 8,
+          "PointX": 840.613,
+          "PointY": 53.0376,
+          "PointID": 169
+        },
+        {
+          "ConturID": 8,
+          "PointX": 899.895,
+          "PointY": 99.8686,
+          "PointID": 170
+        },
+        {
+          "ConturID": 8,
+          "PointX": 964.692,
+          "PointY": 167.36,
+          "PointID": 171
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1017.08,
+          "PointY": 234.852,
+          "PointID": 172
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1095.91,
+          "PointY": 367.539,
+          "PointID": 173
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1162.08,
+          "PointY": 508.032,
+          "PointID": 174
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1210.34,
+          "PointY": 636.129,
+          "PointID": 175
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1292.44,
+          "PointY": 859.224,
+          "PointID": 176
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1351.1,
+          "PointY": 1046.04,
+          "PointID": 177
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1375.55,
+          "PointY": 1165.7,
+          "PointID": 178
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 179
+        },
+        {
+          "ConturID": 8,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 180
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 181
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 182
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1371.53,
+          "PointY": 1041.62,
+          "PointID": 183
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1237.76,
+          "PointY": 585.07,
+          "PointID": 184
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1168.61,
+          "PointY": 362.472,
+          "PointID": 185
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1102.37,
+          "PointY": 245.09799,
+          "PointID": 186
+        },
+        {
+          "ConturID": 9,
+          "PointX": 1047.05,
+          "PointY": 156.05899,
+          "PointID": 187
+        },
+        {
+          "ConturID": 9,
+          "PointX": 967.15,
+          "PointY": 80.836,
+          "PointID": 188
+        },
+        {
+          "ConturID": 9,
+          "PointX": 878.029,
+          "PointY": 30.1757,
+          "PointID": 189
+        },
+        {
+          "ConturID": 9,
+          "PointX": 795.053,
+          "PointY": 0.0,
+          "PointID": 190
+        },
+        {
+          "ConturID": 9,
+          "PointX": -795.053,
+          "PointY": 0.0,
+          "PointID": 191
+        },
+        {
+          "ConturID": 9,
+          "PointX": -878.029,
+          "PointY": 30.1757,
+          "PointID": 192
+        },
+        {
+          "ConturID": 9,
+          "PointX": -967.15,
+          "PointY": 80.836,
+          "PointID": 193
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1047.05,
+          "PointY": 156.05899,
+          "PointID": 194
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1102.37,
+          "PointY": 245.09799,
+          "PointID": 195
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1168.61,
+          "PointY": 362.472,
+          "PointID": 196
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1237.76,
+          "PointY": 585.07,
+          "PointID": 197
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1371.53,
+          "PointY": 1041.62,
+          "PointID": 198
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 199
+        },
+        {
+          "ConturID": 9,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 200
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 201
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1378.65,
+          "PointY": 1523.85,
+          "PointID": 202
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1371.53,
+          "PointY": 1041.62,
+          "PointID": 203
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1300.63,
+          "PointY": 717.32,
+          "PointID": 204
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1245.61,
+          "PointY": 521.48,
+          "PointID": 205
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1163.04,
+          "PointY": 295.924,
+          "PointID": 206
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1126.69,
+          "PointY": 211.819,
+          "PointID": 207
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1083.64,
+          "PointY": 138.228,
+          "PointID": 208
+        },
+        {
+          "ConturID": 10,
+          "PointX": -1028.16,
+          "PointY": 76.1049,
+          "PointID": 209
+        },
+        {
+          "ConturID": 10,
+          "PointX": -960.238,
+          "PointY": 35.0084,
+          "PointID": 210
+        },
+        {
+          "ConturID": 10,
+          "PointX": -856.924,
+          "PointY": 0.0,
+          "PointID": 211
+        },
+        {
+          "ConturID": 10,
+          "PointX": 856.924,
+          "PointY": 0.0,
+          "PointID": 212
+        },
+        {
+          "ConturID": 10,
+          "PointX": 960.238,
+          "PointY": 35.0084,
+          "PointID": 213
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1028.16,
+          "PointY": 76.1049,
+          "PointID": 214
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1083.64,
+          "PointY": 138.228,
+          "PointID": 215
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1126.69,
+          "PointY": 211.819,
+          "PointID": 216
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1163.04,
+          "PointY": 295.924,
+          "PointID": 217
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1245.61,
+          "PointY": 521.48,
+          "PointID": 218
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1300.63,
+          "PointY": 717.32,
+          "PointID": 219
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1371.53,
+          "PointY": 1041.62,
+          "PointID": 220
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 221
+        },
+        {
+          "ConturID": 10,
+          "PointX": 1378.65,
+          "PointY": 1523.85,
+          "PointID": 222
+        },
+        {
+          "ConturID": 11,
+          "PointX": -882.229,
+          "PointY": 1274.56,
+          "PointID": 223
+        },
+        {
+          "ConturID": 11,
+          "PointX": 882.229,
+          "PointY": 1274.56,
+          "PointID": 224
+        },
+        {
+          "ConturID": 11,
+          "PointX": 878.999,
+          "PointY": 1177.75,
+          "PointID": 225
+        },
+        {
+          "ConturID": 11,
+          "PointX": 866.078,
+          "PointY": 1080.93,
+          "PointID": 226
+        },
+        {
+          "ConturID": 11,
+          "PointX": 833.777,
+          "PointY": 1000.26,
+          "PointID": 227
+        },
+        {
+          "ConturID": 11,
+          "PointX": 769.176,
+          "PointY": 926.032,
+          "PointID": 228
+        },
+        {
+          "ConturID": 11,
+          "PointX": 678.73303,
+          "PointY": 893.761,
+          "PointID": 229
+        },
+        {
+          "ConturID": 11,
+          "PointX": 494.61798,
+          "PointY": 845.354,
+          "PointID": 230
+        },
+        {
+          "ConturID": 11,
+          "PointX": 371.874,
+          "PointY": 806.628,
+          "PointID": 231
+        },
+        {
+          "ConturID": 11,
+          "PointX": 158.688,
+          "PointY": 751.76697,
+          "PointID": 232
+        },
+        {
+          "ConturID": 11,
+          "PointX": 0.0,
+          "PointY": 706.588,
+          "PointID": 233
+        },
+        {
+          "ConturID": 11,
+          "PointX": -158.688,
+          "PointY": 751.76697,
+          "PointID": 234
+        },
+        {
+          "ConturID": 11,
+          "PointX": -371.874,
+          "PointY": 806.628,
+          "PointID": 235
+        },
+        {
+          "ConturID": 11,
+          "PointX": -494.61798,
+          "PointY": 845.354,
+          "PointID": 236
+        },
+        {
+          "ConturID": 11,
+          "PointX": -678.73303,
+          "PointY": 893.761,
+          "PointID": 237
+        },
+        {
+          "ConturID": 11,
+          "PointX": -769.176,
+          "PointY": 926.032,
+          "PointID": 238
+        },
+        {
+          "ConturID": 11,
+          "PointX": -833.777,
+          "PointY": 1000.26,
+          "PointID": 239
+        },
+        {
+          "ConturID": 11,
+          "PointX": -866.078,
+          "PointY": 1080.93,
+          "PointID": 240
+        },
+        {
+          "ConturID": 11,
+          "PointX": -878.999,
+          "PointY": 1177.75,
+          "PointID": 241
+        },
+        {
+          "ConturID": 11,
+          "PointX": -882.229,
+          "PointY": 1274.56,
+          "PointID": 242
+        },
+        {
+          "ConturID": 11,
+          "PointX": -882.229,
+          "PointY": 1274.56,
+          "PointID": 243
+        },
+        {
+          "ConturID": 12,
+          "PointX": 0.0,
+          "PointY": 609.774,
+          "PointID": 244
+        },
+        {
+          "ConturID": 12,
+          "PointX": 65.0152,
+          "PointY": 635.591,
+          "PointID": 245
+        },
+        {
+          "ConturID": 12,
+          "PointX": 446.16602,
+          "PointY": 729.178,
+          "PointID": 246
+        },
+        {
+          "ConturID": 12,
+          "PointX": 623.821,
+          "PointY": 764.676,
+          "PointID": 247
+        },
+        {
+          "ConturID": 12,
+          "PointX": 817.627,
+          "PointY": 813.083,
+          "PointID": 248
+        },
+        {
+          "ConturID": 12,
+          "PointX": 950.061,
+          "PointY": 884.079,
+          "PointID": 249
+        },
+        {
+          "ConturID": 12,
+          "PointX": 1024.35,
+          "PointY": 997.028,
+          "PointID": 250
+        },
+        {
+          "ConturID": 12,
+          "PointX": 1069.57,
+          "PointY": 1129.34,
+          "PointID": 251
+        },
+        {
+          "ConturID": 12,
+          "PointX": 1066.34,
+          "PointY": 1281.01,
+          "PointID": 252
+        },
+        {
+          "ConturID": 12,
+          "PointX": -1066.34,
+          "PointY": 1281.01,
+          "PointID": 253
+        },
+        {
+          "ConturID": 12,
+          "PointX": -1069.57,
+          "PointY": 1129.34,
+          "PointID": 254
+        },
+        {
+          "ConturID": 12,
+          "PointX": -1024.35,
+          "PointY": 997.028,
+          "PointID": 255
+        },
+        {
+          "ConturID": 12,
+          "PointX": -950.061,
+          "PointY": 884.079,
+          "PointID": 256
+        },
+        {
+          "ConturID": 12,
+          "PointX": -817.627,
+          "PointY": 813.083,
+          "PointID": 257
+        },
+        {
+          "ConturID": 12,
+          "PointX": -623.821,
+          "PointY": 764.676,
+          "PointID": 258
+        },
+        {
+          "ConturID": 12,
+          "PointX": -446.16602,
+          "PointY": 729.178,
+          "PointID": 259
+        },
+        {
+          "ConturID": 12,
+          "PointX": -65.0152,
+          "PointY": 635.591,
+          "PointID": 260
+        },
+        {
+          "ConturID": 12,
+          "PointX": 0.0,
+          "PointY": 609.774,
+          "PointID": 261
+        },
+        {
+          "ConturID": 12,
+          "PointX": 0.0,
+          "PointY": 609.774,
+          "PointID": 262
+        },
+        {
+          "ConturID": 13,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 263
+        },
+        {
+          "ConturID": 13,
+          "PointX": 86.0673,
+          "PointY": 0.0,
+          "PointID": 264
+        },
+        {
+          "ConturID": 13,
+          "PointX": 88.0782,
+          "PointY": 388.096,
+          "PointID": 265
+        },
+        {
+          "ConturID": 13,
+          "PointX": 102.102,
+          "PointY": 470.296,
+          "PointID": 266
+        },
+        {
+          "ConturID": 13,
+          "PointX": 139.307,
+          "PointY": 522.642,
+          "PointID": 267
+        },
+        {
+          "ConturID": 13,
+          "PointX": 197.449,
+          "PointY": 567.822,
+          "PointID": 268
+        },
+        {
+          "ConturID": 13,
+          "PointX": 307.272,
+          "PointY": 619.456,
+          "PointID": 269
+        },
+        {
+          "ConturID": 13,
+          "PointX": 484.927,
+          "PointY": 661.408,
+          "PointID": 270
+        },
+        {
+          "ConturID": 13,
+          "PointX": 791.786,
+          "PointY": 732.405,
+          "PointID": 271
+        },
+        {
+          "ConturID": 13,
+          "PointX": 924.22,
+          "PointY": 777.584,
+          "PointID": 272
+        },
+        {
+          "ConturID": 13,
+          "PointX": 1043.73,
+          "PointY": 842.127,
+          "PointID": 273
+        },
+        {
+          "ConturID": 13,
+          "PointX": 1137.41,
+          "PointY": 942.167,
+          "PointID": 274
+        },
+        {
+          "ConturID": 13,
+          "PointX": 1182.63,
+          "PointY": 1038.98,
+          "PointID": 275
+        },
+        {
+          "ConturID": 13,
+          "PointX": 1202.01,
+          "PointY": 1164.84,
+          "PointID": 276
+        },
+        {
+          "ConturID": 13,
+          "PointX": 1198.78,
+          "PointY": 1277.79,
+          "PointID": 277
+        },
+        {
+          "ConturID": 13,
+          "PointX": -1198.78,
+          "PointY": 1277.79,
+          "PointID": 278
+        },
+        {
+          "ConturID": 13,
+          "PointX": -1202.01,
+          "PointY": 1164.84,
+          "PointID": 279
+        },
+        {
+          "ConturID": 13,
+          "PointX": -1182.63,
+          "PointY": 1038.98,
+          "PointID": 280
+        },
+        {
+          "ConturID": 13,
+          "PointX": -1137.41,
+          "PointY": 942.167,
+          "PointID": 281
+        },
+        {
+          "ConturID": 13,
+          "PointX": -1043.73,
+          "PointY": 842.127,
+          "PointID": 282
+        },
+        {
+          "ConturID": 13,
+          "PointX": -924.22,
+          "PointY": 777.584,
+          "PointID": 283
+        },
+        {
+          "ConturID": 13,
+          "PointX": -791.786,
+          "PointY": 732.405,
+          "PointID": 284
+        },
+        {
+          "ConturID": 13,
+          "PointX": -484.927,
+          "PointY": 661.408,
+          "PointID": 285
+        },
+        {
+          "ConturID": 13,
+          "PointX": -307.272,
+          "PointY": 619.456,
+          "PointID": 286
+        },
+        {
+          "ConturID": 13,
+          "PointX": -197.449,
+          "PointY": 567.822,
+          "PointID": 287
+        },
+        {
+          "ConturID": 13,
+          "PointX": -139.307,
+          "PointY": 522.642,
+          "PointID": 288
+        },
+        {
+          "ConturID": 13,
+          "PointX": -102.102,
+          "PointY": 470.296,
+          "PointID": 289
+        },
+        {
+          "ConturID": 13,
+          "PointX": -88.0782,
+          "PointY": 388.096,
+          "PointID": 290
+        },
+        {
+          "ConturID": 13,
+          "PointX": -86.0673,
+          "PointY": 0.0,
+          "PointID": 291
+        },
+        {
+          "ConturID": 13,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 292
+        },
+        {
+          "ConturID": 13,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 293
+        },
+        {
+          "ConturID": 14,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 294
+        },
+        {
+          "ConturID": 14,
+          "PointX": -86.0673,
+          "PointY": 0.0,
+          "PointID": 295
+        },
+        {
+          "ConturID": 14,
+          "PointX": -135.034,
+          "PointY": 47.0934,
+          "PointID": 296
+        },
+        {
+          "ConturID": 14,
+          "PointX": -191.518,
+          "PointY": 123.84,
+          "PointID": 297
+        },
+        {
+          "ConturID": 14,
+          "PointX": -241.22299,
+          "PointY": 241.218,
+          "PointID": 298
+        },
+        {
+          "ConturID": 14,
+          "PointX": -284.151,
+          "PointY": 320.222,
+          "PointID": 299
+        },
+        {
+          "ConturID": 14,
+          "PointX": -338.573,
+          "PointY": 408.682,
+          "PointID": 300
+        },
+        {
+          "ConturID": 14,
+          "PointX": -388.279,
+          "PointY": 456.08398,
+          "PointID": 301
+        },
+        {
+          "ConturID": 14,
+          "PointX": -476.62,
+          "PointY": 504.55,
+          "PointID": 302
+        },
+        {
+          "ConturID": 14,
+          "PointX": -643.913,
+          "PointY": 581.691,
+          "PointID": 303
+        },
+        {
+          "ConturID": 14,
+          "PointX": -872.331,
+          "PointY": 671.689,
+          "PointID": 304
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1029.97,
+          "PointY": 748.829,
+          "PointID": 305
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1136.14,
+          "PointY": 822.756,
+          "PointID": 306
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1219.78,
+          "PointY": 912.754,
+          "PointID": 307
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1268.04,
+          "PointY": 1009.18,
+          "PointID": 308
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1277.69,
+          "PointY": 1121.68,
+          "PointID": 309
+        },
+        {
+          "ConturID": 14,
+          "PointX": -1280.91,
+          "PointY": 1275.96,
+          "PointID": 310
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1280.91,
+          "PointY": 1275.96,
+          "PointID": 311
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1277.69,
+          "PointY": 1121.68,
+          "PointID": 312
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1268.04,
+          "PointY": 1009.18,
+          "PointID": 313
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1219.78,
+          "PointY": 912.754,
+          "PointID": 314
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1136.14,
+          "PointY": 822.756,
+          "PointID": 315
+        },
+        {
+          "ConturID": 14,
+          "PointX": 1029.97,
+          "PointY": 748.829,
+          "PointID": 316
+        },
+        {
+          "ConturID": 14,
+          "PointX": 872.331,
+          "PointY": 671.689,
+          "PointID": 317
+        },
+        {
+          "ConturID": 14,
+          "PointX": 643.913,
+          "PointY": 581.691,
+          "PointID": 318
+        },
+        {
+          "ConturID": 14,
+          "PointX": 476.62,
+          "PointY": 504.55,
+          "PointID": 319
+        },
+        {
+          "ConturID": 14,
+          "PointX": 388.279,
+          "PointY": 456.08398,
+          "PointID": 320
+        },
+        {
+          "ConturID": 14,
+          "PointX": 338.573,
+          "PointY": 408.682,
+          "PointID": 321
+        },
+        {
+          "ConturID": 14,
+          "PointX": 284.151,
+          "PointY": 320.222,
+          "PointID": 322
+        },
+        {
+          "ConturID": 14,
+          "PointX": 241.22299,
+          "PointY": 241.218,
+          "PointID": 323
+        },
+        {
+          "ConturID": 14,
+          "PointX": 191.518,
+          "PointY": 123.84,
+          "PointID": 324
+        },
+        {
+          "ConturID": 14,
+          "PointX": 135.034,
+          "PointY": 47.0934,
+          "PointID": 325
+        },
+        {
+          "ConturID": 14,
+          "PointX": 86.0673,
+          "PointY": 0.0,
+          "PointID": 326
+        },
+        {
+          "ConturID": 14,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 327
+        },
+        {
+          "ConturID": 14,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 328
+        },
+        {
+          "ConturID": 15,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 329
+        },
+        {
+          "ConturID": 15,
+          "PointX": 152.82,
+          "PointY": 0.0,
+          "PointID": 330
+        },
+        {
+          "ConturID": 15,
+          "PointX": 244.68399,
+          "PointY": 46.077,
+          "PointID": 331
+        },
+        {
+          "ConturID": 15,
+          "PointX": 348.198,
+          "PointY": 122.517,
+          "PointID": 332
+        },
+        {
+          "ConturID": 15,
+          "PointX": 458.462,
+          "PointY": 237.176,
+          "PointID": 333
+        },
+        {
+          "ConturID": 15,
+          "PointX": 573.228,
+          "PointY": 358.58002,
+          "PointID": 334
+        },
+        {
+          "ConturID": 15,
+          "PointX": 663.239,
+          "PointY": 437.268,
+          "PointID": 335
+        },
+        {
+          "ConturID": 15,
+          "PointX": 820.965,
+          "PointY": 532.055,
+          "PointID": 336
+        },
+        {
+          "ConturID": 15,
+          "PointX": 946.982,
+          "PointY": 603.998,
+          "PointID": 337
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1084.25,
+          "PointY": 696.175,
+          "PointID": 338
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1194.51,
+          "PointY": 790.601,
+          "PointID": 339
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1270.73,
+          "PointY": 887.20703,
+          "PointID": 340
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1299.25,
+          "PointY": 967.354,
+          "PointID": 341
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1320.65,
+          "PointY": 1077.78,
+          "PointID": 342
+        },
+        {
+          "ConturID": 15,
+          "PointX": 1313.52,
+          "PointY": 1277.25,
+          "PointID": 343
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1313.52,
+          "PointY": 1277.25,
+          "PointID": 344
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1320.65,
+          "PointY": 1077.78,
+          "PointID": 345
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1299.25,
+          "PointY": 967.354,
+          "PointID": 346
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1270.73,
+          "PointY": 887.20703,
+          "PointID": 347
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1194.51,
+          "PointY": 790.601,
+          "PointID": 348
+        },
+        {
+          "ConturID": 15,
+          "PointX": -1084.25,
+          "PointY": 696.175,
+          "PointID": 349
+        },
+        {
+          "ConturID": 15,
+          "PointX": -946.982,
+          "PointY": 603.998,
+          "PointID": 350
+        },
+        {
+          "ConturID": 15,
+          "PointX": -820.965,
+          "PointY": 532.055,
+          "PointID": 351
+        },
+        {
+          "ConturID": 15,
+          "PointX": -663.239,
+          "PointY": 437.268,
+          "PointID": 352
+        },
+        {
+          "ConturID": 15,
+          "PointX": -573.228,
+          "PointY": 358.58002,
+          "PointID": 353
+        },
+        {
+          "ConturID": 15,
+          "PointX": -458.462,
+          "PointY": 237.176,
+          "PointID": 354
+        },
+        {
+          "ConturID": 15,
+          "PointX": -348.198,
+          "PointY": 122.517,
+          "PointID": 355
+        },
+        {
+          "ConturID": 15,
+          "PointX": -244.68399,
+          "PointY": 46.077,
+          "PointID": 356
+        },
+        {
+          "ConturID": 15,
+          "PointX": -152.82,
+          "PointY": 0.0,
+          "PointID": 357
+        },
+        {
+          "ConturID": 15,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 358
+        },
+        {
+          "ConturID": 15,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 359
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 360
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1350.84,
+          "PointY": 1032.28,
+          "PointID": 361
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1336.64,
+          "PointY": 932.94,
+          "PointID": 362
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1308.23,
+          "PointY": 869.079,
+          "PointID": 363
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1199.84,
+          "PointY": 730.391,
+          "PointID": 364
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1098.63,
+          "PointY": 613.314,
+          "PointID": 365
+        },
+        {
+          "ConturID": 16,
+          "PointX": -879.924,
+          "PointY": 389.174,
+          "PointID": 366
+        },
+        {
+          "ConturID": 16,
+          "PointX": -760.963,
+          "PointY": 288.061,
+          "PointID": 367
+        },
+        {
+          "ConturID": 16,
+          "PointX": -579.857,
+          "PointY": 155.018,
+          "PointID": 368
+        },
+        {
+          "ConturID": 16,
+          "PointX": -357.915,
+          "PointY": 45.036,
+          "PointID": 369
+        },
+        {
+          "ConturID": 16,
+          "PointX": -237.17801,
+          "PointY": 0.0,
+          "PointID": 370
+        },
+        {
+          "ConturID": 16,
+          "PointX": 237.17801,
+          "PointY": 0.0,
+          "PointID": 371
+        },
+        {
+          "ConturID": 16,
+          "PointX": 357.915,
+          "PointY": 45.036,
+          "PointID": 372
+        },
+        {
+          "ConturID": 16,
+          "PointX": 579.857,
+          "PointY": 155.018,
+          "PointID": 373
+        },
+        {
+          "ConturID": 16,
+          "PointX": 760.963,
+          "PointY": 288.061,
+          "PointID": 374
+        },
+        {
+          "ConturID": 16,
+          "PointX": 879.924,
+          "PointY": 389.174,
+          "PointID": 375
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1098.63,
+          "PointY": 613.314,
+          "PointID": 376
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1199.84,
+          "PointY": 730.391,
+          "PointID": 377
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1308.23,
+          "PointY": 869.079,
+          "PointID": 378
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1336.64,
+          "PointY": 932.94,
+          "PointID": 379
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1350.84,
+          "PointY": 1032.28,
+          "PointID": 380
+        },
+        {
+          "ConturID": 16,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 381
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 382
+        },
+        {
+          "ConturID": 16,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 383
+        },
+        {
+          "ConturID": 17,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 384
+        },
+        {
+          "ConturID": 17,
+          "PointX": 434.297,
+          "PointY": 0.0,
+          "PointID": 385
+        },
+        {
+          "ConturID": 17,
+          "PointX": 585.218,
+          "PointY": 29.0584,
+          "PointID": 386
+        },
+        {
+          "ConturID": 17,
+          "PointX": 714.832,
+          "PointY": 76.9539,
+          "PointID": 387
+        },
+        {
+          "ConturID": 17,
+          "PointX": 808.936,
+          "PointY": 139.041,
+          "PointID": 388
+        },
+        {
+          "ConturID": 17,
+          "PointX": 890.802,
+          "PointY": 224.465,
+          "PointID": 389
+        },
+        {
+          "ConturID": 17,
+          "PointX": 1029.29,
+          "PointY": 380.568,
+          "PointID": 390
+        },
+        {
+          "ConturID": 17,
+          "PointX": 1171.45,
+          "PointY": 602.642,
+          "PointID": 391
+        },
+        {
+          "ConturID": 17,
+          "PointX": 1336.64,
+          "PointY": 932.94,
+          "PointID": 392
+        },
+        {
+          "ConturID": 17,
+          "PointX": 1350.84,
+          "PointY": 1032.28,
+          "PointID": 393
+        },
+        {
+          "ConturID": 17,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 394
+        },
+        {
+          "ConturID": 17,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 395
+        },
+        {
+          "ConturID": 17,
+          "PointX": -1350.84,
+          "PointY": 1032.28,
+          "PointID": 396
+        },
+        {
+          "ConturID": 17,
+          "PointX": -1336.64,
+          "PointY": 932.94,
+          "PointID": 397
+        },
+        {
+          "ConturID": 17,
+          "PointX": -1171.45,
+          "PointY": 602.642,
+          "PointID": 398
+        },
+        {
+          "ConturID": 17,
+          "PointX": -1029.29,
+          "PointY": 380.568,
+          "PointID": 399
+        },
+        {
+          "ConturID": 17,
+          "PointX": -890.802,
+          "PointY": 224.465,
+          "PointID": 400
+        },
+        {
+          "ConturID": 17,
+          "PointX": -808.936,
+          "PointY": 139.041,
+          "PointID": 401
+        },
+        {
+          "ConturID": 17,
+          "PointX": -714.832,
+          "PointY": 76.9539,
+          "PointID": 402
+        },
+        {
+          "ConturID": 17,
+          "PointX": -585.218,
+          "PointY": 29.0584,
+          "PointID": 403
+        },
+        {
+          "ConturID": 17,
+          "PointX": -434.297,
+          "PointY": 0.0,
+          "PointID": 404
+        },
+        {
+          "ConturID": 17,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 405
+        },
+        {
+          "ConturID": 17,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 406
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 407
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1350.84,
+          "PointY": 1032.28,
+          "PointID": 408
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1336.64,
+          "PointY": 932.94,
+          "PointID": 409
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1277.96,
+          "PointY": 767.58997,
+          "PointID": 410
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1210.51,
+          "PointY": 592.132,
+          "PointID": 411
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1109.0,
+          "PointY": 334.16998,
+          "PointID": 412
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1029.1,
+          "PointY": 197.57901,
+          "PointID": 413
+        },
+        {
+          "ConturID": 18,
+          "PointX": 945.653,
+          "PointY": 121.302,
+          "PointID": 414
+        },
+        {
+          "ConturID": 18,
+          "PointX": 762.772,
+          "PointY": 45.0235,
+          "PointID": 415
+        },
+        {
+          "ConturID": 18,
+          "PointX": 592.32,
+          "PointY": 0.0,
+          "PointID": 416
+        },
+        {
+          "ConturID": 18,
+          "PointX": -592.32,
+          "PointY": 0.0,
+          "PointID": 417
+        },
+        {
+          "ConturID": 18,
+          "PointX": -762.772,
+          "PointY": 45.0235,
+          "PointID": 418
+        },
+        {
+          "ConturID": 18,
+          "PointX": -945.653,
+          "PointY": 121.302,
+          "PointID": 419
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1029.1,
+          "PointY": 197.57901,
+          "PointID": 420
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1109.0,
+          "PointY": 334.16998,
+          "PointID": 421
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1210.51,
+          "PointY": 592.132,
+          "PointID": 422
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1277.96,
+          "PointY": 767.58997,
+          "PointID": 423
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1336.64,
+          "PointY": 932.94,
+          "PointID": 424
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1350.84,
+          "PointY": 1032.28,
+          "PointID": 425
+        },
+        {
+          "ConturID": 18,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 426
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 427
+        },
+        {
+          "ConturID": 18,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 428
+        },
+        {
+          "ConturID": 19,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 429
+        },
+        {
+          "ConturID": 19,
+          "PointX": 848.844,
+          "PointY": 0.0,
+          "PointID": 430
+        },
+        {
+          "ConturID": 19,
+          "PointX": 942.633,
+          "PointY": 21.2464,
+          "PointID": 431
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1007.8,
+          "PointY": 56.4411,
+          "PointID": 432
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1065.93,
+          "PointY": 100.434,
+          "PointID": 433
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1117.01,
+          "PointY": 169.064,
+          "PointID": 434
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1157.52,
+          "PointY": 248.252,
+          "PointID": 435
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1224.5,
+          "PointY": 452.677,
+          "PointID": 436
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1336.64,
+          "PointY": 932.94,
+          "PointID": 437
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1350.84,
+          "PointY": 1032.28,
+          "PointID": 438
+        },
+        {
+          "ConturID": 19,
+          "PointX": 1350.84,
+          "PointY": 1271.76,
+          "PointID": 439
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1350.84,
+          "PointY": 1271.76,
+          "PointID": 440
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1350.84,
+          "PointY": 1032.28,
+          "PointID": 441
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1336.64,
+          "PointY": 932.94,
+          "PointID": 442
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1224.5,
+          "PointY": 452.677,
+          "PointID": 443
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1157.52,
+          "PointY": 248.252,
+          "PointID": 444
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1117.01,
+          "PointY": 169.064,
+          "PointID": 445
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1065.93,
+          "PointY": 100.434,
+          "PointID": 446
+        },
+        {
+          "ConturID": 19,
+          "PointX": -1007.8,
+          "PointY": 56.4411,
+          "PointID": 447
+        },
+        {
+          "ConturID": 19,
+          "PointX": -942.633,
+          "PointY": 21.2464,
+          "PointID": 448
+        },
+        {
+          "ConturID": 19,
+          "PointX": -848.844,
+          "PointY": 0.0,
+          "PointID": 449
+        },
+        {
+          "ConturID": 19,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 450
+        },
+        {
+          "ConturID": 19,
+          "PointX": 0.0,
+          "PointY": 0.0,
+          "PointID": 451
+        }
+      ]
+    }
+  }
+}

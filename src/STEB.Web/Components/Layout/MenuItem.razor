@@ -1,0 +1,19 @@
+@inject ProjectService Projects
+@if (NeedsProject && Projects.CurrentFile == null)
+{
+    <span class="menu-item disabled" title="@L.T("Сначала откройте или создайте проект")">@ChildContent</span>
+}
+else if (External)
+{
+    <a class="menu-item" href="@Href" target="_blank" rel="noopener">@ChildContent</a>
+}
+else
+{
+    <a class="menu-item" href="@Href">@ChildContent</a>
+}
+@code {
+    [Parameter] public string Href { get; set; } = "";
+    [Parameter] public bool NeedsProject { get; set; }
+    [Parameter] public bool External { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

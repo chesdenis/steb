@@ -1,0 +1,185 @@
+@page "/"
+@inject ProjectService Projects
+@inject NavigationManager Nav
+
+<div class="home-head">
+    <h1>@L.T("Проекты")</h1>
+    <div class="home-actions">
+        <button class="@(panel == "new" ? "active" : "")" @onclick='() => Toggle("new")'>@L.T("Создать...")</button>
+        <button class="@(panel == "proto" ? "active" : "")" @onclick='() => Toggle("proto")'>@L.T("Создать на основе прототипа...")</button>
+        <button class="@(panel == "saveas" ? "active" : "")" disabled="@(Projects.CurrentFile == null)" @onclick='() => Toggle("saveas")'>@L.T("Сохранить как...")</button>
+        @if (Projects.CurrentFile != null)
+        {
+            <a class="button-link" href="download/project" target="_blank" rel="noopener">@L.T("Скачать текущий")</a>
+            <a class="button-link primary" href="panel">@L.T("Панель управления ›")</a>
+        }
+    </div>
+</div>
+
+@if (error != null) { <div class="msg error">@L.T(error)</div> }
+@if (info != null) { <div class="msg info">@info</div> }
+
+@if (panel == "new")
+{
+    <div class="action-panel">
+        <label>@L.T("Имя нового проекта:") <input @bind="newName" placeholder="@L.T("Мое судно")" /></label>
+        <button class="primary" @onclick="Create">@L.T("Создать")</button>
+        <span class="muted small">@L.T("Пустой проект: затем задайте форму корпуса (можно загрузить .psteb).")</span>
+    </div>
+}
+else if (panel == "proto")
+{
+    <div class="action-panel">
+        <span>@L.T("Прототип:") <b>@(protoFile ?? L.T("выберите проект в списке ниже (кнопка «копировать»)"))</b></span>
+        <label>@L.T("Имя нового проекта:") <input @bind="protoName" /></label>
+        <button class="primary" disabled="@(protoFile == null)" @onclick="CreateFromPrototype">@L.T("Создать копию")</button>
+    </div>
+}
+else if (panel == "saveas")
+{
+    <div class="action-panel">
+        <span>@L.T("Текущий:") <b>@Projects.CurrentName</b></span>
+        <label>@L.T("Новое имя:") <input @bind="saveAsName" /></label>
+        <button class="primary" @onclick="DoSaveAs">@L.T("Сохранить")</button>
+    </div>
+}
+
+<div class="browser">
+    <div class="browser-tools">
+        <input class="search" placeholder="@L.T("Поиск: название судна или проекта…")" value="@filter" @oninput="e => filter = e.Value?.ToString() ?? string.Empty" />
+        <div class="chips">
+            @foreach (var c in CaseFilters)
+            {
+                var cc = c;
+                <button class="chip @(caseFilter == cc.key ? "active" : "")" @onclick="() => caseFilter = cc.key">@L.T(cc.title)</button>
+            }
+        </div>
+        <span class="muted small">@L.F("{0} из {1} файлов", ShownCount, projects.Count)</span>
+    </div>
+
+    @if (projects.Count == 0)
+    {
+        <p class="muted">@L.T("В папке проектов пока нет файлов. Создайте проект.")</p>
+    }
+    else
+    {
+        <div class="ship-list">
+            @foreach (var g in Groups)
+            {
+                <div class="ship-row @(g.Files.Any(f => f.File == Projects.CurrentName) ? "current" : "")">
+                    <div class="ship-name">
+                        <span class="ship-icon">⛴</span>
+                        <span title="@g.Ship">@L.T(g.Ship)</span>
+                    </div>
+                    <div class="ship-cases">
+                        @foreach (var f in g.Files)
+                        {
+                            var ff = f;
+                            <span class="case">
+                                <button class="case-open @CaseClass(ff.Case) @(ff.File == Projects.CurrentName ? "open" : "")" title="@(L.T("Открыть") + " " + ff.File)" @onclick="() => Open(ff.File)">@L.T(CaseTitle(ff.Case))</button>
+                                <button class="case-copy" title="@L.T("Использовать как прототип (создать копию)")" @onclick="() => UseAsPrototype(ff.File)">⧉</button>
+                            </span>
+                        }
+                    </div>
+                </div>
+            }
+            @if (!Groups.Any())
+            {
+                <p class="muted">@L.T("Ничего не найдено.")</p>
+            }
+        </div>
+    }
+    <p class="muted small">@L.T("Папка проектов:") @Projects.ProjectsFolder</p>
+</div>
+
+@code {
+    [SupplyParameterFromQuery(Name = "new")] public int New { get; set; }
+    [SupplyParameterFromQuery(Name = "saveas")] public int SaveAs { get; set; }
+    [SupplyParameterFromQuery(Name = "proto")] public int Proto { get; set; }
+
+    private IReadOnlyList<string> projects = new List<string>();
+    private string newName, saveAsName, protoFile, protoName, error, info, panel;
+    private string filter = "", caseFilter = "";
+
+    private static readonly (string key, string title)[] CaseFilters =
+    {
+        ("", "Все"), ("перемещение груза", "Перемещение груза"), ("затопление отсека", "Затопление отсека"),
+        ("грузовой план", "Грузовой план"), ("-", "Прочие")
+    };
+
+    private record ProjectFile(string File, string Ship, string Case);
+    private record ShipGroup(string Ship, List<ProjectFile> Files);
+
+    protected override void OnParametersSet()
+    {
+        if (New == 1) panel = "new";
+        else if (Proto == 1) panel = "proto";
+        else if (SaveAs == 1) panel = "saveas";
+        Refresh();
+    }
+
+    private void Refresh() => projects = Projects.ListProjects();
+
+    private static ProjectFile Parse(string file)
+    {
+        string name = file.EndsWith(ProjectService.Extension, StringComparison.OrdinalIgnoreCase) ? file[..^ProjectService.Extension.Length] : file;
+        int i = name.LastIndexOf(" — ", StringComparison.Ordinal);
+        return i > 0 ? new ProjectFile(file, name[..i], name[(i + 3)..]) : new ProjectFile(file, name, "");
+    }
+
+    private IEnumerable<ProjectFile> Visible => projects.Select(Parse).Where(p =>
+        (string.IsNullOrWhiteSpace(filter) || p.File.Contains(filter.Trim(), StringComparison.CurrentCultureIgnoreCase)) &&
+        (caseFilter == "" || (caseFilter == "-" ? !CaseFilters.Any(c => c.key.Length > 1 && c.key == p.Case) : p.Case == caseFilter)));
+
+    private int ShownCount => Visible.Count();
+
+    private static readonly string[] CaseOrder = { "грузовой план", "перемещение груза", "затопление отсека" };
+
+    private IEnumerable<ShipGroup> Groups => Visible
+        .GroupBy(p => p.Ship, StringComparer.CurrentCultureIgnoreCase)
+        .OrderBy(g => g.Key, StringComparer.CurrentCultureIgnoreCase)
+        .Select(g => new ShipGroup(g.Key, g.OrderBy(p => Rank(p.Case)).ThenBy(p => p.Case).ToList()));
+
+    private static int Rank(string c) { int k = Array.IndexOf(CaseOrder, c); return k < 0 ? 99 : k; }
+
+    private static string CaseTitle(string c) => c switch
+    {
+        "перемещение груза" => "Перемещение груза",
+        "затопление отсека" => "Затопление отсека",
+        "грузовой план" => "Грузовой план",
+        "" => "Открыть",
+        _ => c
+    };
+
+    private static string CaseClass(string c) => c switch
+    {
+        "перемещение груза" => "c-cargo",
+        "затопление отсека" => "c-damage",
+        "грузовой план" => "c-plan",
+        _ => "c-other"
+    };
+
+    private void Toggle(string p) { panel = panel == p ? null : p; error = info = null; }
+
+    private void Run(Action action)
+    {
+        error = info = null;
+        try { action(); }
+        catch (Exception ex) { error = ex.Message; }
+        Refresh();
+    }
+
+    private void Open(string file) => Run(() => { Projects.Open(file); Nav.NavigateTo("panel"); });
+    private void Create() => Run(() => { var f = Projects.Create(newName); newName = ""; Nav.NavigateTo("panel?dlg=hull"); });
+    private void DoSaveAs() => Run(() => { var f = Projects.SaveAs(saveAsName); info = L.T("Проект сохранен как") + " " + f; saveAsName = ""; panel = null; });
+
+    private void UseAsPrototype(string file)
+    {
+        protoFile = file;
+        protoName = Parse(file).Ship + " " + L.T("— копия");
+        panel = "proto";
+        error = info = null;
+    }
+
+    private void CreateFromPrototype() => Run(() => { Projects.CreateFromPrototype(protoFile, protoName); protoName = ""; Nav.NavigateTo("panel"); });
+}

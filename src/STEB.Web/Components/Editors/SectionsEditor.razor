@@ -1,0 +1,17 @@
+@* View of STEB2.Controls.ProjectSectionDefinition: the list of sections to draw. *@
+<p class="muted small">
+    @L.T("Одно сечение на строку в формате") <code>@L.T("координата:подпись;")</code> @L.T("(например") <code>@L.T("4,5:Шп. 10;")</code>).
+    @(TypeSection == STEB2.Controls.ProjectSectionDefinition.SectionType.Transv ? L.T("Координата — отстояние по длине X, м.") : L.T("Координата — отстояние от ДП Y, м."))
+    @L.T("Изменения сохраняются в проект при выходе из поля.")
+</p>
+<textarea class="sections-text" spellcheck="false" value="@model.textBox.Text" @onchange="OnChange"></textarea>
+
+@code {
+    [Parameter] public STEB2.Controls.ProjectSectionDefinition.SectionType TypeSection { get; set; }
+    private STEB2.Controls.ProjectSectionDefinition model;
+
+    protected override void OnInitialized() => model = new STEB2.Controls.ProjectSectionDefinition(TypeSection);
+
+    // Same as typing into the original TextBox: TextChanged -> SyncronizeDatabase().
+    private void OnChange(ChangeEventArgs e) => model.textBox.Text = e.Value?.ToString() ?? "";
+}

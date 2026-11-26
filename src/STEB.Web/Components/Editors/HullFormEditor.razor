@@ -1,0 +1,85 @@
+@* View of the original STEB2.Controls.Forms user control ("Редактировать форму корпуса"). *@
+
+<div class="toolbar">
+    <button disabled="@(!model.toolStripButton_SaveForm.Enabled)" @onclick="Save">@L.T("Сохранить форму корпуса...")</button>
+    <label class="file-button">@L.T("Загрузить из файла (.psteb)...")
+        <InputFile OnChange="LoadFile" accept=".psteb,.txt" />
+    </label>
+    @if (saved) { <span class="ok">@L.T("Форма корпуса сохранена в проект.")</span> }
+    @if (error != null) { <span class="err">@L.T(error)</span> }
+</div>
+
+<div class="hull-layout">
+    <div class="hull-main">
+        <div class="hull-text">
+            <div class="caption">@L.T("Описание формы (теоретические шпангоуты: «new X», затем строки «Y = … Z = …»)")</div>
+            <textarea spellcheck="false" value="@model.formDescription.richTextBox_FormTextView.Text" @onchange="OnTextChanged"></textarea>
+        </div>
+        <div class="hull-drawing">
+            <ModelFrame Frame="model.formDescription.usgModelFrame_FormDrawing" Height="auto" FileName="hull-form" />
+        </div>
+    </div>
+
+    <aside class="hull-dims">
+        <fieldset>
+            <legend>@L.T("Главные размерения")</legend>
+            <div class="grid2">
+                <label>@L.T("Длина формы корпуса, м:")</label><NumberField Field="model.formMainDimension.usgNumberField_L" />
+                <label>@L.T("Ширина формы корпуса, м:")</label><NumberField Field="model.formMainDimension.usgNumberField_B" />
+                <label>@L.T("Высота формы корпуса, м:")</label><NumberField Field="model.formMainDimension.usgNumberField_H" />
+                <label>@L.T("Проектная осадка корпуса, м:")</label><NumberField Field="model.formMainDimension.usgNumberField_d" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>@L.T("Коэффициенты афинного преобразования:")</legend>
+            <div class="grid2">
+                <label>kX:</label><NumberField Field="model.formMainDimension.usgNumberField_kX" />
+                <label>kY:</label><NumberField Field="model.formMainDimension.usgNumberField_kY" />
+                <label>kZ:</label><NumberField Field="model.formMainDimension.usgNumberField_kZ" />
+            </div>
+        </fieldset>
+    </aside>
+</div>
+
+@code {
+    private STEB2.Controls.Forms model;
+    private bool saved;
+
+    protected override void OnInitialized() => model = new STEB2.Controls.Forms();
+
+    private string error;
+
+    private void OnTextChanged(ChangeEventArgs e) => SetText(e.Value?.ToString() ?? "");
+
+    private void SetText(string text)
+    {
+        saved = false;
+        error = null;
+        // Same as typing into the original RichTextBox: TextChanged -> FormDescriptionChanged -> redraw.
+        model.formDescription.richTextBox_FormTextView.Text = text;
+        // Web addition: fit the new hull into the view (coordinates may be in mm).
+        model.formDescription.usgModelFrame_FormDrawing.ZoomAll();
+    }
+
+    /// <summary>Reads a .psteb prototype (plain text; UTF-8 or Windows-1251) into the description box.</summary>
+    private async Task LoadFile(InputFileChangeEventArgs e)
+    {
+        try
+        {
+            using var ms = new MemoryStream();
+            await using (var s = e.File.OpenReadStream(20 * 1024 * 1024)) await s.CopyToAsync(ms);
+            byte[] bytes = ms.ToArray();
+            string text;
+            try { text = new System.Text.UTF8Encoding(false, true).GetString(bytes); }
+            catch (System.Text.DecoderFallbackException) { text = System.Text.Encoding.GetEncoding(1251).GetString(bytes); }
+            SetText(text.TrimStart('\uFEFF'));
+        }
+        catch (Exception ex) { error = ex.Message; }
+    }
+
+    private void Save()
+    {
+        model.toolStripButton_SaveForm_Click(model.toolStripButton_SaveForm, EventArgs.Empty);
+        saved = true;
+    }
+}

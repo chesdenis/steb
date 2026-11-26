@@ -1,0 +1,178 @@
+@page "/panel"
+@implements IDisposable
+@inject ProjectService Projects
+@inject NavigationManager Nav
+@* View of STEB_LOAD.frmControlPanel: the main window with the floating position and the sections. *@
+
+@if (Projects.CurrentFile == null)
+{
+    <h1>@L.T("Панель управления")</h1>
+    <div class="msg info">@L.T("Сначала откройте или создайте проект.")</div>
+}
+else
+{
+    <div class="panel-toolbar">
+        <button disabled="@busy" @onclick="Recalc">@L.T("Пересчитать посадку")</button>
+        <button disabled="@busy" @onclick="Redraw">@L.T("Перерисовать посадку")</button>
+        <span class="sep"></span>
+        <button class="link" @onclick="() => showLog = !showLog">@(showLog ? L.T("Скрыть журнал") : L.T("Журнал"))</button>
+    </div>
+
+    @if (model != null)
+    {
+        <div class="panel-layout @(showLog ? "with-log" : "")">
+            <section class="panel-frame">
+                <div class="frame-title">@L.T("Посадка судна")</div>
+                <ModelFrame Frame="model.usgModelFrame_Waterlanding" Height="auto" FileName="waterlanding" Suspended="busy" />
+            </section>
+            <section class="panel-frame">
+                <div class="frame-title">@L.T("Сечения")</div>
+                <ModelFrame Frame="model.usgModelFrame_Sections" Height="auto" FileName="sections" Suspended="busy" />
+            </section>
+            @if (showLog)
+            {
+                <textarea class="panel-log" readonly>@L.T(model.textBoxStatus.Text)</textarea>
+            }
+        </div>
+    }
+
+    @if (busy)
+    {
+        <div class="busy-overlay"><div class="busy-box"><div class="spinner"></div>@(string.IsNullOrEmpty(host.Status) ? L.T("Расчет...") : L.T(host.Status))</div></div>
+    }
+
+    <CascadingValue Value="host">
+        @foreach (var form in host.OpenForms.ToArray())
+        {
+            <FormWindow Form="form" @key="form" OnClose="() => host.Close(form)" />
+        }
+    </CascadingValue>
+
+    @if (dialog != null && !busy)
+    {
+        <Modal Title="@dialogTitle" Class="@(dialog == "gposition" ? "small" : "large")" OnClose="CloseDialog">
+            @switch (dialog)
+            {
+                case "transv":
+                    <SectionsEditor TypeSection="STEB2.Controls.ProjectSectionDefinition.SectionType.Transv" />
+                    break;
+                case "long":
+                    <SectionsEditor TypeSection="STEB2.Controls.ProjectSectionDefinition.SectionType.Long" />
+                    break;
+                case "hull":
+                    <HullFormEditor />
+                    break;
+                case "aquatory":
+                    <AquatoryEditor />
+                    break;
+                case "gposition":
+                    <GPositionEditor />
+                    break;
+                case "compartments":
+                    <GridEditor Kind="compartments" />
+                    break;
+                case "containers":
+                    <GridEditor Kind="containers" />
+                    break;
+                case "cisterns":
+                    <CisternsEditor />
+                    break;
+                case "hull3d":
+                    <Hull3DView />
+                    break;
+            }
+        </Modal>
+    }
+}
+
+@code {
+    [SupplyParameterFromQuery(Name = "dlg")] public string Dlg { get; set; }
+
+    private STEB_LOAD.frmControlPanel model;
+    private readonly FormHost host = new FormHost();
+    private bool showLog;
+    private string dialog, dialogTitle, handledDlg;
+    private bool busy => host.IsBusy;
+
+    protected override void OnInitialized() => host.Changed += OnHostChanged;
+    private void OnHostChanged() => InvokeAsync(StateHasChanged);
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Projects.CurrentFile == null) return;
+        // The original constructor loads everything and recalculates the floating position.
+        await Busy(() => model = new STEB_LOAD.frmControlPanel());
+        model.OpenDialog += (key, title) => { dialog = key; dialogTitle = title; };
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // Menu "Исходные данные" items link here with ?dlg=... : same as clicking the menu item in the original.
+        if (model == null || string.IsNullOrEmpty(Dlg) || Dlg == handledDlg) return;
+        handledDlg = Dlg;
+        if (Dlg == "hull3d")
+        {
+            // Web addition: the 3D view only reads the hull, so there is no original handler to run.
+            dialog = "hull3d"; dialogTitle = "3D вид корпуса";
+            return;
+        }
+        await Busy(() => Click(Dlg));
+        if (dialog == null) { handledDlg = null; Nav.NavigateTo("panel", replace: true); }
+    }
+
+    private void Click(string key)
+    {
+        switch (key)
+        {
+            case "transv": model.toolStripButton_DefineTransvSection_Click(model.toolStripButton_DefineTransvSection, EventArgs.Empty); break;
+            case "long": model.toolStripButton_DefineLongSection_Click(model.toolStripButton_DefineLongSection, EventArgs.Empty); break;
+            case "hull": model.toolStripButton_EditShipForm_Click(model.toolStripButton_EditShipForm, EventArgs.Empty); break;
+            case "aquatory": model.toolStripButton_EditAquatory_Click(model.toolStripButton_EditAquatory, EventArgs.Empty); break;
+            case "gposition": model.toolStripButton_BaseMassGpos_Click(model.toolStripButton_BaseMassGpos, EventArgs.Empty); break;
+            case "compartments": model.toolStripButton_Compartment_Click(model.toolStripButton_Compartment, EventArgs.Empty); break;
+            case "containers": model.toolStripButton_Container_Click(model.toolStripButton_Container, EventArgs.Empty); break;
+            case "cisterns": model.toolStripMenuItem_Cisterns_Click(model.toolStripMenuItem_Cisterns, EventArgs.Empty); break;
+            case "gryz": model.toolStripButton_GryzRazmer_Click(model.toolStripButton_GryzRazmer, EventArgs.Empty); break;
+            case "xcxf": model.toolStripButton_DiagrammXcXf_Click(model.toolStripButton_DiagrammXcXf, EventArgs.Empty); break;
+            case "rzc": model.toolStripButton_DiagrammrZc_Click(model.toolStripButton_DiagrammrZc, EventArgs.Empty); break;
+            case "hydrocoeff": model.toolStripButton_DiagrammHydroCoeff_Click(model.toolStripButton_DiagrammHydroCoeff, EventArgs.Empty); break;
+            case "stability": model.toolStripButton_DSO_Click(model.toolStripButton_DSO, EventArgs.Empty); break;
+            case "pantokareni": model.toolStripButton_Pantokareni_Click(model.toolStripButton_Pantokareni, EventArgs.Empty); break;
+            case "circle": model.toolStripMenuItem_CircleStabilityDiagramm_Click(model.toolStripMenuItem_CircleStabilityDiagramm, EventArgs.Empty); break;
+            case "hydrostatic": model.toolStripMenuItem_ReportGryzRazmer_Click(model.toolStripMenuItem_ReportHydrostatic, EventArgs.Empty); break;
+            case "report": model.toolStripButton_Report_Click(model.toolStripButton_Report, EventArgs.Empty); break;
+            case "sample": model.toolStripMenuItem_SampleWaterlanding_Click(model.toolStripMenuItem_SampleWaterlanding, EventArgs.Empty); break;
+        }
+    }
+
+    private async Task CloseDialog()
+    {
+        bool viewOnly = dialog == "hull3d";
+        dialog = null;
+        handledDlg = null;
+        if (!viewOnly) await Busy(model.DialogClosed);
+        if (!string.IsNullOrEmpty(Dlg)) Nav.NavigateTo("panel", replace: true);
+    }
+
+    private Task Recalc() => Busy(() => model.toolStripButton_RecalcWaterlanding_Click(model.toolStripButton_RecalcWaterlanding, EventArgs.Empty));
+    private Task Redraw() => Busy(() => model.DrawHullAndBroadSideRotated_ToolBtnClick(this, EventArgs.Empty));
+
+    private Task Busy(Action work) => host.Run(() =>
+    {
+        work();
+        // Web addition: fit both drawings to their windows after every redraw
+        // (in the original the user pressed "Подобрать масштаб").
+        if (model != null)
+        {
+            model.usgModelFrame_Waterlanding.ZoomAll();
+            model.usgModelFrame_Sections.ZoomAll();
+        }
+    });
+
+    public void Dispose()
+    {
+        host.Changed -= OnHostChanged;
+        host.Dispose();
+        model?.Dispose();
+    }
+}

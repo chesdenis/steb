@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    STEB.Compat: a small, cross-platform re-implementation of the parts of
+    System.Drawing (GDI+) and System.Windows.Forms that the original 2010
+    STEB code uses. Types keep their original namespaces so the recovered
+    code compiles unchanged. Drawing is recorded and rendered as SVG.
+    Do NOT add a reference to System.Drawing.Common next to this project.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>STEB.Compat</RootNamespace>
+    <NoWarn>CS0436</NoWarn>
+  </PropertyGroup>
+</Project>

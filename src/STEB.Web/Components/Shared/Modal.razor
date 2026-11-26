@@ -1,0 +1,22 @@
+@* Modal window: the web counterpart of Form.ShowDialog(). *@
+<div class="modal-backdrop">
+    <div class="modal-window @Class">
+        <div class="modal-title">
+            <span>@L.T(Title)</span>
+            <button class="modal-x" title="@L.T("Закрыть")" @onclick="() => OnClose.InvokeAsync()">✕</button>
+        </div>
+        <div class="modal-body">@ChildContent</div>
+        <div class="modal-footer">
+            @Footer
+            <button @onclick="() => OnClose.InvokeAsync()">@L.T(CloseText)</button>
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string Class { get; set; }
+    [Parameter] public string CloseText { get; set; } = "Закрыть";
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public RenderFragment Footer { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+}

@@ -1,0 +1,91 @@
+@* View of STEB_LOAD.frmSampleWaterlanding ("Произвольная посадка") with its
+   STEB2.Controls.ProjectWaterlandingCharacteristics panel. White fields are the inputs of the chosen method. *@
+<div class="sample-layout">
+    <aside class="sample-params">
+        <details open>
+            <summary>@L.T("Определить посадку по:")</summary>
+            @foreach (var rb in Radios)
+            {
+                var r = rb;
+                <label class="checkbox"><input type="radio" name="defwtrl-@id" checked="@r.Checked" @onchange="() => r.Checked = true" /> @L.T(r.Text)</label>
+            }
+        </details>
+        <details open>
+            <summary>@L.T("Положение ЦТ и вес судна")</summary>
+            <div class="grid2">
+                <label>@L.T(P.label16.Text)</label><NumberField Field="P.usgNumberField_Mass" OnEnter="Enter" />
+                <label>@L.T(P.label18.Text)</label><NumberField Field="P.usgNumberField_Xg" OnEnter="Enter" />
+                <label>@L.T(P.label17.Text)</label><NumberField Field="P.usgNumberField_Yg" OnEnter="Enter" />
+                <label>@L.T(P.label15.Text)</label><NumberField Field="P.usgNumberField_Zg" OnEnter="Enter" />
+            </div>
+        </details>
+        <details open>
+            <summary>@L.T("Характеристики посадки")</summary>
+            <div class="grid2">
+                <label>@L.T(P.label28.Text)</label><NumberField Field="P.usgNumberField_dn" OnEnter="Enter" />
+                <label>@L.T(P.label30.Text)</label><NumberField Field="P.usgNumberField_dk" OnEnter="Enter" />
+                <label>@L.T(P.label29.Text)</label><NumberField Field="P.usgNumberField_dlb" OnEnter="Enter" />
+                <label>@L.T(P.label27.Text)</label><NumberField Field="P.usgNumberField_dpb" OnEnter="Enter" />
+                <label>@L.T(P.label31.Text)</label><NumberField Field="P.usgNumberField_heelAngle" OnEnter="Enter" />
+                <label>@L.T(P.label21.Text)</label><NumberField Field="P.usgNumberField_trimAngle" OnEnter="Enter" />
+            </div>
+        </details>
+        <details open>
+            <summary>@L.T("Характеристики подводного объема")</summary>
+            <div class="grid2">
+                <label>@L.T(P.label6.Text)</label><NumberField Field="P.usgNumberField_DSPL" OnEnter="Enter" />
+                <label>@L.T(P.label5.Text)</label><NumberField Field="P.usgNumberField_V" OnEnter="Enter" />
+                <label>@L.T(P.label7.Text)</label><NumberField Field="P.usgNumberField_delta" OnEnter="Enter" />
+                <label>@L.T(P.label1.Text)</label><NumberField Field="P.usgNumberField_Xc" OnEnter="Enter" />
+                <label>@L.T(P.label2.Text)</label><NumberField Field="P.usgNumberField_Yc" OnEnter="Enter" />
+                <label>@L.T(P.label3.Text)</label><NumberField Field="P.usgNumberField_Zc" OnEnter="Enter" />
+                <label>@L.T(P.label12.Text)</label><NumberField Field="P.usgNumberField_rSmall" OnEnter="Enter" />
+                <label>@L.T(P.label13.Text)</label><NumberField Field="P.usgNumberField_Rbig" OnEnter="Enter" />
+                <label>@L.T(P.label33.Text)</label><NumberField Field="P.usgNumberField_MetHTransv" OnEnter="Enter" />
+                <label>@L.T(P.label20.Text)</label><NumberField Field="P.usgNumberField_MetHLong" OnEnter="Enter" />
+            </div>
+        </details>
+        <details open>
+            <summary>@L.T("Характеристики ватерлинии")</summary>
+            <div class="grid2">
+                <label>@L.T(P.label11.Text)</label><NumberField Field="P.usgNumberField_alpha" OnEnter="Enter" />
+                <label>@L.T(P.label10.Text)</label><NumberField Field="P.usgNumberField_XgWl" OnEnter="Enter" />
+                <label>@L.T(P.label9.Text)</label><NumberField Field="P.usgNumberField_YgWl" OnEnter="Enter" />
+                <label>@L.T(P.label8.Text)</label><NumberField Field="P.usgNumberField_IxWl" OnEnter="Enter" />
+                <label>@L.T(P.label14.Text)</label><NumberField Field="P.usgNumberField_IyWL" OnEnter="Enter" />
+            </div>
+        </details>
+        <button class="bold sample-update" disabled="@Host.IsBusy" @onclick="Update">@L.T(P.button_Update.Text)</button>
+    </aside>
+    <div class="sample-drawings">
+        <div class="form-fill"><ModelFrame Frame="Model.usgModelFrame_Waterlanding" Height="auto" FileName="sample-waterlanding" Suspended="Host.IsBusy" /></div>
+        <div class="form-fill"><ModelFrame Frame="Model.usgModelFrame_Sections" Height="auto" FileName="sample-sections" Suspended="Host.IsBusy" /></div>
+    </div>
+</div>
+@code {
+    [Parameter, EditorRequired] public STEB_LOAD.frmSampleWaterlanding Model { get; set; }
+    [CascadingParameter] public FormHost Host { get; set; }
+    private readonly string id = Guid.NewGuid().ToString("n");
+
+    private STEB2.Controls.ProjectWaterlandingCharacteristics P => Model.projectWaterlandingCharacteristics;
+
+    // the 16 methods in the original order (top to bottom)
+    private IEnumerable<System.Windows.Forms.RadioButton> Radios => new[]
+    {
+        P.radioButton_MassGpos, P.radioButton_dn_dk_dlb_dpb, P.radioButton_dn_dk_heel, P.radioButton_dlb_dpb_trim,
+        P.radioButton_d_heel_trim, P.radioButton_DSPL_heel_trim, P.radioButton_Volume_heel_trim, P.radioButton_delta,
+        P.radioButton_rSmall, P.radioButton_Rbig, P.radioButton_Cpos, P.radioButton_Gwl, P.radioButton_Iwl,
+        P.radioButton_alpha, P.radioButton_MetHLong, P.radioButton_MetHTransv
+    };
+
+    // "Определить(Enter)" button and Enter in any field run the original NeedRecalc() with a progress box.
+    private Task Update() => Run(() => P.button_Update.PerformClick());
+    private Task Enter() => Run(() => P.usgNumberField_Mass.RaiseKeyDown(System.Windows.Forms.Keys.Return));
+
+    private Task Run(Action action) => Host.Run(() =>
+    {
+        action();
+        Model.usgModelFrame_Waterlanding.ZoomAll(); // web addition: fit the drawings
+        Model.usgModelFrame_Sections.ZoomAll();
+    });
+}

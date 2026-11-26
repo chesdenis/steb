@@ -1,0 +1,11 @@
+@* View of STEB2.Controls.ProjectGPosition: lightship mass and centre of gravity. *@
+<div class="grid2 narrow">
+    <label>@L.T(model.label16.Text)</label><NumberField Field="model.usgNumberField_Mass" />
+    <label>@L.T(model.label18.Text)</label><NumberField Field="model.usgNumberField_Xg" />
+    <label>@L.T(model.label17.Text)</label><NumberField Field="model.usgNumberField_Yg" />
+    <label>@L.T(model.label15.Text)</label><NumberField Field="model.usgNumberField_Zg" />
+</div>
+@code {
+    private STEB2.Controls.ProjectGPosition model;
+    protected override void OnInitialized() => model = new STEB2.Controls.ProjectGPosition();
+}

@@ -1,0 +1,87 @@
+@* 3D hull view (web addition, display only): stations, waterlines, sheer, keel and design waterline,
+   plus compartments, tanks and cargo as shaded solids with their liquid level.
+   Left drag rotates, right drag / Shift+drag pans, the wheel zooms around the cursor, double click fits. *@
+@implements IAsyncDisposable
+@inject IJSRuntime JS
+@inject ProjectService Projects
+
+<div class="h3d">
+    <div class="mf-toolbar">
+        <button @onclick='() => View("iso")'>@L.T("Изометрия")</button>
+        <button @onclick='() => View("body")'>@L.T("Корпус")</button>
+        <button @onclick='() => View("profile")'>@L.T("Бок")</button>
+        <button @onclick='() => View("plan")'>@L.T("Полуширота")</button>
+        <span class="sep"></span>
+        <button @onclick="Fit">@L.T("Подобрать масштаб")</button>
+        <button @onclick="SavePng">@L.T("Сохранить изображение")</button>
+        <span class="sep"></span>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("stations", e)' /> @L.T("Шпангоуты")</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("waterlines", e)' /> @L.T("Ватерлинии")</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("sheer", e)' /> @L.T("Линии палубы и киля")</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("dwl", e)' /> @L.T("Конструктивная ватерлиния")</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("axes", e)' /> @L.T("Оси")</label>
+        <label class="checkbox"><input type="checkbox" @onchange='e => Option("perspective", e)' /> @L.T("Перспектива")</label>
+    </div>
+    <div class="mf-toolbar h3d-loads">
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("compartments", e)' /><i class="sw sw-comp"></i> @L.T("Отсеки") (@Count("compartment"))</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("tanks", e)' /><i class="sw sw-tank"></i> @L.T("Цистерны") (@Count("tank"))</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("cargo", e)' /><i class="sw sw-cargo"></i> @L.T("Контейнеры") (@Count("cargo"))</label>
+        <label class="checkbox"><input type="checkbox" checked @onchange='e => Option("liquid", e)' /><i class="sw sw-liquid"></i> @L.T("Жидкость (уровень заполнения)")</label>
+        <label class="checkbox"><input type="checkbox" @onchange='e => Option("names", e)' /> @L.T("Названия")</label>
+    </div>
+    @if (error != null)
+    {
+        <div class="msg error">@L.T(error)</div>
+    }
+    else if (model != null && model.Stations.Count == 0)
+    {
+        <div class="msg info">@L.T("Форма корпуса не задана.")</div>
+    }
+    <canvas class="h3d-canvas" @ref="canvas"></canvas>
+    <div class="muted small h3d-hint">
+        @L.T("Левая кнопка мыши — вращение, правая кнопка или Shift — перемещение, колесо — масштаб относительно курсора, двойной щелчок — подобрать масштаб.")
+        @if (model != null)
+        {
+            <span> L = @model.L.ToString("0.###"), B = @model.B.ToString("0.###"), H = @model.H.ToString("0.###"), d = @model.DesignDraft.ToString("0.###") @L.T("м")</span>
+        }
+    </div>
+</div>
+
+@code {
+    private ElementReference canvas;
+    private Hull3D.Model model;
+    private string error;
+    private bool ready;
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            if (Projects.CurrentFile == null) throw new InvalidOperationException("Проект не открыт.");
+            model = Hull3D.Load(Projects.CurrentFile);
+        }
+        catch (Exception ex) { error = ex.Message; }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender || model == null || model.Stations.Count == 0) return;
+        await JS.InvokeVoidAsync("steb.hull3d.init", canvas, model);
+        ready = true;
+    }
+
+    private int Count(string kind) => model?.Solids.Count(s => s.Kind == kind) ?? 0;
+
+    private async Task View(string name) { if (ready) await JS.InvokeVoidAsync("steb.hull3d.view", canvas, name); }
+    private async Task Fit() { if (ready) await JS.InvokeVoidAsync("steb.hull3d.fit", canvas); }
+    private async Task SavePng() { if (ready) await JS.InvokeVoidAsync("steb.hull3d.png", canvas, "hull-3d.png"); }
+    private async Task Option(string key, ChangeEventArgs e)
+    {
+        if (ready) await JS.InvokeVoidAsync("steb.hull3d.option", canvas, key, e.Value is bool b && b);
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        try { if (ready) await JS.InvokeVoidAsync("steb.hull3d.dispose", canvas); } catch (JSDisconnectedException) { }
+    }
+}
